@@ -31,7 +31,7 @@ function readInputParameters(ARGS)
   ### Set standard values for the parameters ###
   #instName = "instances/csifa/c52_1.txt"
   solver = "gurobi"
-  method = "rf"
+  method = "exact"
   maxtime = 3600
   tolgap = 1e-6
   disablesolver = 0

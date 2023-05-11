@@ -64,6 +64,7 @@ function tukey_exact(params::ParameterData)
     @objective(model, Min, sum(x[j] for j in 1:N))
 
     @constraint(model, x[i] == 1)
+
     for u in 1:N
       for w in (u+1):N
         if dm[u,w] <= N
@@ -82,7 +83,7 @@ function tukey_exact(params::ParameterData)
     #relax_integrality(model)
 
     ### export .lp
-    #write_to_file(model,"tukey.lp")
+    write_to_file(model,"tukey.lp")
 
     ### solving the problem
     optimize!(model)
