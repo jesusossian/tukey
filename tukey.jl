@@ -13,6 +13,7 @@ using CPLEX
 import Data
 import Parameters
 import exact
+import relax_and_fix
 
 params = Parameters.readInputParameters(ARGS)
 
@@ -23,4 +24,6 @@ params = Parameters.readInputParameters(ARGS)
 
 if (params.method == "exact")
     exact.tukey_exact(params)
+elseif (params.method == "rf")
+    relax_and_fix.main_rf(params)
 end

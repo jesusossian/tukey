@@ -1,6 +1,6 @@
 #!/bin/bash
 
-method_=exact
+method_=rf
 solver_=gurobi # cplex
 inst_="karate"
 

@@ -9,11 +9,11 @@ struct ParameterData
   disablesolver::Int
   maxnodes::Int
 
-  #horsizerf::Int
-  #fixsizerf::Int
-  #maxtimerf::Int
-  #tolgaprf::Float64
-  #freeintervalr::Int
+  horsizerf::Int
+  fixsizerf::Int
+  maxtimerf::Int
+  tolgaprf::Float64
+  freeintervalrf::Int
 
   #horsizefo::Int
   #fixsizefo::Int
@@ -31,17 +31,17 @@ function readInputParameters(ARGS)
   ### Set standard values for the parameters ###
   #instName = "instances/csifa/c52_1.txt"
   solver = "gurobi"
-  method = "exact"
+  method = "rf"
   maxtime = 3600
   tolgap = 1e-6
   disablesolver = 0
   maxnodes = 10000000.0
 
-  #horsizerf = 3
-  #fixsizerf = 2
-  #maxtimerf = 360
-  #tolgaprf = 1e-6
-  #freeintervalr = 2
+  horsizerf = 3
+  fixsizerf = 2
+  maxtimerf = 360
+  tolgaprf = 1e-6
+  freeintervalrf = 2
   
   #horsizefo = 3
   #maxhorsizefo = 3
@@ -73,18 +73,21 @@ function readInputParameters(ARGS)
     elseif ARGS[param] == "--maxnodes"
       maxnodes = parse(Float64,ARGS[param+1])
       param += 1
-    #elseif ARGS[param] == "--horsizerf"
-    #  horsizerf = parse(Int,ARGS[param+1])
-    #  param += 1
-    #elseif ARGS[param] == "--fixsizerf"
-    #  fixsizerf = parse(Int,ARGS[param+1])
-    #  param += 1
-    #elseif ARGS[param] == "--maxtimerf"
-    #  maxtimerf = parse(Int,ARGS[param+1])
-    #  param += 1
-    #elseif ARGS[param] == "--tolgaprf"
-    #  tolgaprf = parse(Float64,ARGS[param+1])
-    #  param += 1
+    elseif ARGS[param] == "--horsizerf"
+      horsizerf = parse(Int,ARGS[param+1])
+      param += 1
+    elseif ARGS[param] == "--fixsizerf"
+      fixsizerf = parse(Int,ARGS[param+1])
+      param += 1
+    elseif ARGS[param] == "--maxtimerf"
+      maxtimerf = parse(Int,ARGS[param+1])
+      param += 1
+    elseif ARGS[param] == "--tolgaprf"
+      tolgaprf = parse(Float64,ARGS[param+1])
+      param += 1
+    elseif ARGS[param] == "--freeintervalrf"
+      freeintervalrf = parse(Float64,ARGS[param+1])
+      param += 1
     #elseif ARGS[param] == "--horsizefo"
     #  horsizefo = parse(Int,ARGS[param+1])
     #  param += 1
@@ -112,12 +115,12 @@ function readInputParameters(ARGS)
     maxtime,
     tolgap,
     disablesolver,
-    maxnodes
-    #horsizerf, 
-    #fixsizerf,
-    #maxtimerf, 
-    #tolgaprf,
-    #freeintervalr,
+    maxnodes,
+    horsizerf, 
+    fixsizerf,
+    maxtimerf, 
+    tolgaprf,
+    freeintervalrf
     #horsizefo, 
     #fixsizefo, 
     #maxhorsizefo, 
