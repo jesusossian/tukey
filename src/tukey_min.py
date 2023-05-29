@@ -16,6 +16,11 @@ import igraph as ig
 
 from itertools import combinations
 
+import sys
+from datetime import datetime, date
+
+RESULT_PATH   = Path('../result/')
+
 def is_subclique(G, nodelist):
     '''
     For each pair of nodes in nodelist whether there is an edge
@@ -28,17 +33,8 @@ def is_subclique(G, nodelist):
     return True  #if we get to here, then every edge was there.  It's True.
 
 
-def tukey():
-
-  #instance
-  #inst_="internet_graph"
-  #dim_=100
-  #id_=1
-  #G = nx.read_gml(f"../instances/{inst_}/{dim_}/{inst_}_{dim_}_{id_}.gml.gz",destringizer=int)
-
-  inst_="karate"
-  G = nx.karate_club_graph()
-
+def tukey_min(method_,form_,inst_,id_,instance,G):
+  
   N = nx.number_of_nodes(G)
   M = nx.number_of_edges(G)
 
@@ -51,9 +47,8 @@ def tukey():
         dm[i][j] = len(p[i][j])-1
 
   # fmin
-  form_="fmin"
-  method_="mip"
-
+#  form_="fmin"
+#  method_="mip"
 
   lb = np.zeros((N), dtype=float)
   ub = np.zeros((N), dtype=float)
@@ -62,13 +57,12 @@ def tukey():
   nodes = np.zeros((N), dtype=float)
   status = np.zeros((N), dtype=float)
 
-  RESULT_PATH   = Path('../result/')
-  #instance = f"{method_}_{form_}_{inst_}_{dim_}_{id_}.txt"
-  instance = f"{method_}_{form_}_{inst_}.txt"
+#  instance = f"{method_}_{form_}_{inst_}_{dim_}_{id_}.txt"
+#  #instance = f"{method_}_{form_}_{inst_}.txt"
 
   for i in G: # begin tukey node i
 
-    print("node %d" %i)
+    #print("node %d" %i)
     
     Ni = nx.neighbors(G,i)
 
@@ -89,7 +83,7 @@ def tukey():
     else:
       # if not clique
 
-      model = gp.Model(f"{method_}_{inst_}_{form_}")
+      model = gp.Model(f"{method_}_{form_}_{inst_}_{id_}")
 
       if (method_=="mip"):
         x = model.addVars(N, vtype=GRB.BINARY, name="x")
@@ -103,7 +97,7 @@ def tukey():
       model.setObjective(obj, GRB.MINIMIZE)
     
       # configurando parametros
-      # model.Params.TimeLimit = 60
+      model.Params.TimeLimit = 3600
       model.Params.MIPGap = 1.e-6
       model.Params.Threads = 1
       # model.Params.Presolve = 0
@@ -147,8 +141,6 @@ def tukey():
         time[i] = model.Runtime
         status[i] = tmp
 
-
-
     if (method_=="mip"):
       arquivo = open(
         os.path.join(RESULT_PATH,instance),'a'
@@ -184,4 +176,31 @@ def tukey():
 
 if __name__ == "__main__":
 
-  tukey()
+  #instance
+
+#  instance = f"{method_}_{form_}_{inst_}_{dim_}_{id_}.txt"
+#  instance = f"{method_}_{form_}_{inst_}.txt"
+  
+  for id_ in range(1,5):
+    print("instance %d" %(id_))
+    method_="mip"
+    form_="fmin"
+    inst_="internet_graph"
+    dim_=100
+    instance = f"{method_}_{form_}_{inst_}_{dim_}_{id_}.txt"
+    G = nx.read_gml(f"../instances/{inst_}/{dim_}/{inst_}_{dim_}_{id_}.gml.gz",destringizer=int)
+
+    tukey_min(method_,form_,inst_,id_,instance,G)
+
+    G.clear()
+
+  #inst_="karate"
+  #G = nx.karate_club_graph()
+
+  #inst_="dodecahedral_graph"
+  #G = nx.dodecahedral_graph()
+
+  #inst_="karate"
+  #G = nx.karate_club_graph()
+
+  
