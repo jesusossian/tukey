@@ -32,7 +32,7 @@ def is_subclique(G, nodelist):
             return False #if any edge is missing we're done
     return True  #if we get to here, then every edge was there.  It's True.
 
-def tukey_max_neighb(method_,form_,inst_,instance,G):
+def tukey_max_neighb(method_,instance_,G):
   
   N = nx.number_of_nodes(G)
   M = nx.number_of_edges(G)
@@ -75,7 +75,7 @@ def tukey_max_neighb(method_,form_,inst_,instance,G):
     else:
       # if not clique
 
-      model = gp.Model(f"{form_}_{inst_}")
+      model = gp.Model(f"{instance_}")
 
       if (method_=="mip"):
         x = model.addVars(N, vtype=GRB.BINARY, name="x")
@@ -90,8 +90,8 @@ def tukey_max_neighb(method_,form_,inst_,instance,G):
       # model.Params.Cuts = 0
  
       # Turn off display and heuristics
-      gp.setParam('OutputFlag', 0)
-      gp.setParam('Heuristics', 0)
+      #gp.setParam('OutputFlag', 0)
+      #gp.setParam('Heuristics', 0)
 
       obj = 0
       for j in G:
@@ -115,7 +115,7 @@ def tukey_max_neighb(method_,form_,inst_,instance,G):
                 if (dm[u,s] + dm[s,w] == dm[u,w]):
                   model.addConstr(x[u] + x[w] <= 1 + x[s], "geodesic")
 
-      #model.write(f"{form_}_{inst_}.lp")
+      #model.write(f"{method_}_{instance_}.lp")
 
       if method_ != "mip":
         relax = model.relax()
@@ -141,7 +141,7 @@ def tukey_max_neighb(method_,form_,inst_,instance,G):
 
     if (method_=="mip"):
       arquivo = open(
-        os.path.join(RESULT_PATH,instance),'a'
+        os.path.join(RESULT_PATH,instance_),'a'
       )
       tmp = i
       arquivo.write(
@@ -156,7 +156,7 @@ def tukey_max_neighb(method_,form_,inst_,instance,G):
       arquivo.close()
     else:
       arquivo = open(
-        os.path.join(RESULT_PATH,instance),'a'
+        os.path.join(RESULT_PATH,instance_),'a'
       )
       tmp = i
       arquivo.write(
@@ -170,7 +170,7 @@ def tukey_max_neighb(method_,form_,inst_,instance,G):
   # end tukey for node i
 
 
-def tukey_max_miset(method_,form_,inst_,instance,G):
+def tukey_max_miset(method_,instance_,G):
   
   N = nx.number_of_nodes(G)
   M = nx.number_of_edges(G)
@@ -213,7 +213,7 @@ def tukey_max_miset(method_,form_,inst_,instance,G):
     else:
       # if not clique
 
-      model = gp.Model(f"{form_}_{inst_}")
+      model = gp.Model(f"{instance_}")
 
       if (method_=="mip"):
         x = model.addVars(N, vtype=GRB.BINARY, name="x")
@@ -228,8 +228,8 @@ def tukey_max_miset(method_,form_,inst_,instance,G):
       # model.Params.Cuts = 0
  
       # Turn off display and heuristics
-      gp.setParam('OutputFlag', 0)
-      gp.setParam('Heuristics', 0)
+      #gp.setParam('OutputFlag', 0)
+      #gp.setParam('Heuristics', 0)
 
       obj = 0
       for j in G:
@@ -271,7 +271,7 @@ def tukey_max_miset(method_,form_,inst_,instance,G):
 
         T.clear()
 
-      #model.write(f"{form_}_{inst_}.lp")
+      #model.write(f"{method_}_{instance_}.lp")
 
       if method_ != "mip":
         relax = model.relax()    
@@ -297,7 +297,7 @@ def tukey_max_miset(method_,form_,inst_,instance,G):
 
     if (method_=="mip"):
       arquivo = open(
-        os.path.join(RESULT_PATH,instance),'a'
+        os.path.join(RESULT_PATH,instance_),'a'
       )
       tmp = i
       arquivo.write(
@@ -312,7 +312,7 @@ def tukey_max_miset(method_,form_,inst_,instance,G):
       arquivo.close()
     else:
       arquivo = open(
-        os.path.join(RESULT_PATH,instance),'a'
+        os.path.join(RESULT_PATH,instance_),'a'
       )
       tmp = i
       arquivo.write(
@@ -326,7 +326,7 @@ def tukey_max_miset(method_,form_,inst_,instance,G):
   # end tukey for node i
 
 
-def tukey_max(method_,form_,inst_,instance,G):
+def tukey_max(method_,instance_,G):
   
   N = nx.number_of_nodes(G)
   M = nx.number_of_edges(G)
@@ -369,7 +369,7 @@ def tukey_max(method_,form_,inst_,instance,G):
     else:
       # if not clique
 
-      model = gp.Model(f"{form_}_{inst_}")
+      model = gp.Model(f"{instance_}")
 
       if (method_=="mip"):
         x = model.addVars(N, vtype=GRB.BINARY, name="x")
@@ -384,8 +384,8 @@ def tukey_max(method_,form_,inst_,instance,G):
       # model.Params.Cuts = 0
  
       # Turn off display and heuristics
-      gp.setParam('OutputFlag', 0)
-      gp.setParam('Heuristics', 0)
+      #gp.setParam('OutputFlag', 0)
+      #gp.setParam('Heuristics', 0)
 
       obj = 0
       for j in G:
@@ -429,7 +429,7 @@ def tukey_max(method_,form_,inst_,instance,G):
 
     if (method_=="mip"):
       arquivo = open(
-        os.path.join(RESULT_PATH,instance),'a'
+        os.path.join(RESULT_PATH,instance_),'a'
       )
       tmp = i
       arquivo.write(
@@ -444,7 +444,7 @@ def tukey_max(method_,form_,inst_,instance,G):
       arquivo.close()
     else:
       arquivo = open(
-        os.path.join(RESULT_PATH,instance),'a'
+        os.path.join(RESULT_PATH,instance_),'a'
       )
       tmp = i
       arquivo.write(
@@ -458,7 +458,7 @@ def tukey_max(method_,form_,inst_,instance,G):
   # end tukey for node i
 
 
-def tukey_min(method_,form_,inst_,instance,G):
+def tukey_min(method_,instance_,G):
   
   N = nx.number_of_nodes(G)
   M = nx.number_of_edges(G)
@@ -501,7 +501,7 @@ def tukey_min(method_,form_,inst_,instance,G):
     else:
       # if not clique
 
-      model = gp.Model(f"{form_}_{inst_}")
+      model = gp.Model(f"{instance_}")
 
       if (method_=="mip"):
         x = model.addVars(N, vtype=GRB.BINARY, name="x")
@@ -516,8 +516,11 @@ def tukey_min(method_,form_,inst_,instance,G):
       # model.Params.Cuts = 0
  
       # Turn off display and heuristics
-      gp.setParam('OutputFlag', 0)
-      gp.setParam('Heuristics', 0)
+      #gp.setParam('OutputFlag', 0)
+      #gp.setParam('Heuristics', 0)
+
+      # Open log file
+      # logfile = open('{instance_}.log', 'w')
 
       obj = 0
       for j in G:
@@ -535,7 +538,7 @@ def tukey_min(method_,form_,inst_,instance,G):
               if (dm[u,s] + dm[s,w] == dm[u,w]):
                 model.addConstr(x[u] + x[w] >= x[s])
 
-      #model.write(f"{form_}_{inst_}.lp")
+      #model.write(f"{instance_}.lp")
 
       if method_ != "mip":
         relax = model.relax()
@@ -561,7 +564,7 @@ def tukey_min(method_,form_,inst_,instance,G):
 
     if (method_=="mip"):
       arquivo = open(
-        os.path.join(RESULT_PATH,instance),'a'
+        os.path.join(RESULT_PATH,instance_),'a'
       )
       tmp = i
       arquivo.write(
@@ -576,7 +579,7 @@ def tukey_min(method_,form_,inst_,instance,G):
       arquivo.close()
     else:
       arquivo = open(
-        os.path.join(RESULT_PATH,instance),'a'
+        os.path.join(RESULT_PATH,instance_),'a'
       )
       tmp = i
       arquivo.write(
@@ -590,17 +593,32 @@ def tukey_min(method_,form_,inst_,instance,G):
   # end tukey for node i
 
 if __name__ == "__main__":
-  
-  inst_="internet_graph"
-  G = nx.read_gml(f"../instances/{inst_}/{inst_}.gml.gz",destringizer=int)
 
-  method_="mip"
-  form_="fmin"
-  instance = f"{method_}_{form_}_{inst_}.txt"
+  if len(sys.argv) < 1:
+    print("Default data file : ")
+  else:
+    data_ = sys.argv[1]
+    inst_ = sys.argv[2]
+    method_ = sys.argv[3]
+    form_ = sys.argv[4]
   
-  tukey_min(method_,form_,inst_,instance,G)
-  #tukey_max(method_,form_,inst_,instance,G)
-  #tukey_max_miset(method_,form_,inst_,instance,G)
-  #tukey_max_neighb(method_,form_,inst_,instance,G)
+#  inst_="internet_graph"
+#  G = nx.read_gml(f"../instances/{inst_}/{inst_}.gml.gz",destringizer=int)
+  G = nx.read_gml(data_,destringizer=int)
+
+  #method_ = "mip"
+  #form_ = "fmin"
+  instance_ = f"{method_}_{form_}_{inst_}.txt"
+  
+  if form_ == "fmin":
+    tukey_min(method_,instance_,G)
+  elif form_ == "fmax":
+    tukey_max(method_,instance_,G)
+  elif form_ == "miset":
+    tukey_max_miset(method_,instance_,G)
+  elif form_ == "neighb":
+    tukey_max_neighb(method_,instance_,G)
+  else:
+    print("parameters errado!")
 
   G.clear()  

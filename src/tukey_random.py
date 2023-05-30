@@ -32,7 +32,7 @@ def is_subclique(G, nodelist):
             return False #if any edge is missing we're done
     return True  #if we get to here, then every edge was there.  It's True.
 
-def tukey_max_neighb(method_,form_,inst_,id_,instance,G):
+def tukey_max_neighb(method_,instance_,G):
   
   N = nx.number_of_nodes(G)
   M = nx.number_of_edges(G)
@@ -115,7 +115,7 @@ def tukey_max_neighb(method_,form_,inst_,id_,instance,G):
                 if (dm[u,s] + dm[s,w] == dm[u,w]):
                   model.addConstr(x[u] + x[w] <= 1 + x[s], "geodesic")
 
-      #model.write(f"{method_}_{form_}_{inst_}_{id_}.lp")
+      #model.write(f"{instance_}.lp")
 
       if method_ != "mip":
         relax = model.relax()
@@ -138,10 +138,12 @@ def tukey_max_neighb(method_,form_,inst_,id_,instance,G):
         ub[i] = model.objVal
         time[i] = model.Runtime
         status[i] = tmp
+      
+      model.dispose()
 
     if (method_=="mip"):
       arquivo = open(
-        os.path.join(RESULT_PATH,instance),'a'
+        os.path.join(RESULT_PATH,instance_),'a'
       )
       tmp = i
       arquivo.write(
@@ -156,7 +158,7 @@ def tukey_max_neighb(method_,form_,inst_,id_,instance,G):
       arquivo.close()
     else:
       arquivo = open(
-        os.path.join(RESULT_PATH,instance),'a'
+        os.path.join(RESULT_PATH,instance_),'a'
       )
       tmp = i
       arquivo.write(
@@ -167,12 +169,10 @@ def tukey_max_neighb(method_,form_,inst_,id_,instance,G):
       )
       arquivo.close()
         
-    model.dispose()    
-
   # end tukey for node i
 
 
-def tukey_max_miset(method_,form_,inst_,id_,instance,G):
+def tukey_max_miset(method_,instance_,G):
   
   N = nx.number_of_nodes(G)
   M = nx.number_of_edges(G)
@@ -273,7 +273,7 @@ def tukey_max_miset(method_,form_,inst_,id_,instance,G):
 
         T.clear()
 
-      #model.write(f"{method_}_{form_}_{inst_}_{id_}.lp")
+      #model.write(f"{instance_}.lp")
 
       if method_ != "mip":
         relax = model.relax()    
@@ -297,9 +297,11 @@ def tukey_max_miset(method_,form_,inst_,id_,instance,G):
         time[i] = model.Runtime
         status[i] = tmp
 
+      model.dispose()
+
     if (method_=="mip"):
       arquivo = open(
-        os.path.join(RESULT_PATH,instance),'a'
+        os.path.join(RESULT_PATH,instance_),'a'
       )
       tmp = i
       arquivo.write(
@@ -314,7 +316,7 @@ def tukey_max_miset(method_,form_,inst_,id_,instance,G):
       arquivo.close()
     else:
       arquivo = open(
-        os.path.join(RESULT_PATH,instance),'a'
+        os.path.join(RESULT_PATH,instance_),'a'
       )
       tmp = i
       arquivo.write(
@@ -324,13 +326,11 @@ def tukey_max_miset(method_,form_,inst_,id_,instance,G):
         +str(round(status[i],1))+'\n'
       )
       arquivo.close()
-
-    model.dispose()
     
   # end tukey for node i
 
 
-def tukey_max(method_,form_,inst_,id_,instance,G):
+def tukey_max(method_,instance_,G):
   
   N = nx.number_of_nodes(G)
   M = nx.number_of_edges(G)
@@ -373,7 +373,7 @@ def tukey_max(method_,form_,inst_,id_,instance,G):
     else:
       # if not clique
 
-      model = gp.Model(f"{method_}_{form_}_{inst_}_{id_}")
+      model = gp.Model(f"{instance_}")
 
       if (method_=="mip"):
         x = model.addVars(N, vtype=GRB.BINARY, name="x")
@@ -407,7 +407,7 @@ def tukey_max(method_,form_,inst_,id_,instance,G):
                 if (dm[u,s] + dm[s,w] == dm[u,w]):
                   model.addConstr(x[u] + x[w] <= 1 + x[s], "miset")
 
-      #model.write(f"{method_}_{form_}_{inst_}_{id_}.lp")
+      #model.write(f"{instance_}.lp")
 
       if method_ != "mip":
         relax = model.relax()
@@ -431,9 +431,11 @@ def tukey_max(method_,form_,inst_,id_,instance,G):
         time[i] = model.Runtime
         status[i] = tmp
 
+      model.dispose()
+
     if (method_=="mip"):
       arquivo = open(
-        os.path.join(RESULT_PATH,instance),'a'
+        os.path.join(RESULT_PATH,instance_),'a'
       )
       tmp = i
       arquivo.write(
@@ -448,7 +450,7 @@ def tukey_max(method_,form_,inst_,id_,instance,G):
       arquivo.close()
     else:
       arquivo = open(
-        os.path.join(RESULT_PATH,instance),'a'
+        os.path.join(RESULT_PATH,instance_),'a'
       )
       tmp = i
       arquivo.write(
@@ -458,13 +460,11 @@ def tukey_max(method_,form_,inst_,id_,instance,G):
         +str(round(status[i],1))+'\n'
       )
       arquivo.close()
-
-    model.dispose()
     
   # end tukey for node i
 
 
-def tukey_min(method_,form_,inst_,id_,instance,G):
+def tukey_min(method_,instance_,G):
   
   N = nx.number_of_nodes(G)
   M = nx.number_of_edges(G)
@@ -507,7 +507,7 @@ def tukey_min(method_,form_,inst_,id_,instance,G):
     else:
       # if not clique
 
-      model = gp.Model(f"{method_}_{form_}_{inst_}_{id_}")
+      model = gp.Model(f"{instance_}")
 
       if (method_=="mip"):
         x = model.addVars(N, vtype=GRB.BINARY, name="x")
@@ -541,7 +541,7 @@ def tukey_min(method_,form_,inst_,id_,instance,G):
               if (dm[u,s] + dm[s,w] == dm[u,w]):
                 model.addConstr(x[u] + x[w] >= x[s])
 
-      #model.write(f"{method_}_{form_}_{inst_}_{id_}.lp")
+      #model.write(f"{instance_}.lp")
 
       if method_ != "mip":
         relax = model.relax()
@@ -565,9 +565,11 @@ def tukey_min(method_,form_,inst_,id_,instance,G):
         time[i] = model.Runtime
         status[i] = tmp
 
+      model.dispose()
+
     if (method_=="mip"):
       arquivo = open(
-        os.path.join(RESULT_PATH,instance),'a'
+        os.path.join(RESULT_PATH,instance_),'a'
       )
       tmp = i
       arquivo.write(
@@ -582,7 +584,7 @@ def tukey_min(method_,form_,inst_,id_,instance,G):
       arquivo.close()
     else:
       arquivo = open(
-        os.path.join(RESULT_PATH,instance),'a'
+        os.path.join(RESULT_PATH,instance_),'a'
       )
       tmp = i
       arquivo.write(
@@ -592,30 +594,43 @@ def tukey_min(method_,form_,inst_,id_,instance,G):
         +str(round(status[i],1))+'\n'
       )
       arquivo.close()
-        
-    model.dispose()
 
   # end tukey for node i
 
 if __name__ == "__main__":
-  
-  for id_ in range(1,6):
-    #print("instance %d" %(id_))
-    inst_="internet_graph"
-    dim_=200
-    G = nx.read_gml(f"../instances/{inst_}/{dim_}/{inst_}_{dim_}_{id_}.gml.gz",destringizer=int)
 
-    method_="mip"
-    form_="fmax"
-    instance = f"{method_}_{form_}_{inst_}_{dim_}_{id_}.txt"
+  if len(sys.argv) < 2:
+    print("Default data : ")
+  else:
+    data_ = sys.argv[1]
+    inst_ = sys.argv[2]
+    method_ = sys.argv[3]
+    form_ = sys.argv[4]
+    dim_ = sys.argv[5]
+    id_ = sys.argv[6]
+ 
+
+  G = nx.read_gml(data_,destringizer=int)
+
+  instance_ = f"{method_}_{form_}_{inst_}_{dim_}_{id_}.txt"
+
+#  for id_ in range(1,6):
+#    #print("instance %d" %(id_))
+#    inst_="internet_graph"
+#    dim_=200
+#    G = nx.read_gml(f"../instances/{inst_}/{dim_}/{inst_}_{dim_}_{id_}.gml.gz",destringizer=int)
+
+#    method_="mip"
+#    form_="fmax"
+#    instance = f"{method_}_{form_}_{inst_}_{dim_}_{id_}.txt"
     
-    if form_ == "fmin":
-      tukey_min(method_,form_,inst_,id_,instance,G)
-    elif form_ == "fmax":
-      tukey_max(method_,form_,inst_,id_,instance,G)
-    elif form_ == "miset":
-      tukey_max_miset(method_,form_,inst_,id_,instance,G)
-    elif form_ == "neighb":
-      tukey_max_neighb(method_,form_,inst_,id_,instance,G)
+  if form_ == "fmin":
+    tukey_min(method_,instance_,G)
+  elif form_ == "fmax":
+    tukey_max(method_,instance_,G)
+  elif form_ == "miset":
+    tukey_max_miset(method_,instance_,G)
+  elif form_ == "neighb":
+    tukey_max_neighb(method_,instance_,G)
 
     G.clear()  
