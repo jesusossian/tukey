@@ -90,8 +90,8 @@ def tukey_max_neighb(method_,form_,inst_,id_,instance,G):
       # model.Params.Cuts = 0
  
       # Turn off display and heuristics
-      gp.setParam('OutputFlag', 0)
-      gp.setParam('Heuristics', 0)
+      #gp.setParam('OutputFlag', 0)
+      #gp.setParam('Heuristics', 0)
 
       obj = 0
       for j in G:
@@ -166,7 +166,9 @@ def tukey_max_neighb(method_,form_,inst_,id_,instance,G):
         +str(round(status[i],1))+'\n'
       )
       arquivo.close()
-    
+        
+    model.dispose()    
+
   # end tukey for node i
 
 
@@ -228,8 +230,8 @@ def tukey_max_miset(method_,form_,inst_,id_,instance,G):
       # model.Params.Cuts = 0
  
       # Turn off display and heuristics
-      gp.setParam('OutputFlag', 0)
-      gp.setParam('Heuristics', 0)
+      #gp.setParam('OutputFlag', 0)
+      #gp.setParam('Heuristics', 0)
 
       obj = 0
       for j in G:
@@ -322,6 +324,8 @@ def tukey_max_miset(method_,form_,inst_,id_,instance,G):
         +str(round(status[i],1))+'\n'
       )
       arquivo.close()
+
+    model.dispose()
     
   # end tukey for node i
 
@@ -384,8 +388,8 @@ def tukey_max(method_,form_,inst_,id_,instance,G):
       # model.Params.Cuts = 0
  
       # Turn off display and heuristics
-      gp.setParam('OutputFlag', 0)
-      gp.setParam('Heuristics', 0)
+      #gp.setParam('OutputFlag', 0)
+      #gp.setParam('Heuristics', 0)
 
       obj = 0
       for j in G:
@@ -454,6 +458,8 @@ def tukey_max(method_,form_,inst_,id_,instance,G):
         +str(round(status[i],1))+'\n'
       )
       arquivo.close()
+
+    model.dispose()
     
   # end tukey for node i
 
@@ -516,8 +522,8 @@ def tukey_min(method_,form_,inst_,id_,instance,G):
       # model.Params.Cuts = 0
  
       # Turn off display and heuristics
-      gp.setParam('OutputFlag', 0)
-      gp.setParam('Heuristics', 0)
+      #gp.setParam('OutputFlag', 0)
+      #gp.setParam('Heuristics', 0)
 
       obj = 0
       for j in G:
@@ -586,15 +592,17 @@ def tukey_min(method_,form_,inst_,id_,instance,G):
         +str(round(status[i],1))+'\n'
       )
       arquivo.close()
-    
+        
+    model.dispose()
+
   # end tukey for node i
 
 if __name__ == "__main__":
   
   for id_ in range(1,11):
-    print("instance %d" %(id_))
+    #print("instance %d" %(id_))
     inst_="internet_graph"
-    dim_=100
+    dim_=200
     G = nx.read_gml(f"../instances/{inst_}/{dim_}/{inst_}_{dim_}_{id_}.gml.gz",destringizer=int)
 
     method_="mip"
