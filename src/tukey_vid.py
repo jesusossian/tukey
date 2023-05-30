@@ -599,18 +599,23 @@ def tukey_min(method_,form_,inst_,id_,instance,G):
 
 if __name__ == "__main__":
   
-  for id_ in range(1,11):
+  for id_ in range(1,6):
     #print("instance %d" %(id_))
     inst_="internet_graph"
     dim_=200
     G = nx.read_gml(f"../instances/{inst_}/{dim_}/{inst_}_{dim_}_{id_}.gml.gz",destringizer=int)
 
     method_="mip"
-    form_="fmin"
+    form_="fmax"
     instance = f"{method_}_{form_}_{inst_}_{dim_}_{id_}.txt"
-    tukey_min(method_,form_,inst_,id_,instance,G)
-    #tukey_max(method_,form_,inst_,id_,instance,G)
-    #tukey_max_miset(method_,form_,inst_,id_,instance,G)
-    #tukey_max_neighb(method_,form_,inst_,id_,instance,G)
+    
+    if form_ == "fmin":
+      tukey_min(method_,form_,inst_,id_,instance,G)
+    elif form_ == "fmax":
+      tukey_max(method_,form_,inst_,id_,instance,G)
+    elif form_ == "miset":
+      tukey_max_miset(method_,form_,inst_,id_,instance,G)
+    elif form_ == "neighb":
+      tukey_max_neighb(method_,form_,inst_,id_,instance,G)
 
     G.clear()  
