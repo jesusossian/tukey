@@ -83,7 +83,7 @@ def tukey_max_neighb(method_,instance_,G):
         x = model.addVars(N, lb=0.0, ub=1.0, vtype=GRB.CONTINUOUS, name="x")
         
       # configurando parametros
-      model.Params.TimeLimit = 3600
+      model.Params.TimeLimit = 600
       model.Params.MIPGap = 1.e-6
       model.Params.Threads = 1
       # model.Params.Presolve = 0
@@ -223,7 +223,7 @@ def tukey_max_miset(method_,instance_,G):
         x = model.addVars(N, lb=0.0, ub=1.0, vtype=GRB.CONTINUOUS, name="x")
         
       # configurando parametros
-      model.Params.TimeLimit = 3600
+      model.Params.TimeLimit = 600
       model.Params.MIPGap = 1.e-6
       model.Params.Threads = 1
       # model.Params.Presolve = 0
@@ -381,7 +381,7 @@ def tukey_max(method_,instance_,G):
         x = model.addVars(N, lb=0.0, ub=1.0, vtype=GRB.CONTINUOUS, name="x")
         
       # configurando parametros
-      model.Params.TimeLimit = 3600
+      model.Params.TimeLimit = 600
       model.Params.MIPGap = 1.e-6
       model.Params.Threads = 1
       # model.Params.Presolve = 0
@@ -515,7 +515,7 @@ def tukey_min(method_,instance_,G):
         x = model.addVars(N, lb=0.0, ub=1.0, vtype=GRB.CONTINUOUS, name="x")
         
       # configurando parametros
-      model.Params.TimeLimit = 3600
+      model.Params.TimeLimit = 600
       model.Params.MIPGap = 1.e-6
       model.Params.Threads = 1
       # model.Params.Presolve = 0
