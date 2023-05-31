@@ -1,26 +1,3 @@
-import urllib.request
-import io
-import zipfile
-
-from pathlib import Path
-import os
-
-import matplotlib.pyplot as plt
-import networkx as nx
-import numpy as np
-import pandas as pd
-import gurobipy as gp
-from gurobipy import GRB
-
-import igraph as ig
-
-from itertools import combinations
-
-import sys
-from datetime import datetime, date
-
-RESULT_PATH   = Path('../result/')
-
 def is_subclique(G, nodelist):
     '''
     For each pair of nodes in nodelist whether there is an edge
@@ -75,7 +52,7 @@ def tukey_max_neighb(method_,instance_,G):
     else:
       # if not clique
 
-      model = gp.Model(f"{method_}_{form_}_{inst_}_{id_}")
+      model = gp.Model(f"{instance_}")
 
       if (method_=="mip"):
         x = model.addVars(N, vtype=GRB.BINARY, name="x")
@@ -83,7 +60,7 @@ def tukey_max_neighb(method_,instance_,G):
         x = model.addVars(N, lb=0.0, ub=1.0, vtype=GRB.CONTINUOUS, name="x")
         
       # configurando parametros
-      model.Params.TimeLimit = 600
+      model.Params.TimeLimit = 3600
       model.Params.MIPGap = 1.e-6
       model.Params.Threads = 1
       # model.Params.Presolve = 0
@@ -115,7 +92,7 @@ def tukey_max_neighb(method_,instance_,G):
                 if (dm[u,s] + dm[s,w] == dm[u,w]):
                   model.addConstr(x[u] + x[w] <= 1 + x[s], "geodesic")
 
-      #model.write(f"{instance_}.lp")
+      #model.write(f"{method_}_{instance_}.lp")
 
       if method_ != "mip":
         relax = model.relax()
@@ -138,8 +115,6 @@ def tukey_max_neighb(method_,instance_,G):
         ub[i] = model.objVal
         time[i] = model.Runtime
         status[i] = tmp
-      
-      model.dispose()
 
     if (method_=="mip"):
       arquivo = open(
@@ -168,7 +143,7 @@ def tukey_max_neighb(method_,instance_,G):
         +str(round(status[i],1))+'\n'
       )
       arquivo.close()
-        
+    
   # end tukey for node i
 
 
@@ -215,7 +190,7 @@ def tukey_max_miset(method_,instance_,G):
     else:
       # if not clique
 
-      model = gp.Model(f"{method_}_{form_}_{inst_}_{id_}")
+      model = gp.Model(f"{instance_}")
 
       if (method_=="mip"):
         x = model.addVars(N, vtype=GRB.BINARY, name="x")
@@ -223,7 +198,7 @@ def tukey_max_miset(method_,instance_,G):
         x = model.addVars(N, lb=0.0, ub=1.0, vtype=GRB.CONTINUOUS, name="x")
         
       # configurando parametros
-      model.Params.TimeLimit = 600
+      model.Params.TimeLimit = 3600
       model.Params.MIPGap = 1.e-6
       model.Params.Threads = 1
       # model.Params.Presolve = 0
@@ -273,7 +248,7 @@ def tukey_max_miset(method_,instance_,G):
 
         T.clear()
 
-      #model.write(f"{instance_}.lp")
+      #model.write(f"{method_}_{instance_}.lp")
 
       if method_ != "mip":
         relax = model.relax()    
@@ -296,8 +271,6 @@ def tukey_max_miset(method_,instance_,G):
         ub[i] = model.objVal
         time[i] = model.Runtime
         status[i] = tmp
-
-      model.dispose()
 
     if (method_=="mip"):
       arquivo = open(
@@ -381,7 +354,7 @@ def tukey_max(method_,instance_,G):
         x = model.addVars(N, lb=0.0, ub=1.0, vtype=GRB.CONTINUOUS, name="x")
         
       # configurando parametros
-      model.Params.TimeLimit = 600
+      model.Params.TimeLimit = 3600
       model.Params.MIPGap = 1.e-6
       model.Params.Threads = 1
       # model.Params.Presolve = 0
@@ -407,7 +380,7 @@ def tukey_max(method_,instance_,G):
                 if (dm[u,s] + dm[s,w] == dm[u,w]):
                   model.addConstr(x[u] + x[w] <= 1 + x[s], "miset")
 
-      #model.write(f"{instance_}.lp")
+      #model.write(f"{form_}_{inst_}.lp")
 
       if method_ != "mip":
         relax = model.relax()
@@ -430,8 +403,6 @@ def tukey_max(method_,instance_,G):
         ub[i] = model.objVal
         time[i] = model.Runtime
         status[i] = tmp
-
-      model.dispose()
 
     if (method_=="mip"):
       arquivo = open(
@@ -515,7 +486,7 @@ def tukey_min(method_,instance_,G):
         x = model.addVars(N, lb=0.0, ub=1.0, vtype=GRB.CONTINUOUS, name="x")
         
       # configurando parametros
-      model.Params.TimeLimit = 600
+      model.Params.TimeLimit = 3600
       model.Params.MIPGap = 1.e-6
       model.Params.Threads = 1
       # model.Params.Presolve = 0
@@ -524,6 +495,9 @@ def tukey_min(method_,instance_,G):
       # Turn off display and heuristics
       #gp.setParam('OutputFlag', 0)
       #gp.setParam('Heuristics', 0)
+
+      # Open log file
+      # logfile = open('{instance_}.log', 'w')
 
       obj = 0
       for j in G:
@@ -565,8 +539,6 @@ def tukey_min(method_,instance_,G):
         time[i] = model.Runtime
         status[i] = tmp
 
-      model.dispose()
-
     if (method_=="mip"):
       arquivo = open(
         os.path.join(RESULT_PATH,instance_),'a'
@@ -594,43 +566,6 @@ def tukey_min(method_,instance_,G):
         +str(round(status[i],1))+'\n'
       )
       arquivo.close()
-
+    
   # end tukey for node i
 
-if __name__ == "__main__":
-
-  if len(sys.argv) < 2:
-    print("Default data : ")
-  else:
-    data_ = sys.argv[1]
-    inst_ = sys.argv[2]
-    method_ = sys.argv[3]
-    form_ = sys.argv[4]
-    dim_ = sys.argv[5]
-    id_ = sys.argv[6]
- 
-
-  G = nx.read_gml(data_,destringizer=int)
-
-  instance_ = f"{method_}_{form_}_{inst_}_{dim_}_{id_}.txt"
-
-#  for id_ in range(1,6):
-#    #print("instance %d" %(id_))
-#    inst_="internet_graph"
-#    dim_=200
-#    G = nx.read_gml(f"../instances/{inst_}/{dim_}/{inst_}_{dim_}_{id_}.gml.gz",destringizer=int)
-
-#    method_="mip"
-#    form_="fmax"
-#    instance = f"{method_}_{form_}_{inst_}_{dim_}_{id_}.txt"
-    
-  if form_ == "fmin":
-    tukey_min(method_,instance_,G)
-  elif form_ == "fmax":
-    tukey_max(method_,instance_,G)
-  elif form_ == "miset":
-    tukey_max_miset(method_,instance_,G)
-  elif form_ == "neighb":
-    tukey_max_neighb(method_,instance_,G)
-
-    G.clear()  

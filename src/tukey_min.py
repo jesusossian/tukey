@@ -1,39 +1,14 @@
-import urllib.request
-import io
-import zipfile
-
 from pathlib import Path
 import os
-
-import matplotlib.pyplot as plt
 import networkx as nx
 import numpy as np
-import pandas as pd
 import gurobipy as gp
 from gurobipy import GRB
+import fgraphs as fg
 
-import igraph as ig
+#RESULT_PATH = Path('../result/')
 
-from itertools import combinations
-
-import sys
-from datetime import datetime, date
-
-RESULT_PATH   = Path('../result/')
-
-def is_subclique(G, nodelist):
-    '''
-    For each pair of nodes in nodelist whether there is an edge
-    if any edge is missing, we know that it's not a subclique.
-    if all edges are there, it is a subclique
-    '''
-    for (u,v) in combinations(nodelist,2):  #check each possible pair
-        if not G.has_edge(u,v):
-            return False #if any edge is missing we're done
-    return True  #if we get to here, then every edge was there.  It's True.
-
-
-def tukey_min(method_,form_,inst_,id_,instance,G):
+def tukey_min(method_,instance_,G,result_path):
   
   N = nx.number_of_nodes(G)
   M = nx.number_of_edges(G)
@@ -46,19 +21,12 @@ def tukey_min(method_,form_,inst_,id_,instance,G):
      for j in range(0,N):
         dm[i][j] = len(p[i][j])-1
 
-  # fmin
-#  form_="fmin"
-#  method_="mip"
-
   lb = np.zeros((N), dtype=float)
   ub = np.zeros((N), dtype=float)
   time = np.zeros((N), dtype=float)
   gap = np.zeros((N), dtype=float)
   nodes = np.zeros((N), dtype=float)
   status = np.zeros((N), dtype=float)
-
-#  instance = f"{method_}_{form_}_{inst_}_{dim_}_{id_}.txt"
-#  #instance = f"{method_}_{form_}_{inst_}.txt"
 
   for i in G: # begin tukey node i
 
@@ -71,7 +39,7 @@ def tukey_min(method_,form_,inst_,id_,instance,G):
       lista.append(k)
     
 
-    if(is_subclique(G, lista)):
+    if(fg.is_subclique(G, lista)):
       # if clique
       #print("tukey[%d] = 1" %i)
       lb[i] = 1
@@ -83,29 +51,29 @@ def tukey_min(method_,form_,inst_,id_,instance,G):
     else:
       # if not clique
 
-      model = gp.Model(f"{method_}_{form_}_{inst_}_{id_}")
+      model = gp.Model(f"{instance_}")
 
       if (method_=="mip"):
         x = model.addVars(N, vtype=GRB.BINARY, name="x")
       else:
         x = model.addVars(N, lb=0.0, ub=1.0, vtype=GRB.CONTINUOUS, name="x")
-    
-      obj = 0
-      for j in G:
-        obj += 1 * x[j]
-         
-      model.setObjective(obj, GRB.MINIMIZE)
-    
+        
       # configurando parametros
-      model.Params.TimeLimit = 3600
+      model.Params.TimeLimit = 600
       model.Params.MIPGap = 1.e-6
       model.Params.Threads = 1
       # model.Params.Presolve = 0
       # model.Params.Cuts = 0
  
       # Turn off display and heuristics
-      gp.setParam('OutputFlag', 0)
-      gp.setParam('Heuristics', 0)
+      #gp.setParam('OutputFlag', 0)
+      #gp.setParam('Heuristics', 0)
+
+      obj = 0
+      for j in G:
+        obj += 1 * x[j]
+         
+      model.setObjective(obj, GRB.MINIMIZE)
 
       model.addConstr(x[i] == 1)
 
@@ -117,13 +85,13 @@ def tukey_min(method_,form_,inst_,id_,instance,G):
               if (dm[u,s] + dm[s,w] == dm[u,w]):
                 model.addConstr(x[u] + x[w] >= x[s])
 
-      #x[i].Start = 1.0
-      #relax = model.relax()    
-      #relax.optimize()
-    
-      #model.write(f"{method_}_{form_}_{inst_}_{id_}.lp")
+      #model.write(f"{instance_}.lp")
 
-      model.optimize()
+      if method_ != "mip":
+        relax = model.relax()
+        relax.optimize()
+      else:
+        model.optimize()
 
       tmp = 0
       if model.status == GRB.OPTIMAL:
@@ -141,10 +109,11 @@ def tukey_min(method_,form_,inst_,id_,instance,G):
         time[i] = model.Runtime
         status[i] = tmp
 
+      model.dispose()
+  
+  for i in G:
     if (method_=="mip"):
-      arquivo = open(
-        os.path.join(RESULT_PATH,instance),'a'
-      )
+      arquivo = open(os.path.join(result_path,instance_),'a')
       tmp = i
       arquivo.write(
         str(tmp)+';'
@@ -157,9 +126,7 @@ def tukey_min(method_,form_,inst_,id_,instance,G):
       )
       arquivo.close()
     else:
-      arquivo = open(
-        os.path.join(RESULT_PATH,instance),'a'
-      )
+      arquivo = open(os.path.join(result_path,instance_),'a')
       tmp = i
       arquivo.write(
         str(tmp)+';'
@@ -168,39 +135,5 @@ def tukey_min(method_,form_,inst_,id_,instance,G):
         +str(round(status[i],1))+'\n'
       )
       arquivo.close()
-    
+
   # end tukey for node i
-
-#  tkm = np.sum(ub)
-#  tktime = np.sum(time)
-
-if __name__ == "__main__":
-
-  #instance
-
-#  instance = f"{method_}_{form_}_{inst_}_{dim_}_{id_}.txt"
-#  instance = f"{method_}_{form_}_{inst_}.txt"
-  
-  for id_ in range(1,5):
-    print("instance %d" %(id_))
-    method_="mip"
-    form_="fmin"
-    inst_="internet_graph"
-    dim_=100
-    instance = f"{method_}_{form_}_{inst_}_{dim_}_{id_}.txt"
-    G = nx.read_gml(f"../instances/{inst_}/{dim_}/{inst_}_{dim_}_{id_}.gml.gz",destringizer=int)
-
-    tukey_min(method_,form_,inst_,id_,instance,G)
-
-    G.clear()
-
-  #inst_="karate"
-  #G = nx.karate_club_graph()
-
-  #inst_="dodecahedral_graph"
-  #G = nx.dodecahedral_graph()
-
-  #inst_="karate"
-  #G = nx.karate_club_graph()
-
-  
