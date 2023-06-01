@@ -7,7 +7,7 @@ dim_=200
 mkdir -p ../result/${inst_}
 mkdir -p ../report/${inst_}
 
-for form_ in fmax #fmin fmax miset neighb
+for form_ in fmin miset neighb
 do
 	for id in {1..3}
 	do

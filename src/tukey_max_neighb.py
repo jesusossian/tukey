@@ -86,16 +86,13 @@ def tukey_max_neighb(method_,instance_,G,result_path):
 
       #model.write(f"{instance_}.lp")
 
-      if method_ == "mip":
-        model.optimize()
-      else:
-        relax = model.relax()
-        relax.optimize()
+      model.optimize()
 
-      tmp = 0    
+      tmp = 0
+      if model.status == GRB.OPTIMAL:
+        tmp = 1
+
       if method_ == "mip":
-        if model.status == GRB.OPTIMAL:
-          tmp = 1
         lb[i] = N - model.objBound
         ub[i] = N - model.objVal
         gap[i] = model.MIPGap
@@ -103,10 +100,8 @@ def tukey_max_neighb(method_,instance_,G,result_path):
         nodes[i] = model.NodeCount
         status[i] = tmp
       else:
-        if relax.status == GRB.OPTIMAL:
-          tmp = 1
-        ub[i] = N - relax.objVal
-        time[i] = relax.Runtime
+        ub[i] = N - model.objVal
+        time[i] = model.Runtime
         status[i] = tmp
 
       model.dispose()
@@ -137,3 +132,5 @@ def tukey_max_neighb(method_,instance_,G,result_path):
       +str(round(status[i],1))+'\n'
       )
       arquivo.close()
+  
+  G.clear()

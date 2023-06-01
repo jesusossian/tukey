@@ -28,8 +28,9 @@ def tukey_min(method_,instance_,G,result_path):
   nodes = np.zeros((N), dtype=float)
   status = np.zeros((N), dtype=float)
 
-  for i in G: # begin tukey node i
+  for i in G:
 
+    # begin tukey node i
     #print("node %d" %i)
     
     Ni = nx.neighbors(G,i)
@@ -87,16 +88,13 @@ def tukey_min(method_,instance_,G,result_path):
 
       #model.write(f"{instance_}.lp")
 
-      if method_ == "mip":
-        model.optimize()
-      else:
-        relax = model.relax()
-        relax.optimize()
+      model.optimize()
 
       tmp = 0
+      if model.status == GRB.OPTIMAL:
+        tmp = 1
+ 
       if method_ == "mip":
-        if model.status == GRB.OPTIMAL:
-          tmp = 1
         lb[i] = model.objBound
         ub[i] = model.objVal
         gap[i] = model.MIPGap
@@ -104,13 +102,13 @@ def tukey_min(method_,instance_,G,result_path):
         nodes[i] = model.NodeCount
         status[i] = tmp
       else:
-        if relax.status == GRB.OPTIMAL:
-          tmp = 1
-        ub[i] = relax.objVal
-        time[i] = relax.Runtime
+        ub[i] = model.objVal
+        time[i] = model.Runtime
         status[i] = tmp
 
       model.dispose()
+
+      # end tukey for node i
   
   for i in G:
     if (method_=="mip"):
@@ -137,4 +135,4 @@ def tukey_min(method_,instance_,G,result_path):
       )
       arquivo.close()
 
-  # end tukey for node i
+  G.clear()
