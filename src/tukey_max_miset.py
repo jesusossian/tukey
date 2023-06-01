@@ -103,18 +103,18 @@ def tukey_max_miset(method_,instance_,G,result_path):
 
       T.clear()
 
-      #relax = model.relax()
-      #relax.optimize()
-
       #model.write(f"{instance_}.lp")
 
-      model.optimize()
+      if method_ == "mip":
+        model.optimize()
+      else:
+        relax = model.relax()
+        relax.optimize()
 
       tmp = 0
-      if model.status == GRB.OPTIMAL:
-        tmp = 1
-    
       if (method_=="mip"):
+        if model.status == GRB.OPTIMAL:
+          tmp = 1
         lb[i] = N - model.objBound
         ub[i] = N - model.objVal
         gap[i] = model.MIPGap
@@ -122,8 +122,10 @@ def tukey_max_miset(method_,instance_,G,result_path):
         nodes[i] = model.NodeCount
         status[i] = tmp
       else:
-        ub[i] = N - model.objVal
-        time[i] = model.Runtime
+        if relax.status == GRB.OPTIMAL:
+          tmp = 1
+        ub[i] = N - relax.objVal
+        time[i] = relax.Runtime
         status[i] = tmp
 
       model.dispose()

@@ -87,17 +87,16 @@ def tukey_min(method_,instance_,G,result_path):
 
       #model.write(f"{instance_}.lp")
 
-      if method_ != "mip":
+      if method_ == "mip":
+        model.optimize()
+      else:
         relax = model.relax()
         relax.optimize()
-      else:
-        model.optimize()
 
       tmp = 0
-      if model.status == GRB.OPTIMAL:
-        tmp = 1
-
-      if (method_=="mip"):
+      if method_ == "mip":
+        if model.status == GRB.OPTIMAL:
+          tmp = 1
         lb[i] = model.objBound
         ub[i] = model.objVal
         gap[i] = model.MIPGap
@@ -105,8 +104,10 @@ def tukey_min(method_,instance_,G,result_path):
         nodes[i] = model.NodeCount
         status[i] = tmp
       else:
-        ub[i] = model.objVal
-        time[i] = model.Runtime
+        if relax.status == GRB.OPTIMAL:
+          tmp = 1
+        ub[i] = relax.objVal
+        time[i] = relax.Runtime
         status[i] = tmp
 
       model.dispose()

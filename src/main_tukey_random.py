@@ -32,9 +32,9 @@ if __name__ == "__main__":
     print("Default data : ")
   else:
     data_ = sys.argv[1]
-    inst_ = sys.argv[2]
-    method_ = sys.argv[3]
-    form_ = sys.argv[4]
+    method_ = sys.argv[2]
+    form_ = sys.argv[3]
+    inst_ = sys.argv[4]
     dim_ = sys.argv[5]
     id_ = sys.argv[6]
  

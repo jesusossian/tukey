@@ -24,8 +24,7 @@ import tukey_max_miset as miset
 import tukey_max_neighb as neighb
 import tukey_min as min
 
-RESULT_PATH   = Path('../result/')
-
+#RESULT_PATH   = Path('../result/')
 
 if __name__ == "__main__":
 
@@ -33,9 +32,9 @@ if __name__ == "__main__":
     print("Default data file : ")
   else:
     data_ = sys.argv[1]
-    inst_ = sys.argv[2]
-    method_ = sys.argv[3]
-    form_ = sys.argv[4]
+    method_ = sys.argv[2]
+    form_ = sys.argv[3]
+    inst_ = sys.argv[4]
   
     result_path = Path(f"../result/{inst_}")
 
