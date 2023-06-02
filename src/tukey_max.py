@@ -30,11 +30,11 @@ def tukey_max(method_,instance_,G,result_path):
 
         Ni = nx.neighbors(G,i)
 
-        list0 = []
+        listNi = []
         for k in Ni:
-            list0.append(k)
+            listNi.append(k)
     
-        if(fg.is_subclique(G, list0)):
+        if(fg.is_subclique(G, listNi)):
             #print("tukey[%d] = 1" %i)
             lb[i] = 1
             ub[i] = 1
@@ -47,11 +47,11 @@ def tukey_max(method_,instance_,G,result_path):
             model = gp.Model(f"{instance_}")
 
             # configurando parametros
-            # model.Params.TimeLimit = 60
+            model.Params.TimeLimit = 600
             model.Params.MIPGap = 1.e-6
             model.Params.Threads = 1
-            # model.Params.Presolve = 0
-            # model.Params.Cuts = 0
+            #model.Params.Presolve = 0
+            #model.Params.Cuts = 0
 
             if (method_=="mip"):
                 x = model.addVars(N, vtype=GRB.BINARY, name="x")
@@ -70,13 +70,28 @@ def tukey_max(method_,instance_,G,result_path):
 
             model.addConstr(x[i] == 0)
 
+            # geodesic
+            #for u in range(0,N):
+            #    for w in range(u+1,N):
+            #        #if dm[u,w] <= N:
+            #            for s in range(0,N):
+            #                if (s != u) and (s != w):
+            #                    if (dm[u,s] + dm[s,w] == dm[u,w]):
+            #                        model.addConstr(x[u] + x[w] <= 1 + x[s], "geodesic")
+
+            # geodesic neighbors 
             for u in range(0,N):
+                Nu = nx.neighbors(G,u)
+            
+                listNu = []
+                for j in Nu:
+                    listNu.append(j)
+
                 for w in range(u+1,N):
-                    #if dm[u,w] <= N:
-                        for s in range(0,N):
-                            if (s != u) and (s != w):
-                                if (dm[u,s] + dm[s,w] == dm[u,w]):
-                                    model.addConstr(x[u] + x[w] <= 1 + x[s])
+                    if (w != u) and (w not in listNu):
+                        for s in listNu:
+                            if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
+                                model.addConstr(x[u] + x[w] <= 1 + x[s], "geodesic")
 
             #model.write(f"{instance_}.lp")
 

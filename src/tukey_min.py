@@ -63,8 +63,8 @@ def tukey_min(method_,instance_,G,result_path):
       model.Params.TimeLimit = 600
       model.Params.MIPGap = 1.e-6
       model.Params.Threads = 1
-      # model.Params.Presolve = 0
-      # model.Params.Cuts = 0
+      #model.Params.Presolve = 0
+      #model.Params.Cuts = 0
  
       # Turn off display and heuristics
       #gp.setParam('OutputFlag', 0)
@@ -78,13 +78,28 @@ def tukey_min(method_,instance_,G,result_path):
 
       model.addConstr(x[i] == 1)
 
+      # geodesic
+      #for u in range(0,N):
+      #  for w in range(u+1,N):
+      #    #if dm[u,w] <= N:
+      #    for s in range(0,N):
+      #      if (s != u) and (s != w):
+      #        if (dm[u,s] + dm[s,w] == dm[u,w]):
+      #          model.addConstr(x[u] + x[w] >= x[s], "geodesic")
+
+      # geodesic neighbors
       for u in range(0,N):
+        Nu = nx.neighbors(G,u)
+            
+        listNu = []
+        for j in Nu:
+          listNu.append(j)
+
         for w in range(u+1,N):
-          #if dm[u,w] <= N:
-          for s in range(0,N):
-            if (s != u) and (s != w):
-              if (dm[u,s] + dm[s,w] == dm[u,w]):
-                model.addConstr(x[u] + x[w] >= x[s])
+          if (w != u) and (w not in listNu):
+            for s in listNu:
+              if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
+                model.addConstr(x[u] + x[w] >= x[s], "geodesic")
 
       #model.write(f"{instance_}.lp")
 

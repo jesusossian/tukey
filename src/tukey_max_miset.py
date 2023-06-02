@@ -29,11 +29,11 @@ def tukey_max_miset(method_,instance_,G,result_path):
   for i in G:
     Ni = nx.neighbors(G,i)
 
-    list0 = []
+    listNi = []
     for k in Ni:
-        list0.append(k)
+        listNi.append(k)
     
-    if(fg.is_subclique(G, list0)):
+    if(fg.is_subclique(G, listNi)):
       #print("tukey[%d] = 1" %i)
       lb[i] = 1
       ub[i] = 1
@@ -46,11 +46,11 @@ def tukey_max_miset(method_,instance_,G,result_path):
       model = gp.Model(f"{instance_}")
 
       # configurando parametros
-      # model.Params.TimeLimit = 60
+      model.Params.TimeLimit = 600
       model.Params.MIPGap = 1.e-6
       model.Params.Threads = 1
-      # model.Params.Presolve = 0
-      # model.Params.Cuts = 0
+      #model.Params.Presolve = 0
+      #model.Params.Cuts = 0
 
       if (method_=="mip"):
         x = model.addVars(N, vtype=GRB.BINARY, name="x")
@@ -69,6 +69,7 @@ def tukey_max_miset(method_,instance_,G,result_path):
 
       model.addConstr(x[i] == 0, "fix_x")
 
+      # geodesic
       for u in range(0,N):
         for w in range(u+1,N):
           #if dm[u,w] <= N:
@@ -77,28 +78,27 @@ def tukey_max_miset(method_,instance_,G,result_path):
                 if (dm[u,s] + dm[s,w] == dm[u,w]):
                   model.addConstr(x[u] + x[w] <= 1 + x[s], "geodesic")
 
-
-      # maximal independent set constraints
+      # maximal independent set
       for u in range(0,N):
         Nu = nx.neighbors(G,u)
-        list2 = []
+        listNu = []
         for k in Nu:
-          list2.append(k)
+          listNu.append(k)
 
-      T = nx.Graph()
-      T.add_nodes_from(list2)
-      for (a,b) in combinations(list2,2):
-        if G.has_edge(a,b):
-          T.add_edge(a,b)
+        T = nx.Graph()
+        T.add_nodes_from(listNu)
+        for (a,b) in combinations(listNu,2):
+          if G.has_edge(a,b):
+            T.add_edge(a,b)
 
-      #nx.draw(T,  with_labels = True)
+        #nx.draw(T,  with_labels = True)
 
-      Im = nx.maximal_independent_set(T)
+        Im = nx.maximal_independent_set(T)
 
-      if (len(Im) > 0):
-        constr = 0
-        for k in Im:
-          constr += 1 * x[k]
+        if (len(Im) > 0):
+          constr = 0
+          for k in Im:
+            constr += 1 * x[k]
           model.addConstr(constr <= 1 + (len(Im)- 1)*x[u], "max_ind_set")
 
       T.clear()

@@ -7,8 +7,7 @@ from gurobipy import GRB
 import fgraphs as fg
 from itertools import combinations
 
-
-def tukey_min(method_,instance_,G,result_path):
+def tukey_min_miset(method_,instance_,G,result_path):
   
   N = nx.number_of_nodes(G)
   M = nx.number_of_edges(G)
@@ -29,18 +28,16 @@ def tukey_min(method_,instance_,G,result_path):
   status = np.zeros((N), dtype=float)
 
   for i in G:
-
-    # begin tukey node i
+    #begin tukey node i
     #print("node %d" %i)
     
     Ni = nx.neighbors(G,i)
 
-    lista = []
+    listaNi = []
     for k in Ni:
-      lista.append(k)
+      listaNi.append(k)
     
-
-    if(fg.is_subclique(G, lista)):
+    if(fg.is_subclique(G, listaNi)):
       # if clique
       #print("tukey[%d] = 1" %i)
       lb[i] = 1
@@ -51,7 +48,6 @@ def tukey_min(method_,instance_,G,result_path):
       status[i] = 1
     else:
       # if not clique
-
       model = gp.Model(f"{instance_}")
 
       if (method_=="mip"):
@@ -63,8 +59,8 @@ def tukey_min(method_,instance_,G,result_path):
       model.Params.TimeLimit = 600
       model.Params.MIPGap = 1.e-6
       model.Params.Threads = 1
-      # model.Params.Presolve = 0
-      # model.Params.Cuts = 0
+      #model.Params.Presolve = 0
+      #model.Params.Cuts = 0
  
       # Turn off display and heuristics
       #gp.setParam('OutputFlag', 0)
@@ -76,44 +72,45 @@ def tukey_min(method_,instance_,G,result_path):
          
       model.setObjective(obj, GRB.MINIMIZE)
 
-      model.addConstr(x[i] == 1)      
+      model.addConstr(x[i] == 1, "fix_x")
 
+      # geodesic neighbors
       for u in range(0,N):
         Nu = nx.neighbors(G,u)
             
-        lNu = []
+        listNu = []
         for j in Nu:
-          lNu.append(j)
+          listNu.append(j)
 
         for w in range(0,N):
-          if (w != u) and (w not in lNu):
-            for s in lNu:
-              if (s != w):
-                if (dm[u,s] + dm[s,w] == dm[u,w]):
+          if (w != u) and (w not in listNu):
+            for s in listNu:
+              if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
                   model.addConstr(x[u] + x[w] >= x[s], "geodesic")
 
-      # maximal independent set constraints
+      # maximal independent set
       for u in range(0,N):
         Nu = nx.neighbors(G,u)
-        list2 = []
+
+        listNu = []
         for k in Nu:
-          list2.append(k)
+          listNu.append(k)
 
-      T = nx.Graph()
-      T.add_nodes_from(list2)
-      for (a,b) in combinations(list2,2):
-        if G.has_edge(a,b):
-          T.add_edge(a,b)
+        T = nx.Graph()
+        T.add_nodes_from(listNu)
+        for (a,b) in combinations(listNu,2):
+          if G.has_edge(a,b):
+            T.add_edge(a,b)
 
-      #nx.draw(T,  with_labels = True)
+        #nx.draw(T,  with_labels = True)
 
-      Im = nx.maximal_independent_set(T)
+        Im = nx.maximal_independent_set(T)
 
-      if (len(Im) > 0):
-        constr = 0
-        for k in Im:
-          constr += 1 * x[k]
-          model.addConstr(constr <= 1 + (len(Im)- 1)*x[u], "max_ind_set")
+        if (len(Im) > 0):
+          constr = 0
+          for k in Im:
+            constr += 1 * x[k]
+          model.addConstr(constr >= (len(Im)- 1)*x[u], "miset")
 
       #model.write(f"{instance_}.lp")
 

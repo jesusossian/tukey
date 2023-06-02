@@ -1,13 +1,13 @@
 #!/bin/bash
 
 inst_=internet_graph
-method_=lp
-dim_=200
+method_=mip
+dim_=100
 
 mkdir -p ../result/${inst_}
 mkdir -p ../report/${inst_}
 
-for form_ in fmin miset neighb
+for form_ in fmin minmiset fmax maxmiset 
 do
 	for id in {1..3}
 	do
