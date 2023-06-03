@@ -1,0 +1,1514 @@
+Set parameter Username
+Academic license - for non-commercial use only - expires 2023-12-01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139067 nonzeros
+Model fingerprint: 0x428edfd1
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3224 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.09s
+Presolved: 199 rows, 43863 columns, 129153 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    4.3270000e+33   6.390154e+32   4.327000e+03      0s
+     378    8.7649198e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     505 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 6.8556272e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     948    8.7649198e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 948 iterations and 0.16 seconds (0.20 work units)
+Optimal objective  8.764919819e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139073 nonzeros
+Model fingerprint: 0x0f2dade3
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3265 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130215 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.6470000e+33   4.316875e+32   3.647000e+03      0s
+     456    7.8408485e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     138 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 6.8278716e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     656    7.8408485e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 656 iterations and 0.14 seconds (0.22 work units)
+Optimal objective  7.840848503e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139072 nonzeros
+Model fingerprint: 0x40531116
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3285 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 129234 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    4.7970000e+33   6.103885e+32   4.797000e+03      0s
+     466    7.4074540e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     225 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 2.8310687e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     745    7.4074540e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 745 iterations and 0.14 seconds (0.21 work units)
+Optimal objective  7.407454038e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139065 nonzeros
+Model fingerprint: 0x2f8cea5f
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3269 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 128932 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    7.3610000e+33   1.054357e+33   7.361000e+03      0s
+     470    9.2216993e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     262 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 1.0241807e-14      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     788    9.2216993e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 788 iterations and 0.15 seconds (0.22 work units)
+Optimal objective  9.221699256e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139067 nonzeros
+Model fingerprint: 0xc1c6e3d4
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3281 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 129398 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    6.0390000e+33   8.900424e+32   6.039000e+03      0s
+     389    8.2995184e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     121 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 4.3853809e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     553    8.2995184e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 553 iterations and 0.14 seconds (0.20 work units)
+Optimal objective  8.299518427e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139072 nonzeros
+Model fingerprint: 0x8392cc24
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3252 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 129483 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    4.6600000e+33   7.066520e+32   4.660000e+03      0s
+     581    8.2716795e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+      67 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 4.1980308e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     700    8.2716795e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 700 iterations and 0.15 seconds (0.22 work units)
+Optimal objective  8.271679450e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139070 nonzeros
+Model fingerprint: 0xfd6028d7
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3179 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 128530 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    6.5550000e+33   9.441165e+32   6.555000e+03      0s
+     655    9.9982040e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     181 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 5.8841820e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     886    9.9982040e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 886 iterations and 0.16 seconds (0.24 work units)
+Optimal objective  9.998204041e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139067 nonzeros
+Model fingerprint: 0x4bbe597c
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3170 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 127634 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.3370000e+33   5.423668e+32   3.337000e+03      0s
+     422    8.2831208e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     277 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 7.6882944e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     751    8.2831208e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 751 iterations and 0.14 seconds (0.21 work units)
+Optimal objective  8.283120815e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139063 nonzeros
+Model fingerprint: 0x58f08cd7
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3232 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 128942 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    7.8280000e+33   1.124822e+33   7.828000e+03      0s
+     614    9.0510702e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     193 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 4.5241588e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     861    9.0510702e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 861 iterations and 0.15 seconds (0.23 work units)
+Optimal objective  9.051070164e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139067 nonzeros
+Model fingerprint: 0xe4d78838
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3154 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 129774 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.4360000e+33   5.510074e+32   3.436000e+03      0s
+     566    8.1881930e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     163 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 6.7723605e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     774    8.1881930e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 774 iterations and 0.15 seconds (0.23 work units)
+Optimal objective  8.188192955e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139070 nonzeros
+Model fingerprint: 0x336db111
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3306 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 129563 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    5.9580000e+33   6.560625e+32   5.958000e+03      0s
+     731    8.2209221e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     204 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 8.9789287e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     987    8.2209221e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 987 iterations and 0.17 seconds (0.25 work units)
+Optimal objective  8.220922092e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139074 nonzeros
+Model fingerprint: 0x508b30df
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3232 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130551 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.1450000e+33   2.558125e+32   2.145000e+03      0s
+     401    6.0322306e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     263 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 5.9952043e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     688    6.0322306e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 688 iterations and 0.14 seconds (0.20 work units)
+Optimal objective  6.032230641e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139069 nonzeros
+Model fingerprint: 0x2a3a0e22
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3285 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130287 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.0870000e+33   1.976250e+32   2.087000e+03      0s
+     456    6.3437036e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     208 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 5.1902926e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     725    6.3437036e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 725 iterations and 0.14 seconds (0.21 work units)
+Optimal objective  6.343703595e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139067 nonzeros
+Model fingerprint: 0x6330d4b1
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3203 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 129187 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.4460000e+33   5.570631e+32   3.446000e+03      0s
+     560    8.2512980e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+      61 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 2.9143354e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     662    8.2512980e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 662 iterations and 0.15 seconds (0.23 work units)
+Optimal objective  8.251297988e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139064 nonzeros
+Model fingerprint: 0x9aa7fe1e
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3336 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130474 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.8550000e+33   2.204375e+32   1.855000e+03      0s
+     356    5.9700574e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     142 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 8.6181062e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     563    5.9700574e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 563 iterations and 0.13 seconds (0.20 work units)
+Optimal objective  5.970057438e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139069 nonzeros
+Model fingerprint: 0x341d75eb
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3239 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 129975 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.7960000e+33   3.969375e+32   3.796000e+03      0s
+     596    8.1653744e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     417 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 7.7715612e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    1060    8.1653744e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 1060 iterations and 0.15 seconds (0.22 work units)
+Optimal objective  8.165374356e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139066 nonzeros
+Model fingerprint: 0xbdea031e
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3190 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 129401 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.8160000e+33   3.654889e+32   2.816000e+03      0s
+     391    6.1247170e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     319 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 2.2065683e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     745    6.1247170e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 745 iterations and 0.14 seconds (0.21 work units)
+Optimal objective  6.124717025e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139066 nonzeros
+Model fingerprint: 0x365fdbbc
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3168 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 126616 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    5.1857500e+33   7.406162e+32   5.185750e+03      0s
+     511    1.0278004e+02   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     455 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 7.0915496e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    1027    1.0278004e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 1027 iterations and 0.15 seconds (0.22 work units)
+Optimal objective  1.027800380e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139067 nonzeros
+Model fingerprint: 0xc84f2a0b
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3234 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 128170 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.5917500e+33   6.093176e+32   3.591750e+03      0s
+     551    7.8458926e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     396 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 5.0515148e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    1003    7.8458926e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 1003 iterations and 0.14 seconds (0.22 work units)
+Optimal objective  7.845892624e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139074 nonzeros
+Model fingerprint: 0x8fa6914b
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3193 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130915 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.2200000e+32   1.412500e+31   1.220000e+02      0s
+     390    5.4118746e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     167 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 1.2628787e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     593    5.4118746e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 593 iterations and 0.13 seconds (0.20 work units)
+Optimal objective  5.411874611e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139071 nonzeros
+Model fingerprint: 0xb2b20e26
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3239 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130885 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.1000000e+32   1.337500e+31   1.100000e+02      0s
+     413    5.0933206e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+      83 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 3.4416914e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     532    5.0933206e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 532 iterations and 0.13 seconds (0.21 work units)
+Optimal objective  5.093320579e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139074 nonzeros
+Model fingerprint: 0xc0768fb1
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3313 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130719 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    4.7700000e+32   5.656250e+31   4.770000e+02      0s
+     360    6.3649284e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     103 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 2.6645353e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     521    6.3649284e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 521 iterations and 0.13 seconds (0.20 work units)
+Optimal objective  6.364928385e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139068 nonzeros
+Model fingerprint: 0x056506ee
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3296 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130642 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.1170000e+33   1.338125e+32   1.117000e+03      0s
+     423    5.9672694e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     114 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 5.5233595e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     577    5.9672694e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 577 iterations and 0.14 seconds (0.21 work units)
+Optimal objective  5.967269352e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139069 nonzeros
+Model fingerprint: 0xc3d7d1c7
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3300 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130634 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    9.7300000e+32   1.120625e+32   9.730000e+02      0s
+     390    5.8804713e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     274 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 8.3544283e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     711    5.8804713e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 711 iterations and 0.14 seconds (0.21 work units)
+Optimal objective  5.880471347e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139070 nonzeros
+Model fingerprint: 0x7cc2ead1
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3241 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130021 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.1890000e+33   2.900192e+32   2.189000e+03      0s
+     342    6.1394300e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     229 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 1.0200174e-14      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     613    6.1394300e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 613 iterations and 0.13 seconds (0.20 work units)
+Optimal objective  6.139430049e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139064 nonzeros
+Model fingerprint: 0x09499321
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3160 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130334 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.2960000e+33   2.607636e+32   1.296000e+03      0s
+     324    5.3060344e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     360 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 5.9952043e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     716    5.3060344e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 716 iterations and 0.13 seconds (0.20 work units)
+Optimal objective  5.306034392e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139068 nonzeros
+Model fingerprint: 0x9b7a1fa2
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3314 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130198 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3510000e+33   2.288750e+32   2.351000e+03      0s
+     410    5.2798855e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     130 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 4.8433479e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     583    5.2798855e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 583 iterations and 0.14 seconds (0.21 work units)
+Optimal objective  5.279885524e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139072 nonzeros
+Model fingerprint: 0xb23dec66
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3209 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 128019 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.7125000e+33   6.367958e+32   3.712500e+03      0s
+     615    7.5474828e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     419 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 3.4416914e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    1076    7.5474828e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 1076 iterations and 0.15 seconds (0.22 work units)
+Optimal objective  7.547482777e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139064 nonzeros
+Model fingerprint: 0xb0196cf2
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3201 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 127951 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    5.5307500e+33   8.514099e+32   5.530750e+03      0s
+     562    7.3062146e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     278 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 6.5364381e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     892    7.3062146e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 892 iterations and 0.15 seconds (0.22 work units)
+Optimal objective  7.306214578e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139072 nonzeros
+Model fingerprint: 0x40d895bb
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3183 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 129765 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.6440000e+33   2.954215e+32   1.644000e+03      0s
+     428    5.7248829e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     127 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 3.2196468e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     609    5.7248829e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 609 iterations and 0.14 seconds (0.21 work units)
+Optimal objective  5.724882936e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139070 nonzeros
+Model fingerprint: 0x16cda203
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3205 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130879 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.0500000e+32   3.656250e+31   3.050000e+02      0s
+     402    4.8871054e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     276 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 6.8278716e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     706    4.8871054e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 706 iterations and 0.13 seconds (0.20 work units)
+Optimal objective  4.887105423e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139070 nonzeros
+Model fingerprint: 0x5cb46d67
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3236 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 129753 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.1160000e+33   2.710251e+32   2.116000e+03      0s
+     477    6.5328138e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     417 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 1.2490009e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     936    6.5328138e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 936 iterations and 0.15 seconds (0.21 work units)
+Optimal objective  6.532813804e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139064 nonzeros
+Model fingerprint: 0xb098491c
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3455 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130304 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.2410000e+33   2.650625e+32   2.241000e+03      0s
+     514    7.1795683e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     455 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 6.1617378e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    1029    7.1795683e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 1029 iterations and 0.14 seconds (0.22 work units)
+Optimal objective  7.179568304e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139070 nonzeros
+Model fingerprint: 0xec7147eb
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3271 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130831 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.5000000e+32   3.037500e+31   2.500000e+02      0s
+     441    4.1024217e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     102 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 3.7192471e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     579    4.1024217e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 579 iterations and 0.13 seconds (0.21 work units)
+Optimal objective  4.102421681e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139066 nonzeros
+Model fingerprint: 0xb8c911fc
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3200 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130496 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4020000e+33   2.836250e+32   2.402000e+03      0s
+     395    6.2140507e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     279 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 6.7723605e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     715    6.2140507e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 715 iterations and 0.13 seconds (0.21 work units)
+Optimal objective  6.214050701e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139070 nonzeros
+Model fingerprint: 0xf09b0026
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3194 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130906 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0600000e+32   1.162500e+31   1.060000e+02      0s
+     374    5.4587984e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     249 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 7.9727891e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     650    5.4587984e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 650 iterations and 0.12 seconds (0.20 work units)
+Optimal objective  5.458798445e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139063 nonzeros
+Model fingerprint: 0xa56355ea
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3236 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130886 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0600000e+32   1.312500e+31   1.060000e+02      0s
+     383    4.7294411e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     716 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 1.8457458e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    1141    4.7294411e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 1141 iterations and 0.13 seconds (0.20 work units)
+Optimal objective  4.729441118e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139068 nonzeros
+Model fingerprint: 0x93d069b4
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3205 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130914 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.1600000e+32   1.375000e+31   1.160000e+02      0s
+     337    4.4121488e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     218 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 3.2335246e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     603    4.4121488e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 603 iterations and 0.12 seconds (0.19 work units)
+Optimal objective  4.412148838e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139073 nonzeros
+Model fingerprint: 0x5523ca29
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3185 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130928 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    9.1000000e+31   1.018750e+31   9.100000e+01      0s
+     360    4.7565277e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     522 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 3.4486303e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     908    4.7565277e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 908 iterations and 0.13 seconds (0.20 work units)
+Optimal objective  4.756527733e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139068 nonzeros
+Model fingerprint: 0xdc31e6b7
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3338 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130760 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.4500000e+32   1.656250e+31   1.450000e+02      0s
+     359    4.9510158e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     117 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 2.9143354e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     523    4.9510158e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 523 iterations and 0.12 seconds (0.20 work units)
+Optimal objective  4.951015801e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139070 nonzeros
+Model fingerprint: 0xd803997b
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3183 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130913 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.1400000e+32   2.537500e+31   2.140000e+02      0s
+     365    4.3417507e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     134 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 3.1641356e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     534    4.3417507e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 534 iterations and 0.12 seconds (0.20 work units)
+Optimal objective  4.341750733e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 46387 rows, 200 columns and 139068 nonzeros
+Model fingerprint: 0xd25a0a76
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3206 rows and 1 columns
+Presolve removed 1 rows and 2724 columns
+Presolve time: 0.07s
+Presolved: 199 rows, 43863 columns, 130910 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.2100000e+32   1.431250e+31   1.210000e+02      0s
+     375    4.5919864e+01   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     219 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 5.8703042e-15      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     643    4.5919864e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 643 iterations and 0.13 seconds (0.20 work units)
+Optimal objective  4.591986365e+01
