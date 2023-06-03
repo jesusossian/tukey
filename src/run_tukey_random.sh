@@ -2,7 +2,7 @@
 
 inst_=internet_graph
 method_=mip
-dim_=100
+dim_=200
 
 mkdir -p ../result/${inst_}
 mkdir -p ../report/${inst_}
