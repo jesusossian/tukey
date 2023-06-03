@@ -6,6 +6,7 @@ import gurobipy as gp
 from gurobipy import GRB
 import fgraphs as fg
 from itertools import combinations
+import time as trun
 
 def tukey_min_miset(method_,instance_,G,result_path):
   
@@ -33,17 +34,23 @@ def tukey_min_miset(method_,instance_,G,result_path):
     
     Ni = nx.neighbors(G,i)
 
-    listaNi = []
+    listNi = []
     for k in Ni:
-      listaNi.append(k)
+      listNi.append(k)
+
+    tstart = trun.time()
+    status_clique = fg.is_subclique(G, listNi)
+    tend = trun.time()
+
+    elapsed_time = tend - tstart
     
-    if(fg.is_subclique(G, listaNi)):
+    if(status_clique):
       # if clique
       #print("tukey[%d] = 1" %i)
       lb[i] = 1
       ub[i] = 1
       gap[i] = 0.0
-      time[i] = 0.0
+      time[i] = elapsed_time
       nodes[i] = 0
       status[i] = 1
     else:

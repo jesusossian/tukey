@@ -5,6 +5,7 @@ import numpy as np
 import gurobipy as gp
 from gurobipy import GRB
 import fgraphs as fg
+import time as trun
 
 def tukey_max(method_,instance_,G,result_path):
     
@@ -33,13 +34,19 @@ def tukey_max(method_,instance_,G,result_path):
         listNi = []
         for k in Ni:
             listNi.append(k)
+
+        tstart = trun.time()
+        status_clique = fg.is_subclique(G, listNi)
+        tend = trun.time()
+
+        elapsed_time = tend - tstart
     
-        if(fg.is_subclique(G, listNi)):
+        if(status_clique):
             #print("tukey[%d] = 1" %i)
             lb[i] = 1
             ub[i] = 1
             gap[i] = 0.0
-            time[i] = 0.0
+            time[i] = elapsed_time
             nodes[i] = 0
             status[i] = 1
         else:
