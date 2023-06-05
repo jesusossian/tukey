@@ -102,8 +102,9 @@ def tukey_min(method_,instance_,G,result_path):
         for w in range(u+1,N):
           if (w != u) and (w not in listNu):
             for s in listNu:
+              #if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
               if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
-                model.addConstr(x[u] + x[w] >= x[s], "geodesic")
+                model.addConstr(x[u] + x[w] >= x[s], "geodesic_neighb")
 
       #model.write(f"{instance_}.lp")
 

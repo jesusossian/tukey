@@ -8,7 +8,7 @@ import fgraphs as fg
 from itertools import combinations
 import time as trun
 
-def tukey_min_miset(method_,instance_,G,result_path):
+def tukey_min_miset_n1(method_,instance_,G,result_path):
   
   N = nx.number_of_nodes(G)
   M = nx.number_of_edges(G)
@@ -81,20 +81,6 @@ def tukey_min_miset(method_,instance_,G,result_path):
 
       model.addConstr(x[i] == 1, "fix_x")
 
-#      # geodesic neighbors
-#      for u in range(0,N):
-#        Nu = nx.neighbors(G,u)
-#            
-#        listNu = []
-#        for j in Nu:
-#          listNu.append(j)
-#
-#        for w in range(0,N):
-#          if (w != u) and (w not in listNu):
-#            for s in listNu:
-#              if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
-#                  model.addConstr(x[u] + x[w] >= x[s], "geodesic")
-
       # maximal independent set
       for u in range(0,N):
         Nu = nx.neighbors(G,u)
@@ -118,6 +104,20 @@ def tukey_min_miset(method_,instance_,G,result_path):
           for k in Im:
             constr += 1 * x[k]
           model.addConstr(constr >= (len(Im)- 1)*x[u], "miset")
+
+      # geodesic neighbors
+      #for u in range(0,N):
+      #  Nu = nx.neighbors(G,u)
+            
+      #  listNu = []
+      #  for j in Nu:
+      #    listNu.append(j)
+
+        for w in range(u+1,N):
+          if (w != u) and (w not in listNu):
+            for s in listNu:
+              if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]) and (dm[u,w] >= 3):
+                  model.addConstr(x[u] + x[w] >= x[s], "geodesic_neighb")
 
       #model.write(f"{instance_}.lp")
 

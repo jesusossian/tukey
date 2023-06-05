@@ -44,6 +44,10 @@ if __name__ == "__main__":
     min.tukey_min(method_,instance_,G,result_path)
   elif form_ == "minmiset":
     minmiset.tukey_min_miset(method_,instance_,G,result_path)
+  elif form_ == "minmiset0":
+    minmiset.tukey_min_miset_n0(method_,instance_,G,result_path)
+  elif form_ == "minmiset1":
+    minmiset.tukey_min_miset_n1(method_,instance_,G,result_path)
   elif form_ == "fmax":
     max.tukey_max(method_,instance_,G,result_path)
   elif form_ == "maxmiset":
