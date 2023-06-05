@@ -52,10 +52,10 @@ if __name__ == "__main__":
     minmiset.tukey_min_miset(method_,instance_,G,result_path)
   elif form_ == "maxmiset":
     maxmiset.tukey_max_miset(method_,instance_,G,result_path)
-  elif form_ == "minmiset0":
-    minmiset.tukey_min_miset_v0(method_,instance_,G,result_path)
-  elif form_ == "minmiset1":
-    minmiset.tukey_min_miset_v1(method_,instance_,G,result_path)
+  elif form_ == "minmisetn0":
+    minmiset.tukey_min_miset_n0(method_,instance_,G,result_path)
+  elif form_ == "minmisetn1":
+    minmiset.tukey_min_miset_n1(method_,instance_,G,result_path)
   else:
     print("parameters errado!")
   
