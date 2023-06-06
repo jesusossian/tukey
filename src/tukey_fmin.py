@@ -5,10 +5,9 @@ import numpy as np
 import gurobipy as gp
 from gurobipy import GRB
 import fgraphs as fg
-from itertools import combinations
 import time as trun
 
-def tukey_min_miset(method_,instance_,G,result_path):
+def tukey_fmin(method_,instance_,G,result_path):
   
   N = nx.number_of_nodes(G)
   M = nx.number_of_edges(G)
@@ -29,7 +28,8 @@ def tukey_min_miset(method_,instance_,G,result_path):
   status = np.zeros((N), dtype=float)
 
   for i in G:
-    #begin tukey node i
+
+    # begin tukey node i
     #print("node %d" %i)
     
     Ni = nx.neighbors(G,i)
@@ -37,13 +37,13 @@ def tukey_min_miset(method_,instance_,G,result_path):
     listNi = []
     for k in Ni:
       listNi.append(k)
-
+    
     tstart = trun.time()
     status_clique = fg.is_subclique(G, listNi)
     tend = trun.time()
 
     elapsed_time = tend - tstart
-    
+
     if(status_clique):
       # if clique
       #print("tukey[%d] = 1" %i)
@@ -55,6 +55,7 @@ def tukey_min_miset(method_,instance_,G,result_path):
       status[i] = 1
     else:
       # if not clique
+
       model = gp.Model(f"{instance_}")
 
       if (method_=="mip"):
@@ -79,45 +80,30 @@ def tukey_min_miset(method_,instance_,G,result_path):
          
       model.setObjective(obj, GRB.MINIMIZE)
 
-      model.addConstr(x[i] == 1, "fix_x")
+      model.addConstr(x[i] == 1)
 
-#      # geodesic neighbors
-#      for u in range(0,N):
-#        Nu = nx.neighbors(G,u)
-#            
-#        listNu = []
-#        for j in Nu:
-#          listNu.append(j)
-#
-#        for w in range(0,N):
-#          if (w != u) and (w not in listNu):
-#            for s in listNu:
-#              if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
-#                  model.addConstr(x[u] + x[w] >= x[s], "geodesic")
+      # geodesic
+      #for u in range(0,N):
+      #  for w in range(u+1,N):
+      #    #if dm[u,w] <= N:
+      #    for s in range(0,N):
+      #      if (s != u) and (s != w):
+      #        if (dm[u,s] + dm[s,w] == dm[u,w]):
+      #          model.addConstr(x[u] + x[w] >= x[s], "geodesic")
 
-      # maximal independent set
+      # geodesic neighbors
       for u in range(0,N):
         Nu = nx.neighbors(G,u)
-
+            
         listNu = []
-        for k in Nu:
-          listNu.append(k)
+        for j in Nu:
+          listNu.append(j)
 
-        T = nx.Graph()
-        T.add_nodes_from(listNu)
-        for (a,b) in combinations(listNu,2):
-          if G.has_edge(a,b):
-            T.add_edge(a,b)
-
-        #nx.draw(T,  with_labels = True)
-
-        Im = nx.maximal_independent_set(T)
-
-        if (len(Im) > 0):
-          constr = 0
-          for k in Im:
-            constr += 1 * x[k]
-          model.addConstr(constr >= (len(Im)- 1)*x[u], "miset")
+        for w in range(u+1,N):
+          if (w != u) and (w not in listNu):
+            for s in listNu:
+              if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
+                model.addConstr(x[u] + x[w] >= x[s], "geodesic_neighb")
 
       #model.write(f"{instance_}.lp")
 

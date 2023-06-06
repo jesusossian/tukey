@@ -7,7 +7,7 @@ dim_=200
 mkdir -p ../result/${inst_}
 mkdir -p ../report/${inst_}
 
-for form_ in fmin minmiset minmisetn0 minmisetn1 #fmin minmiset minmisetn0 minmisetn1 fmax maxmiset 
+for form_ in fmax fmaxmiset #fmin fminmiset fminmisetn0 fminmisetn1 fmax fmaxmiset 
 do
 	for id in {1..3}
 	do

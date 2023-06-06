@@ -19,12 +19,12 @@ from itertools import combinations
 import sys
 from datetime import datetime, date
 
-RESULT_PATH   = Path('../result/')
-
-import tukey_max as max
-import tukey_min as min
-import tukey_max_miset as maxmiset
-import tukey_min_miset as minmiset
+import tukey_fmax as fmax
+import tukey_fmin as fmin
+import tukey_fmax_miset as fmaxmiset
+import tukey_fmin_miset as fminmiset
+import tukey_fmin_miset_n0 as fminmiset_n0
+import tukey_fmin_miset_n1 as fminmiset_n1
 
 if __name__ == "__main__":
 
@@ -45,17 +45,17 @@ if __name__ == "__main__":
   result_path = Path(f"../result/{inst_}")
     
   if form_ == "fmin":
-    min.tukey_min(method_,instance_,G,result_path)
+    fmin.tukey_fmin(method_,instance_,G,result_path)
   elif form_ == "fmax":
-    max.tukey_max(method_,instance_,G,result_path)
-  elif form_ == "minmiset":
-    minmiset.tukey_min_miset(method_,instance_,G,result_path)
-  elif form_ == "maxmiset":
-    maxmiset.tukey_max_miset(method_,instance_,G,result_path)
-  elif form_ == "minmisetn0":
-    minmiset.tukey_min_miset_n0(method_,instance_,G,result_path)
-  elif form_ == "minmisetn1":
-    minmiset.tukey_min_miset_n1(method_,instance_,G,result_path)
+    fmax.tukey_fmax(method_,instance_,G,result_path)
+  elif form_ == "fminmiset":
+    fminmiset.tukey_fmin_miset(method_,instance_,G,result_path)
+  elif form_ == "fmaxmiset":
+    fmaxmiset.tukey_fmax_miset(method_,instance_,G,result_path)
+  elif form_ == "fminmisetn0":
+    fminmiset_n0.tukey_fmin_miset_n0(method_,instance_,G,result_path)
+  elif form_ == "fminmisetn1":
+    fminmiset_n1.tukey_fmin_miset_n1(method_,instance_,G,result_path)
   else:
     print("parameters errado!")
   

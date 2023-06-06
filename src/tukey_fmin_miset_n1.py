@@ -8,7 +8,7 @@ import fgraphs as fg
 from itertools import combinations
 import time as trun
 
-def tukey_min_miset_n1(method_,instance_,G,result_path):
+def tukey_fmin_miset_n1(method_,instance_,G,result_path):
   
   N = nx.number_of_nodes(G)
   M = nx.number_of_edges(G)

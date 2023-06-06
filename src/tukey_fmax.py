@@ -7,7 +7,7 @@ from gurobipy import GRB
 import fgraphs as fg
 import time as trun
 
-def tukey_max(method_,instance_,G,result_path):
+def tukey_fmax(method_,instance_,G,result_path):
     
     N = nx.number_of_nodes(G)
     M = nx.number_of_edges(G)
