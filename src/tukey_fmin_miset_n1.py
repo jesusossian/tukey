@@ -116,8 +116,8 @@ def tukey_fmin_miset_n1(method_,instance_,G,result_path):
         for w in range(u+1,N):
           if (w != u) and (w not in listNu):
             for s in listNu:
-              if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]) and (dm[u,w] >= 3):
-                  model.addConstr(x[u] + x[w] >= x[s], "geodesic_neighb")
+              if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):# and (dm[u,w] >= 3):
+                  model.addConstr(x[u] + x[w] >= x[s], "geo_nei")
 
       #model.write(f"{instance_}.lp")
 

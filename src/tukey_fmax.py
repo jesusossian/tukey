@@ -84,7 +84,7 @@ def tukey_fmax(method_,instance_,G,result_path):
             #            for s in range(0,N):
             #                if (s != u) and (s != w):
             #                    if (dm[u,s] + dm[s,w] == dm[u,w]):
-            #                        model.addConstr(x[u] + x[w] <= 1 + x[s], "geodesic")
+            #                        model.addConstr(x[u] + x[w] <= 1 + x[s], "geo")
 
             # geodesic neighbors 
             for u in range(0,N):
@@ -98,7 +98,7 @@ def tukey_fmax(method_,instance_,G,result_path):
                     if (w != u) and (w not in listNu):
                         for s in listNu:
                             if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
-                                model.addConstr(x[u] + x[w] <= 1 + x[s], "geodesic")
+                                model.addConstr(x[u] + x[w] <= 1 + x[s], "geo")
 
             #model.write(f"{instance_}.lp")
 

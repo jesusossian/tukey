@@ -77,13 +77,27 @@ def tukey_fmax_miset_n0(method_,instance_,G,result_path):
       model.addConstr(x[i] == 0, "fix_x")
 
       # geodesic
+#      for u in range(0,N):
+#        for w in range(u+1,N):
+#          #if dm[u,w] <= N:
+#            for s in range(0,N):
+#              if (s != u) and (s != w):
+#                if (dm[u,s] + dm[s,w] == dm[u,w]):
+#                  model.addConstr(x[u] + x[w] <= 1 + x[s], "geo")
+
+      # geodesic neighbors 
       for u in range(0,N):
+        Nu = nx.neighbors(G,u)
+            
+        listNu = []
+        for j in Nu:
+          listNu.append(j)
+
         for w in range(u+1,N):
-          #if dm[u,w] <= N:
-            for s in range(0,N):
-              if (s != u) and (s != w):
-                if (dm[u,s] + dm[s,w] == dm[u,w]):
-                  model.addConstr(x[u] + x[w] <= 1 + x[s], "geodesic")
+          if (w != u) and (w not in listNu):
+            for s in listNu:
+              if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
+                model.addConstr(x[u] + x[w] <= 1 + x[s], "geo")
 
       # maximal independent set
       for u in range(0,N):

@@ -6,7 +6,7 @@ method_=mip
 mkdir -p ../result/${inst_}
 mkdir -p ../report/${inst_}
 
-for form_ in fmin fminmiset fminmisetn0 fminmisetn1 fmax fmaxmisetn0
+for form_ in fminmisetn1 #fmin fminmiset fminmisetn0 fminmisetn1 fmax fmaxmisetn0
 do
 	python3 main_tukey_inst.py \
 	../instances/${inst_}/${inst_}.gml.gz \

@@ -93,7 +93,7 @@ def tukey_fmin_miset_n0(method_,instance_,G,result_path):
           if (w != u) and (w not in listNu):
             for s in listNu:
               if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
-                  model.addConstr(x[u] + x[w] >= x[s], "geodesic_neighb")
+                  model.addConstr(x[u] + x[w] >= x[s], "geo_nei")
 
       # maximal independent set
       for u in range(0,N):
