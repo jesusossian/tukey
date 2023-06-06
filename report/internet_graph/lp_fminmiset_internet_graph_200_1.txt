@@ -1,0 +1,926 @@
+Set parameter Username
+Academic license - for non-commercial use only - expires 2023-12-01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 517 nonzeros
+Model fingerprint: 0xb30a12d7
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 159 rows and 129 columns
+Presolve time: 0.00s
+Presolved: 42 rows, 71 columns, 219 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    7.0000000e+00   6.000000e+00   0.000000e+00      0s
+      26    4.0941581e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 26 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  4.094158064e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 520 nonzeros
+Model fingerprint: 0x5ed6a170
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 159 rows and 129 columns
+Presolve time: 0.00s
+Presolved: 42 rows, 71 columns, 226 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    7.0000000e+00   9.000000e+00   0.000000e+00      0s
+      34    5.1853277e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 34 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  5.185327653e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 502 nonzeros
+Model fingerprint: 0x0b65a5c3
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 163 rows and 134 columns
+Presolve time: 0.00s
+Presolved: 38 rows, 66 columns, 197 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    8.0000000e+00   6.000000e+00   0.000000e+00      0s
+      35    6.6490482e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 35 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  6.649048200e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 506 nonzeros
+Model fingerprint: 0x92db2eab
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 160 rows and 131 columns
+Presolve time: 0.00s
+Presolved: 41 rows, 69 columns, 213 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    4.0000000e+00   3.000000e+00   0.000000e+00      0s
+      19    2.4626915e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 19 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  2.462691543e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 513 nonzeros
+Model fingerprint: 0x1a6a0b26
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 161 rows and 131 columns
+Presolve time: 0.00s
+Presolved: 40 rows, 69 columns, 214 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    5.0000000e+00   3.000000e+00   0.000000e+00      0s
+       8    1.2521739e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 8 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.252173913e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 510 nonzeros
+Model fingerprint: 0x02320a87
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 163 rows and 132 columns
+Presolve time: 0.00s
+Presolved: 38 rows, 68 columns, 209 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.4000000e+01   2.000000e+00   0.000000e+00      0s
+       3    1.6000000e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 3 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.600000000e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 515 nonzeros
+Model fingerprint: 0xe10ba3a3
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 161 rows and 129 columns
+Presolve time: 0.00s
+Presolved: 40 rows, 71 columns, 219 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+01   6.000000e+00   0.000000e+00      0s
+      33    3.9378875e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 33 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  3.937887540e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 512 nonzeros
+Model fingerprint: 0x12253712
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 159 rows and 130 columns
+Presolve time: 0.00s
+Presolved: 42 rows, 70 columns, 216 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.0000000e+00   7.000000e+00   0.000000e+00      0s
+      30    4.1294512e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 30 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  4.129451203e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 517 nonzeros
+Model fingerprint: 0xfbf6f122
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 159 rows and 130 columns
+Presolve time: 0.00s
+Presolved: 42 rows, 70 columns, 223 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    4.0000000e+00   6.000000e+00   0.000000e+00      0s
+      21    3.1363771e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 21 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  3.136377054e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 517 nonzeros
+Model fingerprint: 0xd4d0c0cc
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 159 rows and 130 columns
+Presolve time: 0.00s
+Presolved: 42 rows, 70 columns, 224 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    5.0000000e+00   3.000000e+00   0.000000e+00      0s
+      25    3.1627625e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 25 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  3.162762507e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 512 nonzeros
+Model fingerprint: 0x21e45b36
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 161 rows and 131 columns
+Presolve time: 0.00s
+Presolved: 40 rows, 69 columns, 212 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.0000000e+01   3.000000e+00   0.000000e+00      0s
+      10    3.6407153e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 10 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  3.640715301e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 518 nonzeros
+Model fingerprint: 0xab36577a
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 160 rows and 131 columns
+Presolve time: 0.00s
+Presolved: 41 rows, 69 columns, 222 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.3000000e+01   7.000000e+00   0.000000e+00      0s
+      28    5.9687137e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 28 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  5.968713667e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 520 nonzeros
+Model fingerprint: 0x6a3c2b0d
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 159 rows and 130 columns
+Presolve time: 0.00s
+Presolved: 42 rows, 70 columns, 230 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+00   1.000000e+00   0.000000e+00      0s
+      12    9.3962227e+00   0.000000e+00   0.000000e+00      0s
+
+Solved in 12 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  9.396222740e+00
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 512 nonzeros
+Model fingerprint: 0x1a990433
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 160 rows and 131 columns
+Presolve time: 0.00s
+Presolved: 41 rows, 69 columns, 219 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+00   3.000000e+00   0.000000e+00      0s
+      15    1.3970735e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 15 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.397073500e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 518 nonzeros
+Model fingerprint: 0x2263e184
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 159 rows and 130 columns
+Presolve time: 0.00s
+Presolved: 42 rows, 70 columns, 225 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    6.0000000e+00   3.000000e+00   0.000000e+00      0s
+      17    1.7171666e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 17 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.717166585e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 515 nonzeros
+Model fingerprint: 0x98dcab04
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 160 rows and 129 columns
+Presolve time: 0.00s
+Presolved: 41 rows, 71 columns, 220 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.0000000e+00   5.000000e+00   0.000000e+00      0s
+      18    2.3279310e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 18 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  2.327931042e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 510 nonzeros
+Model fingerprint: 0xd84d4184
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 160 rows and 129 columns
+Presolve time: 0.00s
+Presolved: 41 rows, 71 columns, 219 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+00   1.000000e+00   0.000000e+00      0s
+       7    4.1372180e+00   0.000000e+00   0.000000e+00      0s
+
+Solved in 7 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  4.137218045e+00
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 511 nonzeros
+Model fingerprint: 0x0553c4ec
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 162 rows and 134 columns
+Presolve time: 0.00s
+Presolved: 39 rows, 66 columns, 208 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    5.0000000e+00   7.000000e+00   0.000000e+00      0s
+      35    3.0855541e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 35 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  3.085554051e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 509 nonzeros
+Model fingerprint: 0xab9d2d60
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 160 rows and 129 columns
+Presolve time: 0.00s
+Presolved: 41 rows, 71 columns, 217 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+00   2.000000e+00   0.000000e+00      0s
+      13    1.1449630e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 13 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.144963048e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 520 nonzeros
+Model fingerprint: 0x832d5301
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 159 rows and 129 columns
+Presolve time: 0.00s
+Presolved: 42 rows, 71 columns, 227 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.0000000e+00   3.000000e+00   0.000000e+00      0s
+      24    2.0384605e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 24 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  2.038460467e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 517 nonzeros
+Model fingerprint: 0x626eb915
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 160 rows and 131 columns
+Presolve time: 0.00s
+Presolved: 41 rows, 69 columns, 223 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    4.0000000e+00   3.000000e+00   0.000000e+00      0s
+      21    2.9737792e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 21 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  2.973779233e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 520 nonzeros
+Model fingerprint: 0xac2ab55e
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 160 rows and 130 columns
+Presolve time: 0.00s
+Presolved: 41 rows, 70 columns, 228 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.0000000e+00   2.000000e+00   0.000000e+00      0s
+      18    1.4479026e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 18 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.447902587e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 514 nonzeros
+Model fingerprint: 0xa8a5fda5
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 162 rows and 131 columns
+Presolve time: 0.00s
+Presolved: 39 rows, 69 columns, 213 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.1000000e+01   7.000000e+00   0.000000e+00      0s
+      25    4.2352403e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 25 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  4.235240347e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 515 nonzeros
+Model fingerprint: 0xe83e3ac4
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 159 rows and 130 columns
+Presolve time: 0.00s
+Presolved: 42 rows, 70 columns, 222 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+00   3.000000e+00   0.000000e+00      0s
+      37    4.2493542e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 37 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  4.249354173e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 507 nonzeros
+Model fingerprint: 0x551db7a0
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 161 rows and 130 columns
+Presolve time: 0.00s
+Presolved: 40 rows, 70 columns, 213 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.0000000e+00   2.000000e+00   0.000000e+00      0s
+      14    1.1954117e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 14 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.195411717e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 513 nonzeros
+Model fingerprint: 0x2747ac9a
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 160 rows and 129 columns
+Presolve time: 0.00s
+Presolved: 41 rows, 71 columns, 222 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+00   2.000000e+00   0.000000e+00      0s
+      23    2.1902165e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 23 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  2.190216506e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 507 nonzeros
+Model fingerprint: 0x9c7e5da3
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 160 rows and 132 columns
+Presolve time: 0.00s
+Presolved: 41 rows, 68 columns, 215 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.0000000e+00   2.000000e+00   0.000000e+00      0s
+      17    1.4524811e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 17 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.452481115e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 513 nonzeros
+Model fingerprint: 0x0e29b898
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 160 rows and 132 columns
+Presolve time: 0.00s
+Presolved: 41 rows, 68 columns, 218 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.0000000e+00   4.000000e+00   0.000000e+00      0s
+      24    2.4315336e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 24 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  2.431533596e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 512 nonzeros
+Model fingerprint: 0x4a6b35c5
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 160 rows and 132 columns
+Presolve time: 0.00s
+Presolved: 41 rows, 68 columns, 217 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.0000000e+00   2.000000e+00   0.000000e+00      0s
+      10    7.5767635e+00   0.000000e+00   0.000000e+00      0s
+
+Solved in 10 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  7.576763485e+00
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 516 nonzeros
+Model fingerprint: 0x6e9c813a
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 160 rows and 129 columns
+Presolve time: 0.00s
+Presolved: 41 rows, 71 columns, 222 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.0000000e+00   4.000000e+00   0.000000e+00      0s
+      33    2.4123997e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 33 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  2.412399696e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 511 nonzeros
+Model fingerprint: 0xe0b2e0b1
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 160 rows and 130 columns
+Presolve time: 0.00s
+Presolved: 41 rows, 70 columns, 216 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+00   6.000000e+00   0.000000e+00      0s
+      40    5.2084326e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 40 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  5.208432587e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 517 nonzeros
+Model fingerprint: 0x1bdacad1
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 159 rows and 129 columns
+Presolve time: 0.00s
+Presolved: 42 rows, 71 columns, 227 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.0000000e+00   2.000000e+00   0.000000e+00      0s
+       9    8.1532567e+00   0.000000e+00   0.000000e+00      0s
+
+Solved in 9 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  8.153256705e+00
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 516 nonzeros
+Model fingerprint: 0x54d96b2f
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 160 rows and 130 columns
+Presolve time: 0.00s
+Presolved: 41 rows, 70 columns, 223 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+00   2.000000e+00   0.000000e+00      0s
+      11    8.1757652e+00   0.000000e+00   0.000000e+00      0s
+
+Solved in 11 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  8.175765215e+00
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 513 nonzeros
+Model fingerprint: 0x853b3b09
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 160 rows and 130 columns
+Presolve time: 0.00s
+Presolved: 41 rows, 70 columns, 219 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+00   2.000000e+00   0.000000e+00      0s
+      12    1.4105045e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 12 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.410504543e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 513 nonzeros
+Model fingerprint: 0xbf87ba1c
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 159 rows and 131 columns
+Presolve time: 0.00s
+Presolved: 42 rows, 69 columns, 221 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+00   2.000000e+00   0.000000e+00      0s
+       4    1.5083130e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 4 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.508312958e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 511 nonzeros
+Model fingerprint: 0x60f01dde
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 159 rows and 130 columns
+Presolve time: 0.00s
+Presolved: 42 rows, 70 columns, 219 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+00   2.000000e+00   0.000000e+00      0s
+      14    1.4892991e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 14 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.489299124e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 511 nonzeros
+Model fingerprint: 0x4fd5dc4a
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 159 rows and 130 columns
+Presolve time: 0.00s
+Presolved: 42 rows, 70 columns, 219 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+00   1.000000e+00   0.000000e+00      0s
+      11    8.7315894e+00   0.000000e+00   0.000000e+00      0s
+
+Solved in 11 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  8.731589414e+00
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 513 nonzeros
+Model fingerprint: 0x8bf079aa
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 159 rows and 131 columns
+Presolve time: 0.00s
+Presolved: 42 rows, 69 columns, 221 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+00   2.000000e+00   0.000000e+00      0s
+      16    1.5000000e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 16 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.500000000e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 517 nonzeros
+Model fingerprint: 0x1d10586f
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 159 rows and 130 columns
+Presolve time: 0.00s
+Presolved: 42 rows, 70 columns, 226 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+00   2.000000e+00   0.000000e+00      0s
+      15    1.2980327e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 15 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.298032719e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 513 nonzeros
+Model fingerprint: 0x040bd698
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 160 rows and 131 columns
+Presolve time: 0.00s
+Presolved: 41 rows, 69 columns, 221 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+00   2.000000e+00   0.000000e+00      0s
+      19    2.4264054e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 19 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  2.426405406e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 511 nonzeros
+Model fingerprint: 0xb4a205f6
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 160 rows and 131 columns
+Presolve time: 0.00s
+Presolved: 41 rows, 69 columns, 218 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+00   1.000000e+00   0.000000e+00      0s
+       7    8.1457627e+00   0.000000e+00   0.000000e+00      0s
+
+Solved in 7 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  8.145762712e+00
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 9.5.2 build v9.5.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 1 threads
+Optimize a model with 201 rows, 200 columns and 508 nonzeros
+Model fingerprint: 0xae854549
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 161 rows and 133 columns
+Presolve time: 0.00s
+Presolved: 40 rows, 67 columns, 213 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+00   2.000000e+00   0.000000e+00      0s
+       4    1.5117647e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 4 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.511764706e+01

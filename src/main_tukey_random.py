@@ -19,12 +19,13 @@ from itertools import combinations
 import sys
 from datetime import datetime, date
 
-import tukey_fmax as fmax
 import tukey_fmin as fmin
-import tukey_fmax_miset as fmaxmiset
 import tukey_fmin_miset as fminmiset
 import tukey_fmin_miset_n0 as fminmiset_n0
 import tukey_fmin_miset_n1 as fminmiset_n1
+
+import tukey_fmax as fmax
+import tukey_fmax_miset_n0 as fmaxmiset_n0
 
 if __name__ == "__main__":
 
@@ -50,8 +51,8 @@ if __name__ == "__main__":
     fmax.tukey_fmax(method_,instance_,G,result_path)
   elif form_ == "fminmiset":
     fminmiset.tukey_fmin_miset(method_,instance_,G,result_path)
-  elif form_ == "fmaxmiset":
-    fmaxmiset.tukey_fmax_miset(method_,instance_,G,result_path)
+  elif form_ == "fmaxmisetn0":
+    fmaxmiset_n0.tukey_fmax_miset_n0(method_,instance_,G,result_path)
   elif form_ == "fminmisetn0":
     fminmiset_n0.tukey_fmin_miset_n0(method_,instance_,G,result_path)
   elif form_ == "fminmisetn1":
