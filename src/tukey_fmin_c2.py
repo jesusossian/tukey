@@ -6,6 +6,7 @@ import gurobipy as gp
 from gurobipy import GRB
 import fgraphs as fg
 import time as trun
+import igraph as ig
 
 def tukey_fmin_c2(method_,instance_,G,result_path):
   
@@ -82,15 +83,6 @@ def tukey_fmin_c2(method_,instance_,G,result_path):
 
       model.addConstr(x[i] == 1)
 
-      # geodesic
-      #for u in range(0,N):
-      #  for w in range(u+1,N):
-      #    #if dm[u,w] <= N:
-      #    for s in range(0,N):
-      #      if (s != u) and (s != w):
-      #        if (dm[u,s] + dm[s,w] == dm[u,w]):
-      #          model.addConstr(x[u] + x[w] >= x[s], "geodesic")
-
       # geodesic neighbors
       for u in range(0,N):
         Nu = nx.neighbors(G,u)
@@ -103,7 +95,7 @@ def tukey_fmin_c2(method_,instance_,G,result_path):
           if (w != u) and (w not in listNu):
             for s in listNu:
               if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
-                model.addConstr(x[u] + x[w] >= x[s], "geodesic_neighb")
+                model.addConstr(x[u] + x[w] >= x[s], "geo_c2")
 
       #model.write(f"{instance_}.lp")
 
@@ -154,4 +146,4 @@ def tukey_fmin_c2(method_,instance_,G,result_path):
       )
       arquivo.close()
 
-  G.clear()
+  #G.clear()

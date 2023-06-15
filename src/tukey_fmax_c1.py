@@ -6,8 +6,9 @@ import gurobipy as gp
 from gurobipy import GRB
 import fgraphs as fg
 import time as trun
+import igraph as ig
 
-def tukey_fmax_c2(method_,instance_,G,result_path):
+def tukey_fmax_c1(method_,instance_,G,result_path):
     
     N = nx.number_of_nodes(G)
     M = nx.number_of_edges(G)
@@ -77,19 +78,14 @@ def tukey_fmax_c2(method_,instance_,G,result_path):
 
             model.addConstr(x[i] == 0)
 
-            # geodesic neighbors 
+            # geodesic
             for u in range(0,N):
-                Nu = nx.neighbors(G,u)
-            
-                listNu = []
-                for j in Nu:
-                    listNu.append(j)
-
                 for w in range(u+1,N):
-                    if (w != u) and (w not in listNu):
-                        for s in listNu:
-                            if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
-                                model.addConstr(x[u] + x[w] <= 1 + x[s], "geo_c2")
+                    #if dm[u,w] <= N:
+                    for s in range(0,N):
+                        if (s != u) and (s != w):
+                            if (dm[u,s] + dm[s,w] == dm[u,w]):
+                                model.addConstr(x[u] + x[w] <= 1 + x[s], "geo_c1")
 
             #model.write(f"{instance_}.lp")
 

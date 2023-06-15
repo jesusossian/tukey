@@ -184,4 +184,4 @@ def tukey_fmin_miset_c2(method_,instance_,G,result_path):
       )
       arquivo.close()
 
-  G.clear()
+  #G.clear()

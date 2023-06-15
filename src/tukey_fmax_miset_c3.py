@@ -9,7 +9,7 @@ from itertools import combinations
 import time as trun
 import igraph as ig
 
-def tukey_fmax_miset_c2(method_,instance_,G,result_path):
+def tukey_fmax_miset_c3(method_,instance_,G,result_path):
 	N = nx.number_of_nodes(G)
 	M = nx.number_of_edges(G)
 
@@ -78,21 +78,6 @@ def tukey_fmax_miset_c2(method_,instance_,G,result_path):
 
 			model.addConstr(x[i] == 0, "fix_x")
 
-			# geodesic neighbors 
-			for u in range(0,N):
-				
-				Nu = nx.neighbors(G,u)
-            
-				listNu = []
-				for j in Nu:
-					listNu.append(j)
-
-				for w in range(u+1,N):
-					if (w != u) and (w not in listNu):
-						for s in listNu:
-							if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
-								model.addConstr(x[u] + x[w] <= 1 + x[s], "geo")
-
      		# maximal independent set
 			for u in range(0,N):
         		
@@ -126,7 +111,14 @@ def tukey_fmax_miset_c2(method_,instance_,G,result_path):
 						constr = 0
 						for j in itIm:
 							constr += 1 * x[dicl[j]]
-						model.addConstr(constr <= 1 + (len(itIm)- 1)*x[u], "miset_c2")
+						model.addConstr(constr <= 1 + (len(itIm)- 1)*x[u], "miset_c3")
+
+				for w in range(u+1,N):
+					if (dm[u,w] >= 3):
+						if (w != u) and (w not in listNu):
+							for s in listNu:
+								if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
+									model.addConstr(x[u] + x[w] <= 1 + x[s], "geo_c3")
 
 				T.clear()
 
