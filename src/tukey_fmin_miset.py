@@ -7,6 +7,7 @@ from gurobipy import GRB
 import fgraphs as fg
 from itertools import combinations
 import time as trun
+import igraph as ig
 
 def tukey_fmin_miset(method_,instance_,G,result_path):
   
@@ -103,6 +104,12 @@ def tukey_fmin_miset(method_,instance_,G,result_path):
         for k in Nu:
           listNu.append(k)
 
+        count = 0
+        dicl = {}
+        for it in listNu:
+          dicl[count] = it
+          count += 1
+
         T = nx.Graph()
         T.add_nodes_from(listNu)
         for (a,b) in combinations(listNu,2):
@@ -111,13 +118,26 @@ def tukey_fmin_miset(method_,instance_,G,result_path):
 
         #nx.draw(T,  with_labels = True)
 
-        Im = nx.maximal_independent_set(T)
+        A = ig.Graph.from_networkx(T)
+        #Im = nx.maximal_independent_set(T)
+        Im = A.maximal_independent_vertex_sets()
 
-        if (len(Im) > 0):
-          constr = 0
-          for k in Im:
-            constr += 1 * x[k]
-          model.addConstr(constr >= (len(Im)- 1)*x[u], "miset")
+#        if (len(Im) > 0):
+#          constr = 0
+#          for k in Im:
+#            constr += 1 * x[k]
+#          model.addConstr(constr >= (len(Im)- 1)*x[u], "miset")
+
+        tmp = len(Im)
+        if (tmp > 0):
+        #print("dim Im: %d" %(tmp))
+          for itIm in Im:
+            #print(itIm)
+            constr = 0
+            for j in itIm:
+              #print(dicl[j])
+              constr += 1 * x[dicl[j]]
+            model.addConstr(constr >= (len(itIm) - 1)*x[u], "miset")
 
       #model.write(f"{instance_}.lp")
 
