@@ -7,10 +7,10 @@ dim_=200
 mkdir -p ../result/${inst_}
 mkdir -p ../report/${inst_}
 
-#for form_ in fmaxc2 fmaxmiset fmaxmisetc2 fmaxmisetc3
-for form_ in fminc2 fminmiset fminmisetc2 fminmisetc3
- do
-	for id in {1..2}
+#for form_ in fmaxc1 fmaxc2 fmaxmiset fmaxmisetc2 fmaxmisetc3
+for form_ in fminc1 fminc2 fminmiset fminmisetc2 fminmisetc3 fmaxc1 fmaxc2 fmaxmiset fmaxmisetc2 fmaxmisetc3
+do
+	for id in {1..5}
 	do
 		python3 main_tukey_random.py \
 		../instances/${inst_}/${dim_}/${inst_}_${dim_}_${id}.gml.gz \

@@ -9,11 +9,11 @@ import matplotlib.pyplot as plt
 import networkx as nx
 import numpy as np
 import pandas as pd
+
 import gurobipy as gp
 from gurobipy import GRB
 
 import igraph as ig
-
 from itertools import combinations
 
 import sys
@@ -60,9 +60,11 @@ if __name__ == "__main__":
 	elif form_ == "fminmisetc3":
 		fminmiset_c3.tukey_fmin_miset_c3(method_,instance_,G,result_path)
 	elif form_ == "fmaxc1":
-		fmax_c2.tukey_fmax_c1(method_,instance_,G,result_path)
+		fmax_c1.tukey_fmax_c1(method_,instance_,G,result_path)
 	elif form_ == "fmaxc2":
 		fmax_c2.tukey_fmax_c2(method_,instance_,G,result_path)
+	elif form_ == "fmaxmiset":
+		fmaxmiset.tukey_fmax_miset(method_,instance_,G,result_path)
 	elif form_ == "fmaxmisetc2":
 		fmaxmiset_c2.tukey_fmax_miset_c2(method_,instance_,G,result_path)
 	elif form_ == "fmaxmisetc3":

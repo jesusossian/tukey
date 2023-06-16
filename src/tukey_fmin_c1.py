@@ -30,7 +30,7 @@ def tukey_fmin_c1(method_,instance_,G,result_path):
 
   for i in G:
 
-    # begin tukey node i
+    #begin tukey node i
     #print("node %d" %i)
     
     Ni = nx.neighbors(G,i)
@@ -46,7 +46,7 @@ def tukey_fmin_c1(method_,instance_,G,result_path):
     elapsed_time = tend - tstart
 
     if(status_clique):
-      # if clique
+      #if clique
       #print("tukey[%d] = 1" %i)
       lb[i] = 1
       ub[i] = 1
