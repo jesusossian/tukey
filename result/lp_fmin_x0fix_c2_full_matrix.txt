@@ -1,0 +1,34 @@
+\ Model circut_example
+\ LP format - for model browsing. Use MPS format to capture full model detail.
+Minimize
+  x[0] + x[1] + x[2] + x[3] + x[4] + x[5]
+Subject To
+ fix_x: x[0] = 1
+ 1_geo_c2: x[0] - x[1] + x[2] >= 0
+ 2_geo_c2: x[0] - x[1] + x[3] >= 0
+ 3_geo_c2: x[0] + x[3] - x[5] >= 0
+ 4_geo_c2: x[0] + x[4] - x[5] >= 0
+ 5_geo_c2: x[1] - x[2] + x[3] >= 0
+ 6_geo_c2: - x[0] + x[1] + x[4] >= 0
+ 7_geo_c2: x[1] - x[2] + x[4] >= 0
+ 8_geo_c2: - x[0] + x[1] + x[5] >= 0
+ #1_geo_c2: x[0] - x[1] + x[2] >= 0
+ 9_geo_c2: x[2] - x[3] + x[4] >= 0
+ 10_geo_c2: - x[1] + x[2] + x[5] >= 0
+ 11_geo_c2: x[2] - x[3] + x[5] >= 0
+ new1_geo_c2: x[0] - x[2] + x[3] >= 0
+ new2_geo_c2: x[0] + x[3] - x[4] >= 0
+ #5_geo_c2: x[1] - x[2] + x[3] >= 0
+ 12_geo_c2: x[3] - x[4] + x[5] >= 0
+ #4_geo_c2: x[0] + x[4] - x[5] >= 0
+ new3_geo_c2: x[1] - x[3] + x[4] >= 0
+ new4_geo_c2: x[1] + x[4] - x[5] >= 0
+ #9_geo_c2: x[2] - x[3] + x[4] >= 0
+ #8_geo_c2: - x[0] + x[1] + x[5] >= 0
+ new5_geo_c2: - x[0] + x[2] + x[5] >= 0
+ new6_geo_c2: x[2] - x[4] + x[5] >= 0
+ #12_geo_c2: x[3] - x[4] + x[5] >= 0
+Bounds
+Binaries
+ x[0] x[1] x[2] x[3] x[4] x[5]
+End

@@ -1,0 +1,2022 @@
+Set parameter Username
+Academic license - for non-commercial use only - expires 2024-03-15
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x15907be0
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 570 rows and 1 columns
+Presolve time: 0.04s
+Presolved: 199 rows, 26228 columns, 77950 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.741250e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        282   1.9600000e+02   1.6333333e+01      0s
+       2        794   1.4154015e+02   3.2716651e+01      0s
+       3       1218   1.2551758e+02   5.7413804e+01      0s
+       4       1706   1.1834597e+02   6.5880053e+01      0s
+       5       2209   1.1355564e+02   7.1348863e+01      0s
+       6       2628   1.1154173e+02   7.5337084e+01      0s
+       7       3167   1.0927726e+02   7.9724179e+01      0s
+       8       3673   1.0803043e+02   8.2376109e+01      0s
+       9       4139   1.0788500e+02   8.5217058e+01      0s
+      10       4605   1.0779771e+02   8.8854186e+01      0s
+      11       5015   1.0775425e+02   9.1928205e+01      0s
+      12       5530   1.0774427e+02   9.5229836e+01      0s
+      13       5966   1.0773850e+02   9.8983811e+01      0s
+      14       6366   1.0772554e+02   1.0234767e+02      0s
+      15       6754   1.0771652e+02   1.0337657e+02      0s
+      16       7118   1.0771623e+02   1.0559877e+02      0s
+      17       7430   1.0771623e+02   1.0771623e+02      0s
+
+Sifting complete
+
+    7430    1.0771623e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 7430 iterations and 0.18 seconds (0.27 work units)
+Optimal objective  1.077162308e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x3689e258
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 596 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 78691 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.740625e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        284   2.0300000e+02   1.6916667e+01      0s
+       2        841   1.4628785e+02   3.5303056e+01      0s
+       3       1430   1.2872253e+02   4.8295780e+01      0s
+       4       1999   1.2249120e+02   7.3518334e+01      0s
+       5       2501   1.2160496e+02   7.5444197e+01      0s
+       6       3065   1.2150969e+02   7.7489934e+01      0s
+       7       3626   1.2125107e+02   8.0464046e+01      0s
+       8       4190   1.2099701e+02   8.2587390e+01      0s
+       9       4753   1.2049384e+02   8.5955099e+01      0s
+      10       5330   1.1947305e+02   8.8577090e+01      0s
+      11       5828   1.1938953e+02   9.0914841e+01      0s
+      12       6349   1.1880005e+02   9.9454571e+01      0s
+      13       6795   1.1839491e+02   1.0292915e+02      0s
+      14       7287   1.1830089e+02   1.0559683e+02      0s
+      15       7722   1.1825628e+02   1.0897240e+02      0s
+      16       8209   1.1824821e+02   1.1015116e+02      0s
+      17       8583   1.1824817e+02   1.1250494e+02      0s
+
+Sifting complete
+
+    8946    1.1824817e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 8946 iterations and 0.19 seconds (0.31 work units)
+Optimal objective  1.182481711e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x3992a0ef
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 600 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 78109 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.741250e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        330   2.0100000e+02   1.6750000e+01      0s
+       2        768   1.5622222e+02   2.9352912e+01      0s
+       3       1305   1.4622769e+02   4.9272784e+01      0s
+       4       1865   1.3389888e+02   6.5440209e+01      0s
+       5       2402   1.3128463e+02   7.1468932e+01      0s
+       6       2943   1.2978404e+02   7.5236892e+01      0s
+       7       3418   1.2974555e+02   7.8388194e+01      0s
+       8       4023   1.2755521e+02   8.2457183e+01      0s
+       9       4495   1.2650036e+02   8.6809357e+01      0s
+      10       4990   1.2614165e+02   9.1181496e+01      0s
+      11       5496   1.2614165e+02   9.5353400e+01      0s
+      12       5948   1.2589241e+02   1.1094386e+02      0s
+      13       6360   1.2557639e+02   1.1251056e+02      0s
+      14       6771   1.2501646e+02   1.1639493e+02      0s
+      15       7087   1.2499969e+02   1.2013648e+02      0s
+
+Sifting complete
+
+    7432    1.2499969e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 7432 iterations and 0.16 seconds (0.27 work units)
+Optimal objective  1.249996948e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0xdfe76ff9
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 625 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 77727 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.741250e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        223   2.0200000e+02   2.0200000e+01      0s
+       2        671   1.3370345e+02   3.8378460e+01      0s
+       3       1129   1.0551607e+02   4.8029509e+01      0s
+       4       1780   1.0229344e+02   7.0721636e+01      0s
+       5       2189   1.0063495e+02   7.4631657e+01      0s
+       6       2608   9.7401380e+01   7.6612199e+01      0s
+       7       3049   9.6988095e+01   8.0253244e+01      0s
+       8       3527   9.6655409e+01   8.2782856e+01      0s
+       9       3971   9.6655409e+01   8.4331646e+01      0s
+      10       4394   9.6412203e+01   8.7337371e+01      0s
+      11       4731   9.5940167e+01   9.0652678e+01      0s
+      12       5061   9.5937678e+01   9.3860974e+01      0s
+      13       5414   9.5937678e+01   9.5937678e+01      0s
+
+Sifting complete
+
+    5414    9.5937678e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 5414 iterations and 0.13 seconds (0.21 work units)
+Optimal objective  9.593767793e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x7d23d929
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 625 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 78145 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.740625e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        225   2.0200000e+02   1.8363636e+01      0s
+       2        767   1.4059787e+02   3.1071738e+01      0s
+       3       1449   1.2214053e+02   4.6745824e+01      0s
+       4       1941   1.1264484e+02   6.2589772e+01      0s
+       5       2461   1.1092325e+02   6.5692426e+01      0s
+       6       3006   1.1091607e+02   6.7981563e+01      0s
+       7       3535   1.1062919e+02   7.6685010e+01      0s
+       8       3981   1.1029669e+02   8.4590795e+01      0s
+       9       4414   1.0998833e+02   8.9445484e+01      0s
+      10       4889   1.0951109e+02   9.1621824e+01      0s
+      11       5315   1.0796004e+02   9.5081157e+01      0s
+      12       5725   1.0769424e+02   9.6983371e+01      0s
+      13       6143   1.0742843e+02   9.7735013e+01      0s
+      14       6541   1.0730646e+02   1.0164554e+02      0s
+      15       6873   1.0729954e+02   1.0404444e+02      0s
+      16       7236   1.0729954e+02   1.0587668e+02      0s
+
+Sifting complete
+
+    7550    1.0729850e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 7550 iterations and 0.17 seconds (0.28 work units)
+Optimal objective  1.072984961e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x9e171d14
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 580 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 78287 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.740625e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        246   2.0100000e+02   1.8272727e+01      0s
+       2        788   1.3675870e+02   3.7088431e+01      0s
+       3       1320   1.1284062e+02   4.3466283e+01      0s
+       4       1901   1.1008404e+02   6.5870949e+01      0s
+       5       2297   1.0924712e+02   6.8303201e+01      0s
+       6       2711   1.0879546e+02   7.0600620e+01      0s
+       7       3184   1.0789337e+02   7.2681730e+01      0s
+       8       3689   1.0731413e+02   7.5884312e+01      0s
+       9       4175   1.0663164e+02   7.7798189e+01      0s
+      10       4646   1.0663164e+02   8.1245680e+01      0s
+      11       5122   1.0655083e+02   8.8573668e+01      0s
+      12       5453   1.0636011e+02   9.1960413e+01      0s
+      13       5781   1.0580203e+02   9.6128139e+01      0s
+      14       6144   1.0575021e+02   9.9234388e+01      0s
+      15       6483   1.0575021e+02   1.0249821e+02      0s
+      16       6797   1.0574317e+02   1.0574317e+02      0s
+
+Sifting complete
+
+    6797    1.0574317e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 6797 iterations and 0.16 seconds (0.25 work units)
+Optimal objective  1.057431737e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x8b6b7ed4
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 555 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 77559 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.741250e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        219   1.9400000e+02   1.4923077e+01      0s
+       2        658   1.3394332e+02   2.6843398e+01      0s
+       3       1113   1.0431307e+02   3.3774951e+01      0s
+       4       1606   9.9991443e+01   4.8414203e+01      0s
+       5       2132   9.1733606e+01   5.6912741e+01      0s
+       6       2739   9.0058844e+01   6.5398884e+01      0s
+       7       3348   8.9304361e+01   6.8107119e+01      0s
+       8       3806   8.9257119e+01   7.0889097e+01      0s
+       9       4296   8.9247477e+01   7.3866401e+01      0s
+      10       4711   8.9170970e+01   7.6290280e+01      0s
+      11       5100   8.9013018e+01   7.8864152e+01      0s
+      12       5471   8.8830660e+01   8.2181450e+01      0s
+      13       5911   8.8830660e+01   8.5589548e+01      0s
+      14       6310   8.8830660e+01   8.7723196e+01      0s
+      15       6561   8.8830660e+01   8.8315560e+01      0s
+
+Sifting complete
+
+    6812    8.8830651e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 6812 iterations and 0.15 seconds (0.25 work units)
+Optimal objective  8.883065059e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0xdc2a3249
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 470 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 77424 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.740625e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        257   1.9700000e+02   1.0368421e+01      0s
+       2        767   1.5368470e+02   2.3116073e+01      0s
+       3       1265   1.3913433e+02   4.2525825e+01      0s
+       4       1785   1.2725892e+02   6.6976164e+01      0s
+       5       2303   1.2404342e+02   7.0375468e+01      0s
+       6       2882   1.1910304e+02   7.3871669e+01      0s
+       7       3384   1.1816249e+02   8.3165309e+01      0s
+       8       3939   1.1636322e+02   9.0940631e+01      0s
+       9       4385   1.1597972e+02   9.9913424e+01      0s
+      10       4807   1.1558894e+02   1.0688970e+02      0s
+      11       5163   1.1549775e+02   1.1091038e+02      0s
+
+Sifting complete
+
+    5553    1.1549596e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 5553 iterations and 0.13 seconds (0.22 work units)
+Optimal objective  1.154959619e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x1e356909
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 581 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 77727 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.741250e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        221   1.9400000e+02   1.3857143e+01      0s
+       2        761   1.4118139e+02   2.7232760e+01      0s
+       3       1199   1.2533016e+02   3.6975576e+01      0s
+       4       1727   1.1356484e+02   4.6288567e+01      0s
+       5       2319   1.1057929e+02   6.4896184e+01      0s
+       6       2832   1.1005795e+02   6.7769084e+01      0s
+       7       3264   1.0996404e+02   7.0365251e+01      0s
+       8       3731   1.0815353e+02   7.2858820e+01      0s
+       9       4124   1.0756095e+02   7.7908212e+01      0s
+      10       4579   1.0675128e+02   8.4295785e+01      0s
+      11       5119   1.0628498e+02   8.8254384e+01      0s
+      12       5484   1.0628498e+02   9.1815457e+01      0s
+      13       5854   1.0620356e+02   9.7701199e+01      0s
+      14       6199   1.0612686e+02   1.0094017e+02      0s
+      15       6518   1.0607783e+02   1.0536576e+02      0s
+
+Sifting complete
+
+    6745    1.0607743e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 6745 iterations and 0.15 seconds (0.25 work units)
+Optimal objective  1.060774284e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x0cc99260
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 487 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 78486 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.740625e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        294   1.7700000e+02   1.9666667e+01      0s
+       2        926   1.4733578e+02   3.3985755e+01      0s
+       3       1550   1.2470573e+02   4.9598714e+01      0s
+       4       2146   1.1937507e+02   7.1423652e+01      0s
+       5       2800   1.1397628e+02   8.4037664e+01      0s
+       6       3397   1.1282621e+02   8.7236196e+01      0s
+       7       3851   1.1272412e+02   9.1634417e+01      0s
+       8       4366   1.1272412e+02   9.5566493e+01      0s
+       9       4823   1.1265859e+02   1.0524748e+02      0s
+      10       5149   1.1265835e+02   1.0802086e+02      0s
+      11       5478   1.1265835e+02   1.1209138e+02      0s
+
+Sifting complete
+
+    5753    1.1265835e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 5753 iterations and 0.13 seconds (0.23 work units)
+Optimal objective  1.126583525e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0xfcf05fa5
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 637 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 78170 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.740625e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        257   1.9900000e+02   1.8090909e+01      0s
+       2        834   1.3873608e+02   4.0832839e+01      0s
+       3       1328   1.1395104e+02   4.5891600e+01      0s
+       4       1853   1.1208745e+02   7.5249479e+01      0s
+       5       2322   1.1040696e+02   7.8402299e+01      0s
+       6       2813   1.0957789e+02   8.1770035e+01      0s
+       7       3245   1.0884121e+02   8.6555808e+01      0s
+       8       3737   1.0836059e+02   8.9735089e+01      0s
+       9       4280   1.0835763e+02   9.6777766e+01      0s
+      10       4654   1.0824483e+02   1.0423176e+02      0s
+
+Sifting complete
+
+    5024    1.0823586e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 5024 iterations and 0.12 seconds (0.20 work units)
+Optimal objective  1.082358580e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0xbbda4377
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 508 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 79137 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.739375e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        342   1.8150000e+02   1.7285714e+01      0s
+       2        977   1.7600000e+02   3.2473684e+01      0s
+       3       1560   1.6063114e+02   4.9144389e+01      0s
+       4       2150   1.5534606e+02   7.5859096e+01      0s
+       5       2637   1.5325540e+02   8.2501137e+01      0s
+       6       3264   1.5068862e+02   8.7810856e+01      0s
+       7       3893   1.4828080e+02   9.9950624e+01      0s
+       8       4498   1.4690710e+02   1.0564438e+02      0s
+       9       5037   1.4351136e+02   1.0916421e+02      0s
+      10       5552   1.4240236e+02   1.1518891e+02      0s
+      11       6120   1.4207298e+02   1.2024010e+02      0s
+      12       6556   1.4100921e+02   1.2738284e+02      0s
+      13       6953   1.4033260e+02   1.3022581e+02      0s
+      14       7287   1.4000532e+02   1.3285870e+02      0s
+      15       7623   1.3961663e+02   1.3540932e+02      0s
+
+Sifting complete
+
+    7910    1.3960087e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 7910 iterations and 0.17 seconds (0.28 work units)
+Optimal objective  1.396008666e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x965d712c
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 568 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 78840 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.739375e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        262   1.9300000e+02   1.9300000e+01      0s
+       2        833   1.7025989e+02   3.3004075e+01      0s
+       3       1403   1.6033745e+02   4.3608164e+01      0s
+       4       1906   1.4732516e+02   5.1373129e+01      0s
+       5       2631   1.4403356e+02   7.4728803e+01      0s
+       6       3091   1.4322444e+02   8.1625829e+01      0s
+       7       3620   1.4114250e+02   8.9390007e+01      0s
+       8       4123   1.3869789e+02   9.4567148e+01      0s
+       9       4693   1.3673624e+02   9.7508327e+01      0s
+      10       5216   1.3604200e+02   1.0166791e+02      0s
+      11       5699   1.3551120e+02   1.0808817e+02      0s
+      12       6169   1.3529180e+02   1.1409306e+02      0s
+      13       6644   1.3525136e+02   1.1949173e+02      0s
+      14       7175   1.3525136e+02   1.2222276e+02      0s
+      15       7535   1.3523579e+02   1.2670289e+02      0s
+      16       7918   1.3523572e+02   1.2945465e+02      0s
+      17       8283   1.3521128e+02   1.3124185e+02      0s
+      18       8616   1.3508809e+02   1.3508809e+02      0s
+
+Sifting complete
+
+    8616    1.3508809e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 8616 iterations and 0.19 seconds (0.31 work units)
+Optimal objective  1.350880894e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0xf469fab9
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 526 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 78194 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.741250e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        330   1.8255247e+02   1.6842462e+01      0s
+       2        940   1.3589866e+02   2.6559812e+01      0s
+       3       1403   1.1588889e+02   4.4490042e+01      0s
+       4       1922   1.1090019e+02   5.1475457e+01      0s
+       5       2409   1.0915004e+02   5.6447231e+01      0s
+       6       3027   1.0791023e+02   7.5726296e+01      0s
+       7       3482   1.0669326e+02   7.8997598e+01      0s
+       8       3932   1.0661046e+02   8.4021771e+01      0s
+       9       4412   1.0644795e+02   8.6298646e+01      0s
+      10       4906   1.0608139e+02   9.3222970e+01      0s
+      11       5245   1.0583354e+02   9.5710539e+01      0s
+      12       5565   1.0571594e+02   9.9196991e+01      0s
+      13       5864   1.0565164e+02   1.0381451e+02      0s
+
+Sifting complete
+
+    6122    1.0564980e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 6122 iterations and 0.14 seconds (0.24 work units)
+Optimal objective  1.056497957e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x760c85d6
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 605 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 79072 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.739375e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        306   1.8000000e+02   1.2857143e+01      0s
+       2        918   1.7512091e+02   4.4676899e+01      0s
+       3       1420   1.7346321e+02   6.3381437e+01      0s
+       4       2031   1.5924263e+02   7.1281650e+01      0s
+       5       2603   1.4762961e+02   9.4084519e+01      0s
+       6       3264   1.4604833e+02   9.9250602e+01      0s
+       7       3733   1.4422552e+02   1.0804253e+02      0s
+       8       4327   1.4241909e+02   1.1056789e+02      0s
+       9       4762   1.4216820e+02   1.1257536e+02      0s
+      10       5265   1.4202214e+02   1.1519573e+02      0s
+      11       5654   1.4191872e+02   1.1869354e+02      0s
+      12       6070   1.4169290e+02   1.2303821e+02      0s
+      13       6659   1.4106713e+02   1.2746512e+02      0s
+      14       7181   1.4026239e+02   1.3028804e+02      0s
+      15       7700   1.4015464e+02   1.3350649e+02      0s
+      16       8231   1.4015464e+02   1.3600331e+02      0s
+      17       8569   1.3997302e+02   1.3753830e+02      0s
+
+Sifting complete
+
+    8907    1.3996855e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 8907 iterations and 0.19 seconds (0.32 work units)
+Optimal objective  1.399685468e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x3ffe62cb
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 544 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 78537 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.740625e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        319   1.8629730e+02   9.3910082e+00      0s
+       2        922   1.6448628e+02   2.8117425e+01      0s
+       3       1445   1.3879715e+02   6.5241197e+01      0s
+       4       1902   1.3522236e+02   7.5312307e+01      0s
+       5       2341   1.3394326e+02   8.1527082e+01      0s
+       6       2801   1.3031550e+02   8.4737424e+01      0s
+       7       3189   1.2370380e+02   8.5651739e+01      0s
+       8       3643   1.2250709e+02   8.7245997e+01      0s
+       9       4072   1.2144783e+02   8.9005116e+01      0s
+      10       4471   1.1896495e+02   9.0385318e+01      0s
+      11       4889   1.1795588e+02   9.1972962e+01      0s
+      12       5431   1.1782464e+02   9.3348397e+01      0s
+      13       5879   1.1744438e+02   9.5204336e+01      0s
+      14       6428   1.1744367e+02   9.7527561e+01      0s
+      15       6946   1.1695124e+02   1.0420524e+02      0s
+      16       7332   1.1685852e+02   1.0622040e+02      0s
+      17       7929   1.1680763e+02   1.1194031e+02      0s
+      18       8239   1.1676677e+02   1.1477052e+02      0s
+      19       8507   1.1676677e+02   1.1632675e+02      0s
+
+Sifting complete
+
+    8801    1.1676656e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 8801 iterations and 0.19 seconds (0.32 work units)
+Optimal objective  1.167665633e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0xf35b28a0
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 459 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 78477 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.741250e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        332   1.9710000e+02   7.1672727e+00      0s
+       2        942   1.8121552e+02   2.4679088e+01      0s
+       3       1473   1.6368531e+02   5.3122070e+01      0s
+       4       1926   1.5931301e+02   6.5313152e+01      0s
+       5       2420   1.5757068e+02   7.6654351e+01      0s
+       6       2963   1.4977573e+02   9.4581975e+01      0s
+       7       3505   1.4724483e+02   1.0626674e+02      0s
+       8       4035   1.4476239e+02   1.0986063e+02      0s
+       9       4510   1.4033746e+02   1.1303695e+02      0s
+      10       5116   1.3992184e+02   1.1549167e+02      0s
+      11       5639   1.3981386e+02   1.2044151e+02      0s
+      12       6007   1.3904474e+02   1.2246771e+02      0s
+      13       6411   1.3854126e+02   1.2489476e+02      0s
+      14       6794   1.3843902e+02   1.3017678e+02      0s
+      15       7124   1.3836585e+02   1.3427788e+02      0s
+      16       7460   1.3829350e+02   1.3709764e+02      0s
+
+Sifting complete
+
+    7734    1.3828711e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 7734 iterations and 0.16 seconds (0.27 work units)
+Optimal objective  1.382871062e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x8337252d
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 511 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 77106 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.740625e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        217   1.8700000e+02   7.1923077e+00      0s
+       2        791   1.3520270e+02   2.0037063e+01      0s
+       3       1251   1.1956073e+02   4.3659477e+01      0s
+       4       1690   1.0200089e+02   5.3772825e+01      0s
+       5       2194   9.7323246e+01   6.6237709e+01      0s
+       6       2790   9.6207489e+01   7.2482779e+01      0s
+       7       3318   9.5857812e+01   7.6787483e+01      0s
+       8       3864   9.5755062e+01   8.0771148e+01      0s
+       9       4347   9.5751917e+01   8.4343873e+01      0s
+      10       4678   9.5715942e+01   8.8642643e+01      0s
+      11       4985   9.5715942e+01   9.2413987e+01      0s
+      12       5280   9.5715942e+01   9.5674027e+01      0s
+
+Sifting complete
+
+    5554    9.5715942e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 5554 iterations and 0.12 seconds (0.21 work units)
+Optimal objective  9.571594182e+01
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0xbcd865df
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 542 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 78094 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.740625e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        286   1.9281250e+02   1.1341912e+01      0s
+       2        841   1.6192336e+02   3.7597160e+01      0s
+       3       1415   1.4039890e+02   5.3106653e+01      0s
+       4       1918   1.2691831e+02   7.0632141e+01      0s
+       5       2458   1.2170786e+02   7.3559546e+01      0s
+       6       2844   1.2120999e+02   7.7165164e+01      0s
+       7       3372   1.2065197e+02   8.2663152e+01      0s
+       8       3961   1.1927912e+02   8.8438797e+01      0s
+       9       4447   1.1886522e+02   9.5711285e+01      0s
+      10       4826   1.1822336e+02   1.0014727e+02      0s
+      11       5307   1.1793190e+02   1.0285600e+02      0s
+      12       5723   1.1773594e+02   1.0554585e+02      0s
+      13       6102   1.1773594e+02   1.0719496e+02      0s
+      14       6438   1.1763649e+02   1.1267762e+02      0s
+
+Sifting complete
+
+    6764    1.1762803e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 6764 iterations and 0.15 seconds (0.25 work units)
+Optimal objective  1.176280334e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x6d50517b
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 470 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 79304 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.731875e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        278   1.8474054e+02   1.2061079e+01      0s
+       2        876   1.8074664e+02   7.9091492e+01      0s
+       3       1356   1.6422950e+02   8.5749730e+01      0s
+       4       1841   1.5634299e+02   9.0359697e+01      0s
+       5       2502   1.5488916e+02   1.0264558e+02      0s
+       6       3056   1.5246803e+02   1.0587053e+02      0s
+       7       3738   1.4997891e+02   1.1402571e+02      0s
+       8       4297   1.4916635e+02   1.2762008e+02      0s
+       9       4750   1.4773855e+02   1.3324864e+02      0s
+      10       5158   1.4763107e+02   1.4009992e+02      0s
+      11       5527   1.4683177e+02   1.4231514e+02      0s
+      12       5862   1.4680028e+02   1.4291223e+02      0s
+      13       6164   1.4678309e+02   1.4450637e+02      0s
+      14       6444   1.4677455e+02   1.4587893e+02      0s
+
+Sifting complete
+
+    6710    1.4676054e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 6710 iterations and 0.15 seconds (0.25 work units)
+Optimal objective  1.467605357e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0xfd344e35
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 513 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 79279 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.731875e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        367   1.8684444e+02   1.4434335e+01      0s
+       2        976   1.7867700e+02   5.2124257e+01      0s
+       3       1562   1.6000977e+02   6.1920014e+01      0s
+       4       2148   1.5673956e+02   7.5365988e+01      0s
+       5       2700   1.5467881e+02   7.9978198e+01      0s
+       6       3277   1.5128628e+02   8.7898063e+01      0s
+       7       3917   1.5007767e+02   9.5094357e+01      0s
+       8       4471   1.4991795e+02   1.0331906e+02      0s
+       9       5131   1.4916798e+02   1.1105413e+02      0s
+      10       5814   1.4888636e+02   1.1762460e+02      0s
+      11       6307   1.4859192e+02   1.2260303e+02      0s
+      12       6871   1.4853474e+02   1.2997581e+02      0s
+      13       7375   1.4849748e+02   1.3525563e+02      0s
+      14       7821   1.4832142e+02   1.3852634e+02      0s
+      15       8235   1.4828988e+02   1.4177573e+02      0s
+
+Sifting complete
+
+    8646    1.4817731e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 8646 iterations and 0.18 seconds (0.30 work units)
+Optimal objective  1.481773091e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x802cc544
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 616 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 79063 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.731875e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        296   1.8335294e+02   1.5822335e+01      0s
+       2        921   1.6148667e+02   4.0462765e+01      0s
+       3       1560   1.4847962e+02   5.5242148e+01      0s
+       4       2227   1.4605568e+02   7.1246122e+01      0s
+       5       2859   1.3993132e+02   8.6289061e+01      0s
+       6       3457   1.3716052e+02   9.5954046e+01      0s
+       7       4079   1.3678020e+02   1.0066313e+02      0s
+       8       4642   1.3617640e+02   1.0996441e+02      0s
+       9       5211   1.3584124e+02   1.1663152e+02      0s
+      10       5780   1.3571528e+02   1.1893712e+02      0s
+      11       6236   1.3548704e+02   1.2336622e+02      0s
+      12       6603   1.3548704e+02   1.2889306e+02      0s
+
+Sifting complete
+
+    6996    1.3544922e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 6996 iterations and 0.15 seconds (0.25 work units)
+Optimal objective  1.354492235e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x4d089455
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 582 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 79025 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.739375e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        287   1.9197353e+02   1.7249207e+01      0s
+       2        880   1.6843265e+02   5.0802449e+01      0s
+       3       1530   1.5863314e+02   6.9645830e+01      0s
+       4       2134   1.4859085e+02   7.4078681e+01      0s
+       5       2761   1.4472999e+02   8.7094524e+01      0s
+       6       3262   1.4301761e+02   8.9501537e+01      0s
+       7       3821   1.4242781e+02   9.2781674e+01      0s
+       8       4355   1.4164185e+02   9.7275680e+01      0s
+       9       4891   1.4100604e+02   1.0386281e+02      0s
+      10       5462   1.3465640e+02   1.0891817e+02      0s
+      11       5968   1.3419602e+02   1.1422343e+02      0s
+      12       6458   1.3285242e+02   1.1812027e+02      0s
+      13       6890   1.3224347e+02   1.2347108e+02      0s
+      14       7401   1.3220260e+02   1.2834328e+02      0s
+      15       7786   1.3206306e+02   1.3027929e+02      0s
+      16       8104   1.3205756e+02   1.3094436e+02      0s
+
+Sifting complete
+
+    8408    1.3205009e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 8408 iterations and 0.19 seconds (0.32 work units)
+Optimal objective  1.320500928e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0xef8e897a
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 558 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 79068 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.739375e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        329   1.9342895e+02   1.0903872e+01      0s
+       2        949   1.7589787e+02   4.1234277e+01      0s
+       3       1488   1.7175472e+02   4.6428169e+01      0s
+       4       2128   1.7049349e+02   6.1395530e+01      0s
+       5       2639   1.6632447e+02   8.3269917e+01      0s
+       6       3133   1.5646800e+02   8.8388673e+01      0s
+       7       3653   1.5184436e+02   9.5438740e+01      0s
+       8       4137   1.4665401e+02   1.0077999e+02      0s
+       9       4684   1.4592394e+02   1.0401176e+02      0s
+      10       5196   1.4405935e+02   1.0667635e+02      0s
+      11       5706   1.4319438e+02   1.0898146e+02      0s
+      12       6133   1.4192189e+02   1.1342464e+02      0s
+      13       6699   1.4040579e+02   1.1701490e+02      0s
+      14       7320   1.4003292e+02   1.2517387e+02      0s
+      15       7780   1.3980004e+02   1.2783437e+02      0s
+      16       8290   1.3958442e+02   1.3150293e+02      0s
+      17       8730   1.3954525e+02   1.3572586e+02      0s
+      18       9079   1.3954324e+02   1.3775857e+02      0s
+      19       9471   1.3954200e+02   1.3951493e+02      0s
+
+Sifting complete
+
+    9792    1.3954186e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 9792 iterations and 0.21 seconds (0.35 work units)
+Optimal objective  1.395418572e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0xa4a8c0d8
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 511 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 79089 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.740625e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        259   2.0734454e+02   1.1519141e+01      0s
+       2        863   1.8490114e+02   5.3727046e+01      0s
+       3       1458   1.6350472e+02   6.3559995e+01      0s
+       4       1978   1.5517819e+02   7.0840525e+01      0s
+       5       2550   1.4875834e+02   8.0221639e+01      0s
+       6       3248   1.4145901e+02   9.6409220e+01      0s
+       7       3768   1.3969463e+02   1.1121796e+02      0s
+       8       4349   1.3821641e+02   1.3250341e+02      0s
+       9       4678   1.3791681e+02   1.3773090e+02      0s
+
+Sifting complete
+
+    4968    1.3791681e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 4968 iterations and 0.12 seconds (0.21 work units)
+Optimal objective  1.379168119e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x1d3ae718
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 456 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 79090 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.739375e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        322   1.9100000e+02   1.7363636e+01      0s
+       2        908   1.7060694e+02   3.7050237e+01      0s
+       3       1628   1.6558355e+02   7.4793210e+01      0s
+       4       2169   1.5381692e+02   8.2000764e+01      0s
+       5       2636   1.5101475e+02   8.7846687e+01      0s
+       6       3243   1.4969142e+02   9.5111551e+01      0s
+       7       3761   1.4946190e+02   1.0118397e+02      0s
+       8       4202   1.4901630e+02   1.0610180e+02      0s
+       9       4687   1.4839141e+02   1.1222778e+02      0s
+      10       5110   1.4827610e+02   1.1726784e+02      0s
+      11       5480   1.4809057e+02   1.2347376e+02      0s
+      12       5845   1.4774999e+02   1.2908411e+02      0s
+      13       6271   1.4753499e+02   1.3441748e+02      0s
+      14       6745   1.4685377e+02   1.3640259e+02      0s
+      15       7180   1.4636842e+02   1.3743167e+02      0s
+      16       7623   1.4636842e+02   1.4061441e+02      0s
+      17       7973   1.4635141e+02   1.4377689e+02      0s
+      18       8300   1.4600831e+02   1.4513215e+02      0s
+
+Sifting complete
+
+    8535    1.4600475e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 8535 iterations and 0.18 seconds (0.32 work units)
+Optimal objective  1.460047500e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x4132ce59
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 590 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 78892 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.740625e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        310   2.0611701e+02   9.9794662e+00      0s
+       2       1058   1.9413776e+02   5.5213486e+01      0s
+       3       1563   1.8992049e+02   7.2009773e+01      0s
+       4       2092   1.8236756e+02   8.5288586e+01      0s
+       5       2558   1.7864039e+02   9.0848527e+01      0s
+       6       3048   1.7154603e+02   1.0330913e+02      0s
+       7       3498   1.5750179e+02   1.1490715e+02      0s
+       8       3967   1.5323564e+02   1.1785964e+02      0s
+       9       4495   1.5188785e+02   1.2061095e+02      0s
+      10       4963   1.5180198e+02   1.2341732e+02      0s
+      11       5393   1.5111096e+02   1.2703335e+02      0s
+      12       5844   1.4655900e+02   1.3470339e+02      0s
+      13       6253   1.4588544e+02   1.3781115e+02      0s
+      14       6563   1.4574677e+02   1.4132292e+02      0s
+
+Sifting complete
+
+    6863    1.4570834e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 6863 iterations and 0.14 seconds (0.25 work units)
+Optimal objective  1.457083352e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0xfa23f11e
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 517 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 78063 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.740625e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        309   1.7500000e+02   1.1363636e+01      0s
+       2       1029   1.5474053e+02   2.6848706e+01      0s
+       3       1554   1.4613691e+02   4.4114400e+01      0s
+       4       2038   1.4052251e+02   6.0977561e+01      0s
+       5       2574   1.3212933e+02   7.0029694e+01      0s
+       6       3183   1.2646468e+02   7.9398595e+01      0s
+       7       3711   1.2564694e+02   8.4743940e+01      0s
+       8       4190   1.2521438e+02   9.3741502e+01      0s
+       9       4740   1.2501315e+02   9.9575781e+01      0s
+      10       5194   1.2479201e+02   1.0311298e+02      0s
+      11       5682   1.2474984e+02   1.0667389e+02      0s
+      12       6071   1.2433333e+02   1.0844105e+02      0s
+      13       6542   1.2413333e+02   1.1331159e+02      0s
+      14       6913   1.2413333e+02   1.1659839e+02      0s
+      15       7243   1.2395251e+02   1.2143848e+02      0s
+      16       7518   1.2391937e+02   1.2391937e+02      0s
+
+Sifting complete
+
+    7518    1.2391937e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 7518 iterations and 0.16 seconds (0.26 work units)
+Optimal objective  1.239193670e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0xfc95c787
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 506 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 77952 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.740625e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        285   1.9900000e+02   1.1055556e+01      0s
+       2        909   1.5904348e+02   2.3477899e+01      0s
+       3       1453   1.4128889e+02   4.0001799e+01      0s
+       4       2119   1.3857609e+02   6.8556822e+01      0s
+       5       2571   1.3644991e+02   7.6136473e+01      0s
+       6       3083   1.3004563e+02   8.2443941e+01      0s
+       7       3648   1.2740652e+02   9.4398406e+01      0s
+       8       4138   1.2606502e+02   9.9943976e+01      0s
+       9       4600   1.2573272e+02   1.0610808e+02      0s
+      10       5106   1.2523683e+02   1.1538418e+02      0s
+      11       5538   1.2519345e+02   1.1724012e+02      0s
+      12       5903   1.2517115e+02   1.1981184e+02      0s
+      13       6272   1.2516707e+02   1.2325264e+02      0s
+      14       6604   1.2516303e+02   1.2497187e+02      0s
+      15       6886   1.2516303e+02   1.2516303e+02      0s
+
+Sifting complete
+
+    6886    1.2516303e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 6886 iterations and 0.15 seconds (0.24 work units)
+Optimal objective  1.251630290e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0xcd8d2200
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 458 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 78808 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.740625e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        280   1.8511111e+02   1.8307692e+01      0s
+       2        905   1.7296697e+02   8.5467617e+01      0s
+       3       1367   1.5478991e+02   9.4515123e+01      0s
+       4       1890   1.4825842e+02   9.6766147e+01      0s
+       5       2453   1.4565513e+02   9.9955756e+01      0s
+       6       2974   1.4522149e+02   1.0150525e+02      0s
+       7       3563   1.4498650e+02   1.0336322e+02      0s
+       8       4024   1.4458990e+02   1.0643636e+02      0s
+       9       4594   1.4376942e+02   1.0863728e+02      0s
+      10       5276   1.4361643e+02   1.1105845e+02      0s
+      11       5769   1.4305020e+02   1.1392947e+02      0s
+      12       6310   1.4301282e+02   1.1716931e+02      0s
+      13       6808   1.4289645e+02   1.2086909e+02      0s
+      14       7265   1.4285774e+02   1.2481071e+02      0s
+      15       7749   1.4258578e+02   1.2784850e+02      0s
+      16       8129   1.4190716e+02   1.3165820e+02      0s
+      17       8480   1.4190486e+02   1.3432112e+02      0s
+      18       8822   1.4181314e+02   1.4014957e+02      0s
+
+Sifting complete
+
+    9097    1.4180806e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 9097 iterations and 0.18 seconds (0.32 work units)
+Optimal objective  1.418080599e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x84aa849b
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 477 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 79266 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.731875e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        311   1.9800000e+02   9.9000000e+01      0s
+       2        594   1.9700000e+02   1.3166667e+02      0s
+       3        867   1.7876329e+02   1.3318591e+02      0s
+       4       1102   1.7189579e+02   1.3507565e+02      0s
+       5       1405   1.5668686e+02   1.3694325e+02      0s
+       6       1733   1.5359564e+02   1.3935748e+02      0s
+       7       2030   1.5193351e+02   1.4413516e+02      0s
+       8       2328   1.5093406e+02   1.4634292e+02      0s
+       9       2620   1.5075961e+02   1.4858651e+02      0s
+
+Sifting complete
+
+    2916    1.5073805e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 2916 iterations and 0.08 seconds (0.15 work units)
+Optimal objective  1.507380459e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x936c5ea3
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 521 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 78571 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.740625e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        253   1.9500000e+02   1.9500000e+01      0s
+       2        814   1.7300000e+02   3.3454545e+01      0s
+       3       1436   1.4627158e+02   4.2211705e+01      0s
+       4       2047   1.4185047e+02   5.5272017e+01      0s
+       5       2647   1.3979086e+02   7.7221139e+01      0s
+       6       3164   1.3715547e+02   8.3366723e+01      0s
+       7       3708   1.3433107e+02   8.8432981e+01      0s
+       8       4237   1.3273994e+02   9.3573152e+01      0s
+       9       4767   1.3206272e+02   9.7150585e+01      0s
+      10       5321   1.3172607e+02   1.0358809e+02      0s
+      11       5809   1.3147352e+02   1.0957297e+02      0s
+      12       6334   1.3107761e+02   1.1360961e+02      0s
+      13       6816   1.3088476e+02   1.1895881e+02      0s
+      14       7267   1.3085818e+02   1.2375383e+02      0s
+      15       7700   1.3085818e+02   1.2843805e+02      0s
+
+Sifting complete
+
+    7999    1.3066943e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 7999 iterations and 0.17 seconds (0.29 work units)
+Optimal objective  1.306694298e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0xe48c3b6a
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 718 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 78778 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.740625e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        306   2.0104082e+02   9.5178744e+00      0s
+       2        892   1.8510484e+02   3.5453031e+01      0s
+       3       1420   1.7261800e+02   7.8072195e+01      0s
+       4       1873   1.4570159e+02   8.4935072e+01      0s
+       5       2588   1.3483411e+02   8.9601333e+01      0s
+       6       3206   1.3318227e+02   9.1532333e+01      0s
+       7       3738   1.3254111e+02   9.4038126e+01      0s
+       8       4199   1.3051458e+02   9.6164473e+01      0s
+       9       4757   1.2877613e+02   9.7463480e+01      0s
+      10       5262   1.2806124e+02   1.0000362e+02      0s
+      11       5747   1.2744119e+02   1.0495569e+02      0s
+      12       6260   1.2716267e+02   1.0739517e+02      0s
+      13       6797   1.2705683e+02   1.0988604e+02      0s
+      14       7255   1.2704500e+02   1.1240859e+02      0s
+      15       7736   1.2690347e+02   1.1987090e+02      0s
+      16       8091   1.2686965e+02   1.2172380e+02      0s
+
+Sifting complete
+
+    8428    1.2685906e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 8428 iterations and 0.18 seconds (0.32 work units)
+Optimal objective  1.268590556e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0xc5e9196e
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 542 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 79232 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.731875e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        295   2.2273114e+02   1.1262978e+01      0s
+       2        878   2.0229538e+02   6.0870836e+01      0s
+       3       1378   1.9305779e+02   8.4978702e+01      0s
+       4       1874   1.9242729e+02   9.7052655e+01      0s
+       5       2404   1.8813216e+02   1.0777789e+02      0s
+       6       2906   1.8393554e+02   1.1628151e+02      0s
+       7       3410   1.7308551e+02   1.2207011e+02      0s
+       8       3943   1.6771752e+02   1.2724787e+02      0s
+       9       4436   1.6718969e+02   1.3267834e+02      0s
+      10       4879   1.6416287e+02   1.3602549e+02      0s
+      11       5317   1.6253918e+02   1.3876038e+02      0s
+      12       5772   1.6138552e+02   1.4719077e+02      0s
+      13       6192   1.6088094e+02   1.5113886e+02      0s
+      14       6576   1.5984779e+02   1.5174829e+02      0s
+      15       6994   1.5984779e+02   1.5528270e+02      0s
+      16       7318   1.5980896e+02   1.5568534e+02      0s
+
+Sifting complete
+
+    7622    1.5980896e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 7622 iterations and 0.15 seconds (0.26 work units)
+Optimal objective  1.598089616e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x71cd045f
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 471 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 79122 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.739375e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        327   1.8250000e+02   1.7380952e+01      0s
+       2        952   1.7349860e+02   2.5390810e+01      0s
+       3       1539   1.6202582e+02   5.0933675e+01      0s
+       4       2163   1.5022320e+02   6.0850640e+01      0s
+       5       2783   1.4425613e+02   6.8611035e+01      0s
+       6       3404   1.4088932e+02   7.4581305e+01      0s
+       7       3952   1.3940243e+02   8.5120173e+01      0s
+       8       4533   1.3837588e+02   9.1869319e+01      0s
+       9       5095   1.3789872e+02   9.6271668e+01      0s
+      10       5639   1.3789390e+02   9.9065980e+01      0s
+      11       6107   1.3786108e+02   1.0811586e+02      0s
+      12       6531   1.3770952e+02   1.1673880e+02      0s
+      13       6911   1.3725427e+02   1.2300601e+02      0s
+      14       7361   1.3679468e+02   1.3072332e+02      0s
+      15       7704   1.3675292e+02   1.3439882e+02      0s
+
+Sifting complete
+
+    7987    1.3675277e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 7987 iterations and 0.17 seconds (0.29 work units)
+Optimal objective  1.367527691e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x8c27d393
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 478 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 79304 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.731875e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        295   1.7750000e+02   1.8684211e+01      0s
+       2       1018   1.7451477e+02   3.1925549e+01      0s
+       3       1664   1.7077671e+02   8.3069723e+01      0s
+       4       2103   1.6109280e+02   8.6953988e+01      0s
+       5       2578   1.6038369e+02   9.0131481e+01      0s
+       6       3136   1.5297814e+02   9.4040194e+01      0s
+       7       3619   1.5035220e+02   9.7853964e+01      0s
+       8       4059   1.4873529e+02   1.0293902e+02      0s
+       9       4526   1.4825525e+02   1.0652315e+02      0s
+      10       5019   1.4732836e+02   1.1161447e+02      0s
+      11       5455   1.4687643e+02   1.1534797e+02      0s
+      12       5979   1.4548808e+02   1.2073830e+02      0s
+      13       6410   1.4538710e+02   1.2467635e+02      0s
+      14       6973   1.4530420e+02   1.2741992e+02      0s
+      15       7490   1.4530420e+02   1.3051983e+02      0s
+      16       7918   1.4497505e+02   1.3885415e+02      0s
+
+Sifting complete
+
+    8300    1.4489402e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 8300 iterations and 0.18 seconds (0.31 work units)
+Optimal objective  1.448940216e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x06abcfd9
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 504 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 79293 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.731875e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        336   1.9400000e+02   2.1555556e+01      0s
+       2        880   1.7588994e+02   4.9017309e+01      0s
+       3       1331   1.7187933e+02   6.0593769e+01      0s
+       4       1821   1.6804173e+02   6.7806199e+01      0s
+       5       2387   1.6702171e+02   7.4984686e+01      0s
+       6       2967   1.6519683e+02   9.8793192e+01      0s
+       7       3495   1.6302412e+02   1.0174121e+02      0s
+       8       4046   1.6291739e+02   1.0456021e+02      0s
+       9       4581   1.6003922e+02   1.1487802e+02      0s
+      10       5131   1.5852323e+02   1.1722600e+02      0s
+      11       5668   1.5584759e+02   1.1856629e+02      0s
+      12       6198   1.5508494e+02   1.2072015e+02      0s
+      13       6668   1.5430656e+02   1.2304832e+02      0s
+      14       7231   1.5417789e+02   1.2785652e+02      0s
+      15       7808   1.5378510e+02   1.3077042e+02      0s
+      16       8388   1.5373980e+02   1.3283065e+02      0s
+      17       8882   1.5373973e+02   1.3520524e+02      0s
+      18       9431   1.5309541e+02   1.3789562e+02      0s
+      19       9998   1.5221524e+02   1.4394723e+02      0s
+      20      10317   1.5198664e+02   1.4656397e+02      0s
+      21      10671   1.5191373e+02   1.5137439e+02      0s
+
+Sifting complete
+
+   10947    1.5191305e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 10947 iterations and 0.23 seconds (0.39 work units)
+Optimal objective  1.519130518e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x9c2fdc78
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 467 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 79338 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.731875e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        366   1.9100000e+02   2.1222222e+01      0s
+       2        919   1.8444365e+02   4.9220303e+01      0s
+       3       1395   1.8112197e+02   6.6944365e+01      0s
+       4       2071   1.6479623e+02   7.2597442e+01      0s
+       5       2680   1.6268887e+02   9.5550673e+01      0s
+       6       3257   1.6254513e+02   1.0036868e+02      0s
+       7       3845   1.6163948e+02   1.0561444e+02      0s
+       8       4503   1.6041276e+02   1.0930069e+02      0s
+       9       5007   1.5885767e+02   1.2619005e+02      0s
+      10       5554   1.5781408e+02   1.4284530e+02      0s
+      11       5981   1.5744822e+02   1.4639510e+02      0s
+      12       6352   1.5732316e+02   1.5412324e+02      0s
+      13       6702   1.5730822e+02   1.5647967e+02      0s
+
+Sifting complete
+
+    6950    1.5730750e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 6950 iterations and 0.15 seconds (0.26 work units)
+Optimal objective  1.573074968e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0xc813a5d9
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 464 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 79332 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.731875e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        271   1.8486445e+02   1.6141581e+01      0s
+       2        883   1.8071795e+02   4.0108585e+01      0s
+       3       1473   1.7335057e+02   4.7603497e+01      0s
+       4       2028   1.7129646e+02   6.2104624e+01      0s
+       5       2620   1.6521344e+02   7.4052286e+01      0s
+       6       3140   1.6168459e+02   8.8479618e+01      0s
+       7       3639   1.5896126e+02   1.0628671e+02      0s
+       8       4057   1.5798909e+02   1.1176151e+02      0s
+       9       4602   1.5535806e+02   1.2085093e+02      0s
+      10       5147   1.5488316e+02   1.2394311e+02      0s
+      11       5658   1.5439149e+02   1.2879624e+02      0s
+      12       6247   1.5353744e+02   1.3254410e+02      0s
+      13       6735   1.5333581e+02   1.3787252e+02      0s
+      14       7307   1.5320179e+02   1.4038913e+02      0s
+      15       7749   1.5320179e+02   1.4543879e+02      0s
+      16       8147   1.5264788e+02   1.4625397e+02      0s
+      17       8560   1.5227191e+02   1.5188997e+02      0s
+
+Sifting complete
+
+    8873    1.5227189e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 8873 iterations and 0.19 seconds (0.32 work units)
+Optimal objective  1.522718871e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0x1abf727b
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 593 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 79189 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.731875e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        322   1.7864736e+02   1.3080831e+01      0s
+       2        851   1.7180993e+02   4.0202780e+01      0s
+       3       1428   1.6223894e+02   7.2904700e+01      0s
+       4       2013   1.5852636e+02   8.5978865e+01      0s
+       5       2520   1.5424242e+02   1.0335784e+02      0s
+       6       3042   1.5213596e+02   1.1496396e+02      0s
+       7       3507   1.5159152e+02   1.3302550e+02      0s
+       8       3888   1.5126210e+02   1.3633931e+02      0s
+       9       4255   1.5114006e+02   1.3959284e+02      0s
+      10       4622   1.5074737e+02   1.4681091e+02      0s
+      11       4899   1.5065857e+02   1.4799221e+02      0s
+      12       5180   1.5065305e+02   1.4939549e+02      0s
+
+Sifting complete
+
+    5467    1.5064983e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 5467 iterations and 0.12 seconds (0.21 work units)
+Optimal objective  1.506498299e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0xfba684ef
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 450 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 79335 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.731875e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        356   1.9500000e+02   2.1666667e+01      0s
+       2        945   1.8450000e+02   3.8920530e+01      0s
+       3       1624   1.8402854e+02   5.1306558e+01      0s
+       4       2281   1.8023454e+02   6.7770122e+01      0s
+       5       2848   1.7629140e+02   1.0116162e+02      0s
+       6       3338   1.7608566e+02   1.0350844e+02      0s
+       7       3805   1.7545908e+02   1.0711849e+02      0s
+       8       4287   1.7519766e+02   1.1444170e+02      0s
+       9       4699   1.7374132e+02   1.1650300e+02      0s
+      10       5185   1.7303445e+02   1.2039102e+02      0s
+      11       5767   1.6895916e+02   1.2281804e+02      0s
+      12       6276   1.6586745e+02   1.2553515e+02      0s
+      13       6934   1.6393198e+02   1.2723970e+02      0s
+      14       7594   1.6302413e+02   1.2931427e+02      0s
+      15       8195   1.6096803e+02   1.3251051e+02      0s
+      16       8767   1.6014774e+02   1.3850100e+02      0s
+      17       9387   1.5804344e+02   1.3962458e+02      0s
+      18       9944   1.5679817e+02   1.4014631e+02      0s
+      19      10521   1.5668769e+02   1.5214462e+02      0s
+      20      10959   1.5660285e+02   1.5434487e+02      0s
+
+Sifting complete
+
+   11334    1.5659068e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 11334 iterations and 0.23 seconds (0.41 work units)
+Optimal objective  1.565906850e+02
+Set parameter TimeLimit to value 600
+Set parameter MIPGap to value 1e-06
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 26209 rows, 200 columns and 79666 nonzeros
+Model fingerprint: 0xb4a0ed16
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 423 rows and 1 columns
+Presolve time: 0.03s
+Presolved: 199 rows, 26228 columns, 79384 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.731875e+02   0.000000e+00      0s
+
+Starting sifting (using dual simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0          0     infinity      0.0000000e+00      0s
+       1        317   1.9769565e+02   1.7972332e+01      0s
+       2        885   1.9123393e+02   5.2046724e+01      0s
+       3       1367   1.8001600e+02   7.5409666e+01      0s
+       4       2005   1.6907895e+02   1.1525112e+02      0s
+       5       2372   1.6881364e+02   1.2368651e+02      0s
+       6       2825   1.6799405e+02   1.2953575e+02      0s
+       7       3218   1.6700283e+02   1.3480681e+02      0s
+       8       3661   1.6489466e+02   1.3763728e+02      0s
+       9       4019   1.6378779e+02   1.4088476e+02      0s
+      10       4373   1.6342541e+02   1.4252668e+02      0s
+      11       4785   1.6317467e+02   1.4316958e+02      0s
+      12       5187   1.6180317e+02   1.4436942e+02      0s
+      13       5675   1.6170817e+02   1.4889298e+02      0s
+      14       6055   1.6144656e+02   1.5211816e+02      0s
+      15       6521   1.6135237e+02   1.5389205e+02      0s
+      16       6870   1.6125807e+02   1.5470323e+02      0s
+      17       7244   1.6125807e+02   1.5608579e+02      0s
+      18       7591   1.6076374e+02   1.5870409e+02      0s
+
+Sifting complete
+
+    7888    1.6074950e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 7888 iterations and 0.16 seconds (0.26 work units)
+Optimal objective  1.607494997e+02
