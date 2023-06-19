@@ -104,8 +104,13 @@ def tukey_fmax_miset_c3(method_,instance_,G,result_path):
 				#nx.draw(T,  with_labels = True)
 
 				A = ig.Graph.from_networkx(T)
-				#Im = nx.maximal_independent_set(T)
+				
+				tstart = trun.time()
+                #Im = nx.maximal_independent_set(T)
 				Im = A.maximal_independent_vertex_sets()
+				tend = trun.time()
+
+				elapsed_time_miset = tend - tstart
 
 				tmp = len(Im)
 				if (tmp > 0):
@@ -122,9 +127,10 @@ def tukey_fmax_miset_c3(method_,instance_,G,result_path):
 								if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
 									model.addConstr(x[u] + x[w] <= 1 + x[s], "geo_c3")
 
+                #listNu.clear() 
 				T.clear()
 
-			#model.write(f"{instance_}.lp")
+			#model.write(f"{instance_}_{i}.lp")
 
 			model.optimize()
 
@@ -136,15 +142,17 @@ def tukey_fmax_miset_c3(method_,instance_,G,result_path):
 				lb[i] = N - model.objBound
 				ub[i] = N - model.objVal
 				gap[i] = model.MIPGap
-				time[i] = model.Runtime
+				time[i] = model.Runtime + elapsed_time_miset
 				nodes[i] = model.NodeCount
 				status[i] = tmp
 			else:
 				ub[i] = N - model.objVal
-				time[i] = model.Runtime
+				time[i] = model.Runtime + elapsed_time_miset
 				status[i] = tmp
 
 			model.dispose()
+		
+        #listNi.clear()        
 	
 	# end tukey for node i
 
@@ -173,4 +181,3 @@ def tukey_fmax_miset_c3(method_,instance_,G,result_path):
 				)
 			arquivo.close()
 
-	#G.clear()

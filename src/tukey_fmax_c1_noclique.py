@@ -67,7 +67,7 @@ def tukey_fmax_c1_noclique(method_,instance_,G,result_path):
                         if (dm[u,s] + dm[s,w] == dm[u,w]):
                             model.addConstr(x[u] + x[w] <= 1 + x[s], "geo_c1")
 
-        #model.write(f"{instance_}.lp")
+        #model.write(f"{instance_}_{i}.lp")
 
         model.optimize()
 
@@ -116,5 +116,4 @@ def tukey_fmax_c1_noclique(method_,instance_,G,result_path):
             +str(round(status[i],1))+'\n'
             )
             arquivo.close()
-            
-    #G.clear()
+

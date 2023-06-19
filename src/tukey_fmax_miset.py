@@ -12,6 +12,7 @@ import time as trun
 import igraph as ig
 
 def tukey_fmax_miset(method_,instance_,G,result_path):
+
 	N = nx.number_of_nodes(G)
 	M = nx.number_of_edges(G)
 
@@ -35,8 +36,8 @@ def tukey_fmax_miset(method_,instance_,G,result_path):
 		Ni = nx.neighbors(G,i)
 
 		listNi = []
-		for k in Ni:
-			listNi.append(k)
+		for j in Ni:
+			listNi.append(j)
 
 		tstart = trun.time()
 		status_clique = fg.is_subclique(G, listNi)
@@ -101,11 +102,16 @@ def tukey_fmax_miset(method_,instance_,G,result_path):
 					if G.has_edge(a,b):
 						T.add_edge(a,b)
 
-				#nx.draw(T,  with_labels = True)
+                #nx.draw(T,  with_labels = True)
 
 				A = ig.Graph.from_networkx(T)
-				#Im = nx.maximal_independent_set(T)
+				
+				tstart = trun.time()
+                #Im = nx.maximal_independent_set(T)
 				Im = A.maximal_independent_vertex_sets()
+				tend = trun.time()
+
+				elapsed_time_miset = tend - tstart
 
 				tmp = len(Im)
 				if (tmp > 0):
@@ -115,9 +121,10 @@ def tukey_fmax_miset(method_,instance_,G,result_path):
 							constr += 1 * x[dicl[j]]
 						model.addConstr(constr <= 1 + (len(itIm)- 1)*x[u], "miset")
 
+                #listNu.clear()
 				T.clear()
 
-			#model.write(f"{instance_}.lp")
+			#model.write(f"{instance_}_{i}.lp")
 
 			model.optimize()
 
@@ -129,15 +136,17 @@ def tukey_fmax_miset(method_,instance_,G,result_path):
 				lb[i] = N - model.objBound
 				ub[i] = N - model.objVal
 				gap[i] = model.MIPGap
-				time[i] = model.Runtime
+				time[i] = model.Runtime + elapsed_time_miset
 				nodes[i] = model.NodeCount
 				status[i] = tmp
 			else:
 				ub[i] = N - model.objVal
-				time[i] = model.Runtime
+				time[i] = model.Runtime + elapsed_time_miset
 				status[i] = tmp
 
 			model.dispose()
+
+        #listNi.clear()
 	
 	# end tukey for node i
 
@@ -165,5 +174,3 @@ def tukey_fmax_miset(method_,instance_,G,result_path):
 				+str(round(status[i],1))+'\n'
 				)
 			arquivo.close()
-
-	#G.clear()

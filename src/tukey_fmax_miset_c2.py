@@ -80,21 +80,6 @@ def tukey_fmax_miset_c2(method_,instance_,G,result_path):
 
 			model.addConstr(x[i] == 0, "fix_x")
 
-			# geodesic neighbors 
-			for u in range(0,N):
-				
-				Nu = nx.neighbors(G,u)
-            
-				listNu = []
-				for j in Nu:
-					listNu.append(j)
-
-				for w in range(u+1,N):
-					if (w != u) and (w not in listNu):
-						for s in listNu:
-							if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
-								model.addConstr(x[u] + x[w] <= 1 + x[s], "geo")
-
      		# maximal independent set
 			for u in range(0,N):
         		
@@ -119,8 +104,13 @@ def tukey_fmax_miset_c2(method_,instance_,G,result_path):
 				#nx.draw(T,  with_labels = True)
 
 				A = ig.Graph.from_networkx(T)
-				#Im = nx.maximal_independent_set(T)
+
+				tstart = trun.time()
+                #Im = nx.maximal_independent_set(T)
 				Im = A.maximal_independent_vertex_sets()
+				tend = trun.time()
+
+				elapsed_time_miset = tend - tstart
 
 				tmp = len(Im)
 				if (tmp > 0):
@@ -130,9 +120,17 @@ def tukey_fmax_miset_c2(method_,instance_,G,result_path):
 							constr += 1 * x[dicl[j]]
 						model.addConstr(constr <= 1 + (len(itIm)- 1)*x[u], "miset_c2")
 
+                # geodesic c2
+				for w in range(u+1,N):
+					if (w != u) and (w not in listNu):
+						for s in listNu:
+							if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
+								model.addConstr(x[u] + x[w] <= 1 + x[s], "geo_c2")
+								
 				T.clear()
+                #listNu.clear()
 
-			#model.write(f"{instance_}.lp")
+			#model.write(f"{instance_}_{i}.lp")
 
 			model.optimize()
 
@@ -144,16 +142,18 @@ def tukey_fmax_miset_c2(method_,instance_,G,result_path):
 				lb[i] = N - model.objBound
 				ub[i] = N - model.objVal
 				gap[i] = model.MIPGap
-				time[i] = model.Runtime
+				time[i] = model.Runtime + elapsed_time_miset
 				nodes[i] = model.NodeCount
 				status[i] = tmp
 			else:
 				ub[i] = N - model.objVal
-				time[i] = model.Runtime
+				time[i] = model.Runtime + elapsed_time_miset
 				status[i] = tmp
 
 			model.dispose()
 	
+        #listNi.clear()        
+
 	# end tukey for node i
 
 	for i in G:
@@ -181,4 +181,3 @@ def tukey_fmax_miset_c2(method_,instance_,G,result_path):
 				)
 			arquivo.close()
 
-	#G.clear()

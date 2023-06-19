@@ -24,12 +24,18 @@ import tukey_fmin_c2 as fmin_c2
 import tukey_fmin_miset as fminmiset
 import tukey_fmin_miset_c2 as fminmiset_c2
 import tukey_fmin_miset_c3 as fminmiset_c3
+import tukey_fmin_c0 as fmin_c0
+import tukey_fmin_c0_noclique as fmin_c0noclq
+import tukey_fmin_c1_noclique as fmin_c1noclq
 
 import tukey_fmax_c1 as fmax_c1
 import tukey_fmax_c2 as fmax_c2
 import tukey_fmax_miset as fmaxmiset
 import tukey_fmax_miset_c2 as fmaxmiset_c2
 import tukey_fmax_miset_c3 as fmaxmiset_c3
+import tukey_fmax_c0 as fmax_c0
+import tukey_fmax_c0_noclique as fmax_c0noclq
+import tukey_fmax_c1_noclique as fmax_c1noclq
 
 if __name__ == "__main__":
 
@@ -59,6 +65,12 @@ if __name__ == "__main__":
 		fminmiset_c2.tukey_fmin_miset_c2(method_,instance_,G,result_path)
 	elif form_ == "fminmisetc3":
 		fminmiset_c3.tukey_fmin_miset_c3(method_,instance_,G,result_path)
+	elif form_ == "fminc0":
+		fmin_c0.tukey_fmin_c0(method_,instance_,G,result_path)
+	elif form_ == "fminc0noclq":
+		fmin_c0noclq.tukey_fmin_c0_noclique(method_,instance_,G,result_path)
+	elif form_ == "fminc1noclq":
+		fmin_c1noclq.tukey_fmin_c1_noclique(method_,instance_,G,result_path)
 	elif form_ == "fmaxc1":
 		fmax_c1.tukey_fmax_c1(method_,instance_,G,result_path)
 	elif form_ == "fmaxc2":
@@ -69,6 +81,12 @@ if __name__ == "__main__":
 		fmaxmiset_c2.tukey_fmax_miset_c2(method_,instance_,G,result_path)
 	elif form_ == "fmaxmisetc3":
 		fmaxmiset_c3.tukey_fmax_miset_c3(method_,instance_,G,result_path)
+	elif form_ == "fmaxc0":
+		fmax_c0.tukey_fmax_c0(method_,instance_,G,result_path)
+	elif form_ == "fmaxc0noclq":
+		fmax_c0noclq.tukey_fmax_c0_noclique(method_,instance_,G,result_path)
+	elif form_ == "fmaxc1noclq":
+		fmax_c1noclq.tukey_fmax_c1_noclique(method_,instance_,G,result_path)
 	else:
 		print("parameters errado!")
   

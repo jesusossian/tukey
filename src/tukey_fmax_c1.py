@@ -35,8 +35,8 @@ def tukey_fmax_c1(method_,instance_,G,result_path):
         Ni = nx.neighbors(G,i)
 
         listNi = []
-        for k in Ni:
-            listNi.append(k)
+        for j in Ni:
+            listNi.append(j)
 
         tstart = trun.time()
         status_clique = fg.is_subclique(G, listNi)
@@ -89,7 +89,7 @@ def tukey_fmax_c1(method_,instance_,G,result_path):
                             if (dm[u,s] + dm[s,w] == dm[u,w]):
                                 model.addConstr(x[u] + x[w] <= 1 + x[s], "geo_c1")
 
-            #model.write(f"{instance_}.lp")
+            #model.write(f"{instance_}_{i}.lp")
 
             model.optimize()
 
@@ -108,8 +108,10 @@ def tukey_fmax_c1(method_,instance_,G,result_path):
                 ub[i] = N - model.objVal
                 time[i] = model.Runtime
                 status[i] = tmp
-        
+
             model.dispose()
+
+        listNi.clear()        
 
     # end tukey for node i
 
