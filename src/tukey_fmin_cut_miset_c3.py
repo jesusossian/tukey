@@ -31,7 +31,10 @@ def tukey_fmin_cut_miset_c3(method_,instance_,G,result_path):
 
     for i in G:
 
-        #print("node %d" %i)
+        print("node %d" %i)
+        
+        #if i>0:
+        #    continue
     
         Ni = nx.neighbors(G,i)
 
@@ -133,32 +136,37 @@ def tukey_fmin_cut_miset_c3(method_,instance_,G,result_path):
 
             #relax.optimize()
 
-            for v in model.getVars():
-                v.setAttr('vtype', 'C')
-
-            model.optimize()
+            #for v in model.getVars():
+            #    v.setAttr('vtype', 'C')
             
-            val_x = [x[j].X for j in range(0,N)]
-
-            # cut geodesic c3
-            for u in range(0,N):
+            print("teste")
+            temp = 1
+            while temp > 0:
+                temp = 0
+                model.optimize()
             
-                Nu = nx.neighbors(G,u)
+                val_x = [x[j].X for j in range(0,N)]
 
-                listNu = []
-                for j in Nu:
-                    listNu.append(j)
+                # cut geodesic c3
+                for u in range(0,N):
+            
+                    Nu = nx.neighbors(G,u)
 
-                # geodesic c3
-                ncuts = 0
-                for w in range(u+1,N):
-                    if (dm[u,w] >= 3):
-                        if (w != u) and (w not in listNu):
-                            for s in listNu:
-                                if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
-                                    if (val_x[u] + val_x[w] - val_x[s] < 0.0001):
-                                        ncuts += 1
-                                        model.addConstr(x[u] + x[w] >= x[s], "geo_c3")
+                    listNu = []
+                    for j in Nu:
+                        listNu.append(j)
+
+                    # geodesic c3
+                    ncuts = 0
+                    for w in range(u+1,N):
+                        if (dm[u,w] >= 3):
+                            if (w != u) and (w not in listNu):
+                                for s in listNu:
+                                    if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
+                                        if (val_x[u] + val_x[w] - val_x[s] < -0.0001):
+                                            ncuts += 1
+                                            temp += 1
+                                            model.addConstr(x[u] + x[w] >= x[s], "geo_c3")
 
             #print(ncuts)
             #model.write(f"{instance_}_{i}.lp")

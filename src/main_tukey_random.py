@@ -70,6 +70,7 @@ if __name__ == "__main__":
 	elif form_ == "fminmisetc3":
 		fminmiset_c3.tukey_fmin_miset_c3(method_,instance_,G,result_path)
 	elif form_ == "fmincutmisetc3":
+		print("teste")
 		fmincutmiset_c3.tukey_fmin_cut_miset_c3(method_,instance_,G,result_path)
 	elif form_ == "fmincutbmisetc3":
 		fmincutbmiset_c3.tukey_fmin_cutb_miset_c3(method_,instance_,G,result_path)

@@ -138,6 +138,8 @@ def tukey_fmin_miset_c3(method_,instance_,G,result_path):
 
             model.optimize()
 
+            val_x = [x[j].X for j in range(0,N)]
+
             tmp = 0
             if model.status == GRB.OPTIMAL:
                 tmp = 1
