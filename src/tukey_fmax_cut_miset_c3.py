@@ -129,38 +129,38 @@ def tukey_fmax_cut_miset_c3(method_,instance_,G,result_path):
 				T.clear()
 			            
 			for v in model.getVars():
-                v.setAttr('vtype', 'C')
+				v.setAttr('vtype', 'C')
 
-            model.optimize()
+			model.optimize()
             
-            val_x = [x[j].X for j in range(0,N)]
+			val_x = [x[j].X for j in range(0,N)]
 
             # cut geodesic c3
-            for u in range(0,N):
+			for u in range(0,N):
             
-                Nu = nx.neighbors(G,u)
+				Nu = nx.neighbors(G,u)
 
-                listNu = []
-                for j in Nu:
-                    listNu.append(j)
+				listNu = []
+				for j in Nu:
+					listNu.append(j)
 
-                # geodesic c3
-                ncuts = 0
+				# geodesic c3
+				ncuts = 0
 
 				for w in range(u+1,N):
 					if (dm[u,w] >= 3):
 						if (w != u) and (w not in listNu):
 							for s in listNu:
 								if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
-								    if (val_x[u] + val_x[w] - val_x[s] < 0.0001):
-								        ncuts += 1
-								        model.addConstr(x[u] + x[w] <= 1 + x[s], "geo_c3")
+									if (val_x[u] + val_x[w] - val_x[s] < 0.0001):
+										ncuts += 1
+										model.addConstr(x[u] + x[w] <= 1 + x[s], "geo_c3")
 
             #print(ncuts)
             #model.write(f"{instance_}_{i}.lp")
 
-            for v in model.getVars():
-                v.setAttr('vtype', 'B')
+			for v in model.getVars():
+				v.setAttr('vtype', 'B')
 
 			#model.write(f"{instance_}_{i}.lp")
 
