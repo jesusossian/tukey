@@ -152,7 +152,7 @@ def tukey_fmax_cut_miset_c3(method_,instance_,G,result_path):
 						if (w != u) and (w not in listNu):
 							for s in listNu:
 								if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
-									if (val_x[u] + val_x[w] - val_x[s] < 0.0001):
+									if (val_x[u] + val_x[w] - 1 - val_x[s] > 0.0001):
 										ncuts += 1
 										model.addConstr(x[u] + x[w] <= 1 + x[s], "geo_c3")
 

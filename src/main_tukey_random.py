@@ -96,9 +96,9 @@ if __name__ == "__main__":
 	elif form_ == "fmaxc1noclq":
 		fmax_c1noclq.tukey_fmax_c1_noclique(method_,instance_,G,result_path)
 	elif form_ == "fmaxmicutsetc3":
-		fmaxmisetcut_c3.tukey_cut_fmax_miset_c3(method_,instance_,G,result_path)
+	    fmaxcutmiset_c3.tukey_fmax_cut_miset_c3(method_,instance_,G,result_path)
 	elif form_ == "fmaxmicutbsetc3":
-		fmaxmisetcutb_c3.tukey_cutb_fmax_miset_c3(method_,instance_,G,result_path)
+		fmaxcutbmiset_c3.tukey_fmax_cutb_miset_c3(method_,instance_,G,result_path)
 	else:
 		print("parameters errado!")
   
