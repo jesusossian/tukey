@@ -160,7 +160,7 @@ def tukey_fmin_cut_miset_c3(method_,instance_,G,result_path):
                                         ncuts += 1
                                         model.addConstr(x[u] + x[w] >= x[s], "geo_c3")
 
-            print(ncuts)
+            #print(ncuts)
             #model.write(f"{instance_}_{i}.lp")
 
             for v in model.getVars():

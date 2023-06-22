@@ -10,9 +10,9 @@ mkdir -p ../report/${inst_}
 # fminc0 fminc0noclq fminc1noclq fminc1 fminc2 fminmiset fminmisetc2 fminmisetc3 fmincutmisetc3 fmincutbmisetc3  
 # fmaxc0 fmaxc0noclq fmaxc1noclq fmaxc1 fmaxc2 fmaxmiset fmaxmisetc2 fmaxmisetc3  
 
-for form_ in fmincutbmisetc3
+for form_ in fmaxcutmisetc3 fmaxcutbmisetc3
 do
-	for id in {1..1}
+	for id in {1..2}
 	do
 		python3 main_tukey_random.py \
 		../instances/${inst_}/${dim_}/${inst_}_${dim_}_${id}.gml.gz \
