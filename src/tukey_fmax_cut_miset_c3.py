@@ -56,9 +56,9 @@ def tukey_fmax_cut_miset_c3(method_,instance_,G,result_path):
 			
 		else:
 		
-		    #val_x = np.zeros((N), dtype=float)
-            val_x = [0]*N
-
+            #val_x = np.zeros((N), dtype=float)
+			val_x = [0]*N
+	
 			model = gp.Model(f"{instance_}")
 
 			# configurando parametros
