@@ -31,7 +31,10 @@ def tukey_fmin_cutb_miset_c3(method_,instance_,G,result_path):
 
     for i in G:
 
-        #print("node %d" %i)
+        print("node %d" %i)
+        
+        #if i>0:
+        #    continue
     
         Ni = nx.neighbors(G,i)
 
@@ -43,14 +46,14 @@ def tukey_fmin_cutb_miset_c3(method_,instance_,G,result_path):
         status_clique = fg.is_subclique(G, listNi)
         tend = trun.time()
 
-        elapsed_time = tend - tstart
+        elapsed_time_clique = tend - tstart
     
         if(status_clique):
             #print("tukey[%d] = 1" %i)
             lb[i] = 1
             ub[i] = 1
             gap[i] = 0.0
-            time[i] = elapsed_time
+            time[i] = elapsed_time_clique
             nodes[i] = 0
             status[i] = 1
         else:
@@ -108,13 +111,8 @@ def tukey_fmin_cutb_miset_c3(method_,instance_,G,result_path):
                 #nx.draw(T,  with_labels = True)
 
                 A = ig.Graph.from_networkx(T)
-                
-                tstart = trun.time()
                 #Im = nx.maximal_independent_set(T)
                 Im = A.maximal_independent_vertex_sets()
-                tend = trun.time()
-
-                elapsed_time_miset = tend - tstart
 
                 tmp = len(Im)
                 if (tmp > 0):
@@ -129,32 +127,50 @@ def tukey_fmin_cutb_miset_c3(method_,instance_,G,result_path):
 
                 T.clear()
 
-            model.optimize()
-            
-            val_x = [x[j].X for j in range(0,N)]
+            #relax = model.relax()
+            #relax.optimize()
 
-            # cut geodesic c3
-            for u in range(0,N):
-            
-                Nu = nx.neighbors(G,u)
+            #for v in model.getVars():
+            #    v.setAttr('vtype', 'C')
 
-                listNu = []
-                for j in Nu:
-                    listNu.append(j)
+            elapsed_time = 0
 
-                # geodesic c3
+            ncuts = 1
+            while ncuts > 0:
                 ncuts = 0
-                for w in range(u+1,N):
-                    if (dm[u,w] >= 3):
-                        if (w != u) and (w not in listNu):
-                            for s in listNu:
-                                if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
-                                    if (val_x[u] + val_x[w] - val_x[s] < 0.0001):
-                                        ncuts += 1
-                                        model.addConstr(x[u] + x[w] >= x[s], "geo_c3")
 
-            print(ncuts)
+                tstart = trun.time()
+                model.optimize()
+                tend = trun.time()
+                elapsed_time_addcut = tend - tstart
+                elapsed_time += elapsed_time_addcut
+
+                val_x = [x[j].X for j in range(0,N)]
+
+                # cut geodesic c3
+                for u in range(0,N):
+            
+                    Nu = nx.neighbors(G,u)
+
+                    listNu = []
+                    for j in Nu:
+                        listNu.append(j)
+
+                    # geodesic c3
+                    for w in range(u+1,N):
+                        if (dm[u,w] >= 3):
+                            if (w != u) and (w not in listNu):
+                                for s in listNu:
+                                    if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
+                                        if (val_x[u] + val_x[w] - val_x[s] < -0.0001):
+                                            ncuts += 1
+                                            model.addConstr(x[u] + x[w] >= x[s], "geo_c3")
+
+            #print(ncuts)
             #model.write(f"{instance_}_{i}.lp")
+
+            #for v in model.getVars():
+            #    v.setAttr('vtype', 'B')
 
             model.optimize()
 
@@ -166,12 +182,12 @@ def tukey_fmin_cutb_miset_c3(method_,instance_,G,result_path):
                 lb[i] = model.objBound
                 ub[i] = model.objVal
                 gap[i] = model.MIPGap
-                time[i] = model.Runtime + elapsed_time_miset
+                time[i] = model.Runtime + elapsed_time
                 nodes[i] = model.NodeCount
                 status[i] = tmp
             else:
                 ub[i] = model.objVal
-                time[i] = model.Runtime + elapsed_time_miset
+                time[i] = model.Runtime + elapsed_time
                 status[i] = tmp
 
             model.dispose()
@@ -202,4 +218,3 @@ def tukey_fmin_cutb_miset_c3(method_,instance_,G,result_path):
                 +str(round(status[i],1))+'\n'
             )
             arquivo.close()
-

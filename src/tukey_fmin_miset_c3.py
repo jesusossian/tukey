@@ -42,7 +42,6 @@ def tukey_fmin_miset_c3(method_,instance_,G,result_path):
         tstart = trun.time()
         status_clique = fg.is_subclique(G, listNi)
         tend = trun.time()
-
         elapsed_time = tend - tstart
     
         if(status_clique):
@@ -105,13 +104,8 @@ def tukey_fmin_miset_c3(method_,instance_,G,result_path):
                 #nx.draw(T,  with_labels = True)
 
                 A = ig.Graph.from_networkx(T)
-                
-                tstart = trun.time()
                 #Im = nx.maximal_independent_set(T)
                 Im = A.maximal_independent_vertex_sets()
-                tend = trun.time()
-
-                elapsed_time_miset = tend - tstart
 
                 tmp = len(Im)
                 if (tmp > 0):
@@ -135,7 +129,6 @@ def tukey_fmin_miset_c3(method_,instance_,G,result_path):
                                     model.addConstr(x[u] + x[w] >= x[s], "geo_c3")
 
             #model.write(f"{instance_}.lp")
-
             model.optimize()
 
             val_x = [x[j].X for j in range(0,N)]
@@ -148,12 +141,12 @@ def tukey_fmin_miset_c3(method_,instance_,G,result_path):
                 lb[i] = model.objBound
                 ub[i] = model.objVal
                 gap[i] = model.MIPGap
-                time[i] = model.Runtime + elapsed_time_miset
+                time[i] = model.Runtime
                 nodes[i] = model.NodeCount
                 status[i] = tmp
             else:
                 ub[i] = model.objVal
-                time[i] = model.Runtime + elapsed_time_miset
+                time[i] = model.Runtime
                 status[i] = tmp
 
             model.dispose()
