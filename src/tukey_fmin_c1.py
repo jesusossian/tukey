@@ -81,7 +81,7 @@ def tukey_fmin_c1(method_,instance_,G,result_path):
          
             model.setObjective(obj, GRB.MINIMIZE)
 
-            model.addConstr(x[i] == 1)
+            model.addConstr(x[i] == 1, "fix_x")
 
             # geodesic
             for u in range(0,N):
