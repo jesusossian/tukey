@@ -26,7 +26,7 @@ def tukey_fmin_miset_rf_c3(instance_,G,result_path):
 
     lb = np.zeros((N), dtype=float)
     ub = np.zeros((N), dtype=float)
-    time = np.zeros((N), dtype=float)
+    timer = np.zeros((N), dtype=float)
     gap = np.zeros((N), dtype=float)
     nodes = np.zeros((N), dtype=float)
     status = np.zeros((N), dtype=float)
@@ -35,8 +35,8 @@ def tukey_fmin_miset_rf_c3(instance_,G,result_path):
 
     for i in G:
         
-        if (i>15):
-            continue
+        #if (i>23):
+        #    continue
 
         print("########### node %d ###########" %i)
     
@@ -56,7 +56,7 @@ def tukey_fmin_miset_rf_c3(instance_,G,result_path):
             lb[i] = 1
             ub[i] = 1
             gap[i] = 0.0
-            time[i] = elapsed_time
+            timer[i] = elapsed_time
             nodes[i] = 0
             status[i] = 1
         else:
@@ -195,7 +195,7 @@ def tukey_fmin_miset_rf_c3(instance_,G,result_path):
             #lb[i] = model.objBound
             ub[i] = objval
             #gap[i] = model.MIPGap
-            #time[i] = timerf #model.Runtime
+            timer[i] = timerf #model.Runtime
             #nodes[i] = model.NodeCount
             #status[i] = tmp
 
@@ -209,9 +209,9 @@ def tukey_fmin_miset_rf_c3(instance_,G,result_path):
         arquivo.write(
             str(tmp)+';'
     #        +str(round(lb[i],1))+';'
-            +str(round(ub[i],1))+'\n'
+            +str(round(ub[i],1))+';'
             #+str(round(gap[i],2))+';'
-            #+str(round(time[i],2))+'\n'
+            +str(round(timer[i],2))+'\n'
             #+str(round(nodes[i],1))+';'
             #+str(round(status[i],1))+'\n'
         )
