@@ -1,7 +1,7 @@
 #!/bin/bash
 
 inst_=internet_graph
-method_=mip
+method_=rf
 dim_=200
 
 mkdir -p ../result/${inst_}

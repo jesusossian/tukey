@@ -46,21 +46,23 @@ def tukey_fmin_rf_c2(instance_,G,result_path):
         for j in Ni:
             listNi.append(j)
 
-        tstart = trun.time()
+        startclq = trun.time()
         status_clique = fg.is_subclique(G, listNi)
-        tend = trun.time()
-        elapsed_time = tend - tstart
+        endclq = trun.time()
+        elapsedt_clq = endclq - startclq
     
         if(status_clique):
             #print("tukey[%d] = 1" %i)
             lb[i] = 1
             ub[i] = 1
             gap[i] = 0.0
-            timer[i] = elapsed_time
+            timer[i] = elapsedt_clq
             nodes[i] = 0
             status[i] = 1
         else:
         
+            time_rf = 0.0
+            
             model = gp.Model(f"{instance_}")
 
             x = model.addVars(N,lb=0.0,ub=1.0,vtype=GRB.BINARY,name="x")
@@ -107,7 +109,6 @@ def tukey_fmin_rf_c2(instance_,G,result_path):
             k = 3 #horsizerf
             kprime = 2 #fixsizerf
                 
-            timerf = 0.0
             alpha = 0
             beta = min(alpha+k-1,N-1)
 
@@ -117,8 +118,6 @@ def tukey_fmin_rf_c2(instance_,G,result_path):
                              
             while beta < N:
                 print("alpha = %d , beta = %d" %(alpha, beta))
-
-                start = trun.time()
 
                 # fix valor variables
                 if alpha > 0:
@@ -142,8 +141,17 @@ def tukey_fmin_rf_c2(instance_,G,result_path):
                         x[j].ub = 1.0
 
                 model.update()
+
+                startrf = trun.time()
                 
                 model.optimize()
+                
+                endrf = trun.time()
+                
+                elapsedt_rf = endrf - startrf
+
+                time_rf += elapsedt_rf
+                #time_rf += model.Runtime
 
                 objval = model.objBound
                 x_sol = [x[j].X for j in range(N)]
@@ -153,12 +161,7 @@ def tukey_fmin_rf_c2(instance_,G,result_path):
                     beta = N
                 else:
                     beta = min(alpha+k-1,N-1)
-                        
-                tend = trun.time()
-                time = tend - tstart
-
-                timerf += time
-               
+                                       
                 #tmp = 0
                 #if (model.status == GRB.OPTIMAL):
                 #    tmp = 1
@@ -166,7 +169,7 @@ def tukey_fmin_rf_c2(instance_,G,result_path):
             #lb[i] = model.objBound
             ub[i] = objval
             #gap[i] = model.MIPGap
-            timer[i] = timerf #model.Runtime
+            timer[i] = time_rf #model.Runtime
             #nodes[i] = model.NodeCount
             #status[i] = tmp
 
