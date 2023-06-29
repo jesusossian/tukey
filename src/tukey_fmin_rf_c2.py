@@ -142,16 +142,15 @@ def tukey_fmin_rf_c2(instance_,G,result_path):
 
                 model.update()
 
-                startrf = trun.time()
+                #startrf = trun.time()
                 
                 model.optimize()
                 
-                endrf = trun.time()
+                #endrf = trun.time()
+                #elapsedt_rf = endrf - startrf
+                #time_rf += elapsedt_rf
                 
-                elapsedt_rf = endrf - startrf
-
-                time_rf += elapsedt_rf
-                #time_rf += model.Runtime
+                time_rf += model.Runtime
 
                 objval = model.objBound
                 x_sol = [x[j].X for j in range(N)]

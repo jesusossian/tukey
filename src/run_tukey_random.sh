@@ -15,7 +15,7 @@ mkdir -p /home/jossian/Downloads/desenv/report/tukey/${inst_}
 
 for form_ in fminrfc2
 do
-	for id in {1..1}
+	for id in {1..5}
 	do
 		python3 main_tukey_random.py \
 		../instances/${inst_}/${dim_}/${inst_}_${dim_}_${id}.gml.gz \
