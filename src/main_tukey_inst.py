@@ -32,6 +32,7 @@ import tukey_fmin_cutb_miset_c3 as fmincutbmiset_c3
 import tukey_fmin_miset_rf_c3 as fminmisetrf_c3
 import tukey_fmin_rf_c2 as fminrf_c2
 import tukey_fmin_rf_c1 as fminrf_c1
+import tukey_fmin_lazy_miset_c3 as fminlazymiset_c3
 
 
 import tukey_fmax_c1 as fmax_c1
@@ -85,6 +86,8 @@ if __name__ == "__main__":
 		fminrf_c2.tukey_fmin_rf_c2(instance_,G,result_path) 
 	elif form_ == "fminrfc1":
 		fminrf_c1.tukey_fmin_rf_c1(instance_,G,result_path) 
+	elif form_ == "fminlazymisetc3":
+		fminlazymiset_c3.tukey_fmin_lazy_miset_c3(instance_,G,result_path) 
 	elif form_ == "fmaxc1":
 		fmax_c1.tukey_fmax_c1(method_,instance_,G,result_path)
 	elif form_ == "fmaxc2":
