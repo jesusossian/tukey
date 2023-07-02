@@ -61,7 +61,9 @@ def tukey_fmin_miset_rf_c3(instance_,G,result_path):
             status[i] = 1
         else:
         
-            model = gp.Model(f"{instance_}")
+            time_rf = 0.0
+        
+            model = gp.Model(f"{instance_}_{i}")
 
             x = model.addVars(N,lb=0.0,ub=1.0,vtype=GRB.BINARY,name="x")
             #x = model.addVars(N,lb=0.0,ub=1.0,vtype=GRB.CONTINUOUS,name="x")
@@ -130,13 +132,12 @@ def tukey_fmin_miset_rf_c3(instance_,G,result_path):
                                 if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
                                     model.addConstr(x[u] + x[w] >= x[s], "geo_c3")
 
-                #model.write(f"{instance_}.lp")
+                #model.write(f"{instance_}_{i}.lp")
                 
-            # set k and kprime according to the initial parameters
-            k = 6 #params.horsizerf
-            kprime = 3 #params.fixsizerf
+            # set k and kprime according
+            k = 3 #params.horsizerf
+            kprime = 2 #params.fixsizerf
                 
-            timerf = 0.0
             alpha = 0
             beta = min(alpha+k-1,N-1)
 
@@ -146,8 +147,6 @@ def tukey_fmin_miset_rf_c3(instance_,G,result_path):
                              
             while beta < N:
                 print("alpha = %d , beta = %d" %(alpha, beta))
-
-                start = trun.time()
 
                 # fix valor variables
                 if alpha > 0:
@@ -160,20 +159,21 @@ def tukey_fmin_miset_rf_c3(instance_,G,result_path):
                 for j in range(alpha,beta):
                     if (j != i):# and (x[j].VType != gp.GRB.BINARY):
                         x[j].VType = gp.GRB.BINARY
-                        #x[j].lb = 0.0
-                        #x[j].ub = 1.0
+                        x[j].lb = 0.0
+                        x[j].ub = 1.0
                     
                 # relax binary variables    
                 for j in range(beta,N):
                     if (j != i):# and (x[j].VType != gp.GRB.CONTINUOUS):
                         x[j].VType = gp.GRB.CONTINUOUS    
-                        #x[j].lb = 0.0
-                        #x[j].ub = 1.0
+                        x[j].lb = 0.0
+                        x[j].ub = 1.0
 
                 model.update()
                 
                 model.optimize()
 
+                time_rf += model.Runtime
                 objval = model.objBound
                 x_sol = [x[j].X for j in range(N)]
 
@@ -183,23 +183,10 @@ def tukey_fmin_miset_rf_c3(instance_,G,result_path):
                 else:
                     beta = min(alpha+k-1,N-1)
                         
-                tend = trun.time()
-                time = tend - tstart
-
-                timerf += time
-               
-                #tmp = 0
-                #if (model.status == GRB.OPTIMAL):
-                #    tmp = 1
-
-            #lb[i] = model.objBound
             ub[i] = objval
-            #gap[i] = model.MIPGap
-            timer[i] = timerf #model.Runtime
-            #nodes[i] = model.NodeCount
-            #status[i] = tmp
+            timer[i] = timerf
 
-            #model.dispose()
+            model.dispose()
 
         # end tukey for node i
   

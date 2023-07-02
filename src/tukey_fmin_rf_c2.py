@@ -63,7 +63,7 @@ def tukey_fmin_rf_c2(instance_,G,result_path):
         
             time_rf = 0.0
             
-            model = gp.Model(f"{instance_}")
+            model = gp.Model(f"{instance_}_{i}")
 
             x = model.addVars(N,lb=0.0,ub=1.0,vtype=GRB.BINARY,name="x")
             #x = model.addVars(N,lb=0.0,ub=1.0,vtype=GRB.CONTINUOUS,name="x")
@@ -103,9 +103,9 @@ def tukey_fmin_rf_c2(instance_,G,result_path):
                             if (s != w) and (dm[u,s] + dm[s,w] == dm[u,w]):
                                 model.addConstr(x[u] + x[w] >= x[s], "geo_c2")
 
-            #model.write(f"{instance_}.lp")
+            #model.write(f"{instance_}_{i}.lp")
                 
-            # set k and kprime according to the initial parameters
+            # set k and kprime
             k = 3 #horsizerf
             kprime = 2 #fixsizerf
                 
@@ -141,17 +141,10 @@ def tukey_fmin_rf_c2(instance_,G,result_path):
                         x[j].ub = 1.0
 
                 model.update()
-
-                #startrf = trun.time()
                 
                 model.optimize()
-                
-                #endrf = trun.time()
-                #elapsedt_rf = endrf - startrf
-                #time_rf += elapsedt_rf
-                
+                                
                 time_rf += model.Runtime
-
                 objval = model.objBound
                 x_sol = [x[j].X for j in range(N)]
 
@@ -161,18 +154,10 @@ def tukey_fmin_rf_c2(instance_,G,result_path):
                 else:
                     beta = min(alpha+k-1,N-1)
                                        
-                #tmp = 0
-                #if (model.status == GRB.OPTIMAL):
-                #    tmp = 1
-
-            #lb[i] = model.objBound
             ub[i] = objval
-            #gap[i] = model.MIPGap
-            timer[i] = time_rf #model.Runtime
-            #nodes[i] = model.NodeCount
-            #status[i] = tmp
+            timer[i] = time_rf
 
-            #model.dispose()
+            model.dispose()
 
         # end tukey for node i
   
@@ -181,11 +166,7 @@ def tukey_fmin_rf_c2(instance_,G,result_path):
         tmp = i
         arquivo.write(
             str(tmp)+';'
-    #        +str(round(lb[i],1))+';'
             +str(round(ub[i],1))+';'
-            #+str(round(gap[i],2))+';'
             +str(round(timer[i],2))+'\n'
-            #+str(round(nodes[i],1))+';'
-            #+str(round(status[i],1))+'\n'
         )
         arquivo.close()
