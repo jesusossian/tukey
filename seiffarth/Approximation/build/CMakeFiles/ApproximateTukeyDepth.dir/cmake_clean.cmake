@@ -27,8 +27,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ApproximateTukeyDepth.dir/Utils/StaticFunctions.cpp.o.d"
   "CMakeFiles/ApproximateTukeyDepth.dir/Utils/graphio.cpp.o"
   "CMakeFiles/ApproximateTukeyDepth.dir/Utils/graphio.cpp.o.d"
-  "CMakeFiles/ApproximateTukeyDepth.dir/home/jossian/repository/tukey_depth/libs/Snap-6.0/snap-core/Snap.cpp.o"
-  "CMakeFiles/ApproximateTukeyDepth.dir/home/jossian/repository/tukey_depth/libs/Snap-6.0/snap-core/Snap.cpp.o.d"
+  "CMakeFiles/ApproximateTukeyDepth.dir/home/jossian/repository/tukey/seiffarth/libs/Snap-6.0/snap-core/Snap.cpp.o"
+  "CMakeFiles/ApproximateTukeyDepth.dir/home/jossian/repository/tukey/seiffarth/libs/Snap-6.0/snap-core/Snap.cpp.o.d"
   "CMakeFiles/ApproximateTukeyDepth.dir/src/approximate_tukey.cpp.o"
   "CMakeFiles/ApproximateTukeyDepth.dir/src/approximate_tukey.cpp.o.d"
 )

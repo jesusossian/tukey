@@ -1,5 +1,5 @@
 CMakeFiles/ApproximateTukeyDepth.dir/Utils/StaticFunctions.cpp.o: \
- /home/jossian/repository/tukey_depth/Approximation/Utils/StaticFunctions.cpp \
+ /home/jossian/repository/tukey/seiffarth/Approximation/Utils/StaticFunctions.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -155,7 +155,7 @@ CMakeFiles/ApproximateTukeyDepth.dir/Utils/StaticFunctions.cpp.o: \
  /usr/include/c++/11/bits/invoke.h \
  /usr/include/c++/11/bits/stl_multimap.h \
  /usr/include/c++/11/bits/erase_if.h \
- /home/jossian/repository/tukey_depth/Approximation/Utils/StaticFunctions.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/Utils/StaticFunctions.h \
  /usr/include/c++/11/numeric /usr/include/c++/11/bits/stl_numeric.h \
  /usr/include/c++/11/bit /usr/include/c++/11/pstl/glue_numeric_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h /usr/include/c++/11/algorithm \
@@ -175,10 +175,10 @@ CMakeFiles/ApproximateTukeyDepth.dir/Utils/StaticFunctions.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/jossian/repository/tukey_depth/Approximation/Utils/typedefs.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/Utils/typedefs.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/Snap.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/base.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/Snap.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/base.h \
  /usr/include/fcntl.h /usr/include/x86_64-linux-gnu/bits/fcntl.h \
  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -281,75 +281,75 @@ CMakeFiles/ApproximateTukeyDepth.dir/Utils/StaticFunctions.cpp.o: \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
  /usr/include/c++/11/tr1/riemann_zeta.tcc /usr/include/c++/11/stdlib.h \
  /usr/include/string.h /usr/include/strings.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/bd.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/fl.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/dt.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/ut.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/ds.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/bits.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/hash.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/hashmp.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/xml.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/xmath.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/xmlser.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/unicode.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/unicodestring.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/tm.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/shash.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/os.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/env.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/wch.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/xfl.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/blobbs.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/lx.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/url.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/http.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/html.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/md5.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/ss.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/ssmp.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/json.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/zipfl.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/gnuplot.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/linalg.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/gbase.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/util.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/attr.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/graph.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/graphmp.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/network.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/networkmp.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/bignet.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/timenet.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/mmnet.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/table.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/conv.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/numpy.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/subgraph.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/anf.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/bfsdfs.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/cncom.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/kcore.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/alg.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/triad.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/gsvd.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/gstat.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/centr.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/cmty.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/flow.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/coreper.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/randwalk.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/priorityqueue.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/Snap.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/casc.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/sim.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/ggen.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/ff.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/glib-core/bd.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/gio.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/gviz.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/ghash.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/Snap-6.0/snap-core/statplot.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/bd.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/fl.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/dt.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/ut.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/ds.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/bits.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/hash.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/hashmp.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/xml.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/xmath.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/xmlser.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/unicode.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/unicodestring.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/tm.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/shash.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/os.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/env.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/wch.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/xfl.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/blobbs.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/lx.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/url.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/http.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/html.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/md5.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/ss.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/ssmp.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/json.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/zipfl.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/gnuplot.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/linalg.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/gbase.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/util.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/attr.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/graph.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/graphmp.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/network.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/networkmp.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/bignet.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/timenet.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/mmnet.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/table.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/conv.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/numpy.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/subgraph.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/anf.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/bfsdfs.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/cncom.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/kcore.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/alg.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/triad.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/gsvd.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/gstat.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/centr.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/cmty.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/flow.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/coreper.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/randwalk.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/priorityqueue.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/Snap.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/casc.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/sim.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/ggen.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/ff.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/glib-core/bd.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/gio.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/gviz.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/ghash.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/Snap-6.0/snap-core/statplot.h \
  /usr/include/c++/11/filesystem /usr/include/c++/11/bits/fs_fwd.h \
  /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
  /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
@@ -377,25 +377,25 @@ CMakeFiles/ApproximateTukeyDepth.dir/Utils/StaticFunctions.cpp.o: \
  /usr/include/c++/11/bits/random.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h \
  /usr/include/c++/11/bits/random.tcc \
- /home/jossian/repository/tukey_depth/Approximation/Utils/../Data/GraphData.h \
- /home/jossian/repository/tukey_depth/Approximation/Utils/../Data/Data.h \
- /home/jossian/repository/tukey_depth/Approximation/Utils/../Data/../Utils/typedefs.h \
- /home/jossian/repository/tukey_depth/Approximation/Utils/../Data/Data.txx \
- /home/jossian/repository/tukey_depth/Approximation/Utils/GraphFunctions.h \
- /home/jossian/repository/tukey_depth/Approximation/Utils/GraphStructs.h \
- /home/jossian/repository/tukey_depth/Approximation/Utils/directed_graph.h \
- /home/jossian/repository/tukey_depth/Approximation/../libs/libIO/include/FileEvaluation.h \
- /home/jossian/repository/tukey_depth/Approximation/Utils/Enums.h \
- /home/jossian/repository/tukey_depth/Approximation/Utils/OuterplanarSubgraphDFS.h \
- /home/jossian/repository/tukey_depth/Approximation/Utils/OuterplanarSubgraph.h \
- /home/jossian/repository/tukey_depth/Approximation/Utils/../Utils/typedefs.h \
- /home/jossian/repository/tukey_depth/Approximation/Utils/../Data/OuterplanarGraphData.h \
- /home/jossian/repository/tukey_depth/Approximation/Utils/../Data/GraphData.h \
- /home/jossian/repository/tukey_depth/Approximation/Utils/../ClosureOperators/GraphClosures.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/Utils/../Data/GraphData.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/Utils/../Data/Data.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/Utils/../Data/../Utils/typedefs.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/Utils/../Data/Data.txx \
+ /home/jossian/repository/tukey/seiffarth/Approximation/Utils/GraphFunctions.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/Utils/GraphStructs.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/Utils/directed_graph.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/../libs/libIO/include/FileEvaluation.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/Utils/Enums.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/Utils/OuterplanarSubgraphDFS.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/Utils/OuterplanarSubgraph.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/Utils/../Utils/typedefs.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/Utils/../Data/OuterplanarGraphData.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/Utils/../Data/GraphData.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/Utils/../ClosureOperators/GraphClosures.h \
  /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
  /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/unordered_set \
  /usr/include/c++/11/bits/unordered_set.h \
- /home/jossian/repository/tukey_depth/Approximation/Utils/../ClosureOperators/../Data/GraphData.h \
- /home/jossian/repository/tukey_depth/Approximation/Utils/../ClosureOperators/BaseOperator.h \
- /home/jossian/repository/tukey_depth/Approximation/Utils/../ClosureOperators/../Data/Data.h \
- /home/jossian/repository/tukey_depth/Approximation/Utils/../ClosureOperators/../Data/OuterplanarGraphData.h
+ /home/jossian/repository/tukey/seiffarth/Approximation/Utils/../ClosureOperators/../Data/GraphData.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/Utils/../ClosureOperators/BaseOperator.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/Utils/../ClosureOperators/../Data/Data.h \
+ /home/jossian/repository/tukey/seiffarth/Approximation/Utils/../ClosureOperators/../Data/OuterplanarGraphData.h
