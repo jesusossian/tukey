@@ -1,0 +1,3 @@
+https://networkx.org/documentation/stable/auto_examples/graph/plot_karate_club.html
+
+https://juliagraphs.org/Graphs.jl/dev/
