@@ -51,12 +51,17 @@ int TukeyDepth<C, I>::datasize() {
 template<typename C, typename I>
 void TukeyDepth<C, I>::one_sided_run(int seed) {
 #pragma omp parallel for firstprivate(_closure, _initUpdate, seed) shared(approximated_depth, _data) default(none)
+
+    //std::cout << "estamos aqui" << std::endl;
+
     for (int i = 0; i < _data.size(); ++i) {
         std::mt19937_64 gen(seed + i);
         auto& graph = _data[i];
+
         for (int n = 0; n < graph.size(); ++n) {
             const auto &Node = graph.get_graph()->GetNI(n);
             NodeId nodeId = Node.GetId();
+
             for (int j = 0; j < Node.GetDeg(); ++j) {
                 MCSS mcss = MCSS(graph, _closure, _initUpdate);
                 NodeId neighbor = Node.GetNbrNId(j);
@@ -66,12 +71,13 @@ void TukeyDepth<C, I>::one_sided_run(int seed) {
 
 #pragma omp critical
                 for (int k = 0; k < graph.size(); ++k) {
-                    if (out[0].closed_set.find(k) == out[0].closed_set.end()){
+
+                    if (out[0].closed_set.find(k) == out[0].closed_set.end()) {
                         approximated_depth[i][k] = std::max(approximated_depth[i][k], (int) out[0].closed_set.size());
                     }
-                    else if (out[1].closed_set.find(k) == out[1].closed_set.end()){
+                    else if (out[1].closed_set.find(k) == out[1].closed_set.end()) {
                         approximated_depth[i][k] = std::max(approximated_depth[i][k], (int) out[1].closed_set.size());
-                    } else{
+                    } else {
                         throw std::runtime_error("Invalid run!");
                     }
                 }
@@ -90,9 +96,11 @@ template<typename C, typename I>
 void TukeyDepth<C, I>::print() {
     std::cout << "Depths: " << std::endl;
     int counter = 0;
+    
     for (auto& x : this->approximated_depth) {
         ++counter;
         std:: cout << "Graph " << counter << ": ";
+    
         for (auto i : x) {
             std::cout << i << " ";
         }
@@ -102,14 +110,17 @@ void TukeyDepth<C, I>::print() {
 
 template<typename C, typename I>
 void TukeyDepth<C, I>::print_single(int i) {
+
     std::stringstream ss;
     std::map<int, std::vector<int>, std::greater<int>> depthDistribution;
+
     for (int j=0; j < approximated_depth[i].size(); ++j) {
         int depth = approximated_depth[i][j];
-        if (depthDistribution.find(depth) == depthDistribution.end()){
+        
+        if (depthDistribution.find(depth) == depthDistribution.end()) {
             depthDistribution.insert({depth, std::vector<int>(1, j)});
         }
-        else{
+        else {
             depthDistribution[depth].template emplace_back(j);
         }
     }
@@ -135,13 +146,15 @@ void TukeyDepth<C, I>::test_core(GraphData &graph, std::vector<int>& depth) {
     GraphFunctions::get_core(graph, 5, 3, 0, coreNodes);
 
     std::map<int, std::vector<int>, std::greater<int>> depthDistribution;
+    
     for (int j=0; j < coreNodes.Len(); ++j) {
         int node = coreNodes[j];
         int d = depth[coreNodes[j]];
+        
         if (depthDistribution.find(d) == depthDistribution.end()){
             depthDistribution.insert({d, std::vector<int>(1, node)});
         }
-        else{
+        else {
             depthDistribution[d].template emplace_back(node);
         }
     }
@@ -163,16 +176,17 @@ void TukeyDepth<C, I>::test_core(GraphData &graph, std::vector<int>& depth) {
 template<typename C, typename I>
 void TukeyDepth<C, I>::alternative_tukey(std::mt19937_64& gen) {
 #pragma omp parallel for firstprivate(gen, _closure, _initUpdate) shared(_data, approximated_depth) default(none)
+
     for (int i = 0; i < _data.size(); ++i) {
         auto &data = _data[i];
         MCSS mcss = MCSS(data, _closure, _initUpdate);
         std::vector<ClosureParameters> out;
         std::vector<std::set<NodeId>> input_set;
+
         for (TUNGraph::TNodeI Node = data.get_graph()->BegNI(); Node != data.get_graph()->EndNI(); Node++) {
             for (int j = 0; j < Node.GetDeg(); ++j) {
                 NodeId Neighbor = Node.GetNbrNId(j);
-                input_set = {{Node.GetId()},
-                             {Neighbor}};
+                input_set = {{Node.GetId()},{Neighbor}};
                 mcss.run(input_set, gen);
                 out = mcss.get_output();
 #pragma omp critical
@@ -195,19 +209,23 @@ void TukeyDepth<C, I>::alternative_tukey(std::mt19937_64& gen) {
 template<typename C, typename I>
 void TukeyDepth<C, I>::optimized_algorithm(std::mt19937_64 &gen) {
 #pragma omp parallel for firstprivate(gen, _closure, _initUpdate) shared(_data, approximated_depth) default(none)
+
     //Iterate over all graphs
     for (int i = 0; i < _data.size(); ++i) {
         auto& graph = _data[i];
         std::vector<int> depths = std::vector<int>(graph.size(), _data[i].nodes());
         int Id = 0;
         std::vector<ClosureParameters> out;
-        std::vector<int> validity = std::vector<int>(graph.size(), Id); //Checks validity and element is valid iff validity[elementId] != Id
+        std::vector<int> validity = std::vector<int>(graph.size(), Id); 
+        //Checks validity and element is valid iff validity[elementId] != Id
         std::vector<int> node_distances;
         std::vector<int> neighbor_distances;
+
         for (TUNGraph::TNodeI nodeIt = graph.get_graph()->BegNI(); nodeIt != graph.get_graph()->EndNI(); nodeIt++) {
             int degree = nodeIt.GetDeg();
             NodeId nodeId = nodeIt.GetId();
             GraphFunctions::BFSDistances(graph.get_graph(), nodeId, node_distances);
+
             for (int j = 0; j < degree; ++j) {
                 ++Id;
                 NodeId neighbor = nodeIt.GetNbrNId(j);
@@ -235,6 +253,7 @@ void TukeyDepth<C, I>::optimized_algorithm(std::mt19937_64 &gen) {
                     int randomNode = elementCandidates[idx];
                     std::swap(elementCandidates[idx], elementCandidates.back());
                     elementCandidates.pop_back();
+
                     if (validity[randomNode] != Id && closureParameters.closed_set.find(randomNode) == closureParameters.closed_set.end()){
                         bool success = cl.incremental_closure(graph, closureParameters, randomNode);
                         if (!success){
@@ -302,7 +321,6 @@ void TukeyDepth<C, I>::run_optimized_algorithm_two_sides(std::mt19937_64& gen, G
         closureParametersA.forbidden_elements = {&closureParametersB.closed_set};
         closureParametersB.forbidden_elements = {&closureParametersA.closed_set};
 
-
         GraphClosureSP cl;
 
         std::vector<int> elementCandidates = std::vector<int>(graph.size(), 0);
@@ -362,7 +380,7 @@ void TukeyDepth<C, I>::run_optimized_algorithm_two_sides(std::mt19937_64& gen, G
                         closureParametersB.input_set.insert(x);
                     }
                 }
-                else{
+                else {
                     closureParametersB.closed_set = closureParametersB.input_set;
                     for (int k = 0; k < graph.get_graph()->GetNI(randomNode).GetDeg(); ++k) {
                         int currentNodeNeighbor = graph.get_graph()->GetNI(randomNode).GetNbrNId(k);
@@ -416,17 +434,15 @@ void TukeyDepth<C, I>::optimized_algorithm_two_sides(int seed) {
                     
                     ClosureParameters closureParametersA;
                     ClosureParameters closureParametersB;
-                    run_optimized_algorithm_two_sides(gen, graph, nodeIt, j, node_distances, neighbor_distances,
-                                                      Id, validityA, validityB, closureParametersA, closureParametersB);
+                    run_optimized_algorithm_two_sides(gen, graph, nodeIt, j, node_distances, neighbor_distances, Id, validityA, validityB, closureParametersA, closureParametersB);
 #pragma omp critical
                     for (int k = 0; k < graph.size(); ++k) {
                         if (closureParametersA.closed_set.find(k) == closureParametersA.closed_set.end()) {
-                            approximated_depth[i][k] = std::max(approximated_depth[i][k],
-                                                                (int) closureParametersA.closed_set.size());
+                            approximated_depth[i][k] = std::max(approximated_depth[i][k], (int) closureParametersA.closed_set.size());
                         }
+
                         if (closureParametersB.closed_set.find(k) == closureParametersB.closed_set.end()) {
-                            approximated_depth[i][k] = std::max(approximated_depth[i][k],
-                                                                (int) closureParametersB.closed_set.size());
+                            approximated_depth[i][k] = std::max(approximated_depth[i][k], (int) closureParametersB.closed_set.size());
                         }
                     }
                 }
@@ -455,6 +471,7 @@ void TukeyDepth<C, I>::shift_depths(int i) {
 }
 
 // here
+// what are the number of threads? 1 in approximate_tukey.cpp
 void GetWeakTukeyDepth(std::vector<GraphData>& graphs, std::vector<std::vector<int>> &nodeFeatures, int threads, int seed, TDAlgorithm wtdAlgorithm) {
 
     omp_set_num_threads(std::min(threads, omp_get_num_threads()));
@@ -471,8 +488,6 @@ void GetWeakTukeyDepth(std::vector<GraphData>& graphs, std::vector<std::vector<i
         mean_size += (double) graph.size()/(double) graphs.size();
         mean_edges += (double) graph.edges()/(double) graphs.size();
     }
-
-    std::cout << "Teste" << std::endl;
     
     std::cout << "Calculate the weak tukey depth for " << graphs.size() << " graphs." << " Mean size: " << mean_size << " Mean edges: " << mean_edges << std::endl;
     

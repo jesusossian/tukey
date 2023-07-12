@@ -17,18 +17,22 @@ void approx_tukey(const std::string& input_path, const std::string& output_path,
     int deleted = 0;
 
     if (!db_name.empty()) {
-        std::cout << "teste 1" << std::endl;
+    
+        std::cout << "use bd" << std::endl;
         std::vector<int> graphLabels;
         std::vector<std::vector<int>> graphEdgeLabels;
         LoadTUDortmundGraphData::GraphDataToGraphList(input_path, db_name, data, graphLabels, &graphEdgeLabels);
     }
-    else if (!input_path.empty()){
-        std::cout << "teste 2" << std::endl;
+    else if (!input_path.empty()) {
+    
+        std::cout << "read file" << std::endl;
         db_name = std::filesystem::path(input_path).stem();
         data.emplace_back(GraphData(input_path));
     }
+    
     for (int i = 0; i < data.size(); ++i) {
-        std::cout << "data graph" << std::endl;
+        std::cout << " read graph" << std::endl;
+        
         if (!TSnap::IsConnected(data[i].get_graph())) { // get subgraph conected
             std::cout << "graph not is conexo!" << std::endl;
             data.erase(data.begin() + i);
@@ -39,9 +43,11 @@ void approx_tukey(const std::string& input_path, const std::string& output_path,
             std::cout << "graph is conexo!" << std::endl;
         }
     }
+    
     std::cout << "Calculating the tukey depth for " << data.size() 
               << "/" << (int) data.size() + deleted
               << " graphs in " << db_name << "." << std::endl;
+              
     std::cout << deleted << " were not connected and hence deleted." << std::endl;
 
         //data = {data[2765]};
@@ -58,14 +64,13 @@ void approx_tukey(const std::string& input_path, const std::string& output_path,
                 std::chrono::system_clock::now() - start).count() / 1000;
 
         FileEvaluation f = FileEvaluation(output_path, db_name, +"approx_tukey_info");
+        
         f.headerValueInsert({"Name", "Graphs", "Connected", "Runtime"}, {db_name, std::to_string(data.size() + deleted), std::to_string(data.size()), std::to_string(runtime)});
         f.save();
 
-
         DataIO<int>::WriteTrivialMatrix(output_path + name + "_optimized", features_second);
 
-        std::cout << "____________________________________________________________________________________"
-                  << std::endl;
+        std::cout << "==============================" << std::endl;
         std::cout << "Evaluation" << std::endl << std::endl;
         std::cout << "Time: " << runtime << std::endl;
 }
@@ -76,6 +81,7 @@ int main(int argc, char *argv[]) {
     std::string argument;
     std::string input_path = "../../Graphs/";
     std::string output_path = "../../out/";
+    
     int num_threads = 1;
     for (int i = 0; i < argc; ++i) {
         std::string str_argument = std::string(argv[i]);
@@ -95,8 +101,7 @@ int main(int argc, char *argv[]) {
                 argument = "distance";
             }
         }
-            // List arguments
-        else {
+        else { // List arguments
             if (argument == "db") {
                 dbs.emplace_back(std::string(argv[i]));
             } else if (argument == "threads") {
@@ -117,12 +122,12 @@ int main(int argc, char *argv[]) {
             approx_tukey(input_path, output_path, db, num_threads);
         }
     }
-    else if (!input_path.empty()) {
-        
+    else if (!input_path.empty()) {           
         std::cout << "!input_path.empty()" << std::endl;
         approx_tukey(input_path, output_path, "", num_threads);
     }
     else {
         std::cout << "Please give some database via -db " << std::endl;
     }
+
 }

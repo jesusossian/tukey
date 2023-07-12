@@ -20,6 +20,7 @@ struct ClosureParameters;
 
 template <typename C, typename I>
 class TukeyDepth {
+
 public:
     TukeyDepth(std::vector<GraphData> &data, C& closure, I& initUpdate);
 
@@ -30,13 +31,10 @@ public:
 
     static void GetWeakTukeyDepth(std::vector<GraphData>& graphs, std::vector<std::vector<int>> &nodeFeatures, int threads, int seed, TDAlgorithm wtdAlgorithm = TDAlgorithm::ALTERNATIVE_TUKEY);
 
-
-
-        private:
+private:
     std::vector<GraphData>& _data;
     C _closure;
     I _initUpdate;
-
 
     void one_sided_run(int seed);
 
@@ -50,11 +48,11 @@ public:
 
     void exact();
     void shift_depths(int i);
+    
 private:
-    void run_optimized_algorithm_two_sides(std::mt19937_64& gen, GraphData &graph, TUNGraph::TNodeI& nodeIt, int j, std::vector<int> &node_distances,
-                                           std::vector<int> &neighbor_distances, int &Id, std::vector<int> &validityA,
-                                           std::vector<int> &validityB, ClosureParameters& closureParametersA, ClosureParameters& closureParametersB);
+    void run_optimized_algorithm_two_sides(std::mt19937_64& gen, GraphData &graph, TUNGraph::TNodeI& nodeIt, int j, std::vector<int> &node_distances, std::vector<int> &neighbor_distances, int &Id, std::vector<int> &validityA, std::vector<int> &validityB, ClosureParameters& closureParametersA, ClosureParameters& closureParametersB);
 };
+
 #include "TukeyDepth.txx"
 
 #endif //CLOSURES_TUKEYDEPTH_H
